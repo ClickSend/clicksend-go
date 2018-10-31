@@ -1,4 +1,4 @@
-# \ResellerAccountApi
+# ClickSend.Client\ResellerAccountApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

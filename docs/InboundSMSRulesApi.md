@@ -1,4 +1,4 @@
-# \InboundSMSRulesApi
+# ClickSend.Client\InboundSMSRulesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

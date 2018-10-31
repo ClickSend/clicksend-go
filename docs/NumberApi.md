@@ -1,4 +1,4 @@
-# \NumberApi
+# ClickSend.Client\NumberApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

@@ -1,4 +1,4 @@
-# \EmailMarketingApi
+# ClickSend.Client\EmailMarketingApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

@@ -1,4 +1,4 @@
-# \PostDirectMailApi
+# ClickSend.Client\PostDirectMailApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

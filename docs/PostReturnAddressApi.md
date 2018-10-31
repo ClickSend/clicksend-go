@@ -1,4 +1,4 @@
-# \PostReturnAddressApi
+# ClickSend.Client\PostReturnAddressApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

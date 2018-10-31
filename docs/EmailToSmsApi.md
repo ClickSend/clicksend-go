@@ -1,4 +1,4 @@
-# \EmailToSmsApi
+# ClickSend.Client\EmailToSmsApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

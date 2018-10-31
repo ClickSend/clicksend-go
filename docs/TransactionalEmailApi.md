@@ -1,4 +1,4 @@
-# \TransactionalEmailApi
+# ClickSend.Client\TransactionalEmailApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

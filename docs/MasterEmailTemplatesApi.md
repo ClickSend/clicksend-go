@@ -1,4 +1,4 @@
-# \MasterEmailTemplatesApi
+# ClickSend.Client\MasterEmailTemplatesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

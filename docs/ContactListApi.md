@@ -1,4 +1,4 @@
-# \ContactListApi
+# ClickSend.Client\ContactListApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

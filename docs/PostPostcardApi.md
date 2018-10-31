@@ -1,4 +1,4 @@
-# \PostPostcardApi
+# ClickSend.Client\PostPostcardApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
