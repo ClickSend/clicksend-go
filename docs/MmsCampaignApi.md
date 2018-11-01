@@ -1,4 +1,4 @@
-# ClickSend.Client\MmsCampaignApi
+# clicksend\MmsCampaignApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

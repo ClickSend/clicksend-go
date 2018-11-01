@@ -1,4 +1,4 @@
-# ClickSend.Client\SearchApi
+# clicksend\SearchApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

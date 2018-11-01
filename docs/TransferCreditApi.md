@@ -1,4 +1,4 @@
-# ClickSend.Client\TransferCreditApi
+# clicksend\TransferCreditApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

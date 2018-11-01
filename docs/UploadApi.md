@@ -1,4 +1,4 @@
-# ClickSend.Client\UploadApi
+# clicksend\UploadApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

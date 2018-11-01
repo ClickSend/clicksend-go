@@ -1,4 +1,4 @@
-# ClickSend.Client\DeliveryIssuesApi
+# clicksend\DeliveryIssuesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

@@ -1,4 +1,4 @@
-# ClickSend.Client\FaxApi
+# clicksend\FaxApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

@@ -1,4 +1,4 @@
-# ClickSend.Client\VoiceDeliveryReceiptRulesApi
+# clicksend\VoiceDeliveryReceiptRulesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

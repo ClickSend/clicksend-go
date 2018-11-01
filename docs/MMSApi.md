@@ -1,4 +1,4 @@
-# ClickSend.Client\MMSApi
+# clicksend\MMSApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

@@ -1,4 +1,4 @@
-# ClickSend.Client\SMSDeliveryReceiptRulesApi
+# clicksend\SMSDeliveryReceiptRulesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

@@ -1,4 +1,4 @@
-# ClickSend.Client\InboundFAXRulesApi
+# clicksend\InboundFAXRulesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
