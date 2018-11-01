@@ -26,8 +26,3 @@ auth := context.WithValue(context.Background(), sw.ContextBasicAuth, sw.BasicAut
 })
 r, err := client.Service.Operation(auth, args)
 ```
-
-## Author
-
-support@clicksend.com
-
