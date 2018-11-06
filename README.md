@@ -6,7 +6,7 @@
 ## Installation
 Put the package under your project folder and add the following in import:
 ```golang
-import "./swagger"
+import "./clicksend"
 ```
 
 ## Documentation for API Endpoints and Models
