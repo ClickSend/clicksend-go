@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **PostLettersExportGet**
-> *os.File PostLettersExportGet(ctx, filename)
+> string PostLettersExportGet(ctx, filename)
 export post letter history
 
 export post letter history
@@ -25,7 +25,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[***os.File**](*os.File.md)
+**string**
 
 ### Authorization
 

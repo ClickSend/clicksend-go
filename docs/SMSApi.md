@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **SmsHistoryExportGet**
-> *os.File SmsHistoryExportGet(ctx, filename)
+> string SmsHistoryExportGet(ctx, filename)
 Export all sms history
 
 Export all sms history
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[***os.File**](*os.File.md)
+**string**
 
 ### Authorization
 

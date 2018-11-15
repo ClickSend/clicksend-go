@@ -505,7 +505,7 @@ paths:
         200:
           description: "SUCCESS"
           schema:
-            type: "file"
+            type: "string"
         400:
           description: "BAD_REQUEST"
           schema:
@@ -1454,7 +1454,7 @@ paths:
         200:
           description: "SUCCESS"
           schema:
-            type: "file"
+            type: "string"
         400:
           description: "BAD_REQUEST"
           schema:
@@ -5221,7 +5221,7 @@ paths:
         200:
           description: "SUCCESS"
           schema:
-            type: "file"
+            type: "string"
         400:
           description: "BAD_REQUEST"
           schema:
@@ -6312,7 +6312,7 @@ paths:
         200:
           description: "SUCCESS"
           schema:
-            type: "file"
+            type: "string"
         400:
           description: "BAD_REQUEST"
           schema:
@@ -7307,7 +7307,7 @@ paths:
         200:
           description: "SUCCESS"
           schema:
-            type: "file"
+            type: "string"
         400:
           description: "BAD_REQUEST"
           schema:
@@ -8142,7 +8142,7 @@ paths:
         200:
           description: "SUCCESS"
           schema:
-            type: "file"
+            type: "string"
         400:
           description: "BAD_REQUEST"
           schema:

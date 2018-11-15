@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **PostPostcardsHistoryExportGet**
-> *os.File PostPostcardsHistoryExportGet(ctx, filename)
+> string PostPostcardsHistoryExportGet(ctx, filename)
 Export postcard history to a CSV file
 
 Export postcard history to a CSV file
@@ -25,7 +25,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[***os.File**](*os.File.md)
+**string**
 
 ### Authorization
 

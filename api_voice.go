@@ -363,15 +363,15 @@ Export voice history
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param filename Filename to export to
 
-@return *os.File
+@return string
 */
-func (a *VoiceApiService) VoiceHistoryExportGet(ctx context.Context, filename string) (*os.File, *http.Response, error) {
+func (a *VoiceApiService) VoiceHistoryExportGet(ctx context.Context, filename string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue *os.File
+		localVarReturnValue string
 	)
 
 	// create path and map variables
@@ -430,7 +430,7 @@ func (a *VoiceApiService) VoiceHistoryExportGet(ctx context.Context, filename st
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v *os.File
+			var v string
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()

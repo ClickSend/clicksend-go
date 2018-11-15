@@ -714,7 +714,7 @@ Export specific email campaign history
      * @param "DateFrom" (optional.Int32) -  Start date
      * @param "DateTo" (optional.Int32) -  End date
 
-@return *os.File
+@return string
 */
 
 type EmailCampaignHistoryExportGetOpts struct { 
@@ -722,13 +722,13 @@ type EmailCampaignHistoryExportGetOpts struct {
 	DateTo optional.Int32
 }
 
-func (a *EmailMarketingApiService) EmailCampaignHistoryExportGet(ctx context.Context, emailCampaignId int32, localVarOptionals *EmailCampaignHistoryExportGetOpts) (*os.File, *http.Response, error) {
+func (a *EmailMarketingApiService) EmailCampaignHistoryExportGet(ctx context.Context, emailCampaignId int32, localVarOptionals *EmailCampaignHistoryExportGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue *os.File
+		localVarReturnValue string
 	)
 
 	// create path and map variables
@@ -793,7 +793,7 @@ func (a *EmailMarketingApiService) EmailCampaignHistoryExportGet(ctx context.Con
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v *os.File
+			var v string
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()

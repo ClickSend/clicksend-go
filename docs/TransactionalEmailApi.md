@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **EmailHistoryExportGet**
-> *os.File EmailHistoryExportGet(ctx, filename, optional)
+> string EmailHistoryExportGet(ctx, filename, optional)
 Export all Transactional Email history
 
 Export all Transactional Email history
@@ -35,7 +35,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[***os.File**](*os.File.md)
+**string**
 
 ### Authorization
 

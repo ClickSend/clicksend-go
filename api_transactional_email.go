@@ -35,7 +35,7 @@ Export all Transactional Email history
      * @param "DateFrom" (optional.Int32) -  Start date
      * @param "DateTo" (optional.Int32) -  End date
 
-@return *os.File
+@return string
 */
 
 type EmailHistoryExportGetOpts struct { 
@@ -43,13 +43,13 @@ type EmailHistoryExportGetOpts struct {
 	DateTo optional.Int32
 }
 
-func (a *TransactionalEmailApiService) EmailHistoryExportGet(ctx context.Context, filename string, localVarOptionals *EmailHistoryExportGetOpts) (*os.File, *http.Response, error) {
+func (a *TransactionalEmailApiService) EmailHistoryExportGet(ctx context.Context, filename string, localVarOptionals *EmailHistoryExportGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue *os.File
+		localVarReturnValue string
 	)
 
 	// create path and map variables
@@ -114,7 +114,7 @@ func (a *TransactionalEmailApiService) EmailHistoryExportGet(ctx context.Context
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v *os.File
+			var v string
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
