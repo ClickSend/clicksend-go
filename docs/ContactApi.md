@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**ListsContactsByListIdGet**](ContactApi.md#ListsContactsByListIdGet) | **Get** /lists/{list_id}/contacts | Get all contacts in a list
 [**ListsContactsByListIdPost**](ContactApi.md#ListsContactsByListIdPost) | **Post** /lists/{list_id}/contacts | Create new contact
 [**ListsRemoveOptedOutContactsByListIdAndOptOutListIdPut**](ContactApi.md#ListsRemoveOptedOutContactsByListIdAndOptOutListIdPut) | **Put** /lists/{list_id}/remove-opted-out-contacts/{opt_out_list_id} | Remove all opted out contacts
-[**ListsTransferContactPut**](ContactApi.md#ListsTransferContactPut) | **Put** /lists/{from_list_id}/contacts/{contact_id}/{to_list_id} | Transfer contact to another list
+[**ListsTransferContactPut**](ContactApi.md#ListsTransferContactPut) | **Put** /lists/{from_list_id}/contacts/{contact_id}/transfer/{to_list_id} | Transfer contact to another list
 
 
 # **ListsContactsByListIdAndContactIdDelete**

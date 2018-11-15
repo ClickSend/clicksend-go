@@ -1087,7 +1087,7 @@ func (a *ContactApiService) ListsTransferContactPut(ctx context.Context, fromLis
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/lists/{from_list_id}/contacts/{contact_id}/{to_list_id}"
+	localVarPath := a.client.cfg.BasePath + "/lists/{from_list_id}/contacts/{contact_id}/transfer/{to_list_id}"
 	localVarPath = strings.Replace(localVarPath, "{"+"from_list_id"+"}", fmt.Sprintf("%v", fromListId), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"contact_id"+"}", fmt.Sprintf("%v", contactId), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"to_list_id"+"}", fmt.Sprintf("%v", toListId), -1)

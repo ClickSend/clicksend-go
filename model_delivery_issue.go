@@ -21,5 +21,5 @@ type DeliveryIssue struct {
 	// The user's comments.
 	ClientComments string `json:"client_comments,omitempty"`
 	// The user's email address.
-	EmailAddress string `json:"email-address"`
+	EmailAddress string `json:"email_address"`
 }

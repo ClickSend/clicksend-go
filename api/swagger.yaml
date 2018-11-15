@@ -494,7 +494,6 @@ paths:
       operationId: "SmsHistoryExportGet"
       produces:
       - "application/json"
-      - "application/csv"
       parameters:
       - name: "filename"
         in: "query"
@@ -1444,7 +1443,6 @@ paths:
       operationId: "VoiceHistoryExportGet"
       produces:
       - "application/json"
-      - "application/csv"
       parameters:
       - name: "filename"
         in: "query"
@@ -2583,7 +2581,7 @@ paths:
       security:
       - BasicAuth: []
       x-is-put-method: true
-  /lists/{from_list_id}/contacts/{contact_id}/{to_list_id}:
+  /lists/{from_list_id}/contacts/{contact_id}/transfer/{to_list_id}:
     put:
       tags:
       - "Contact"
@@ -5212,7 +5210,6 @@ paths:
       operationId: "PostLettersExportGet"
       produces:
       - "application/json"
-      - "application/csv"
       parameters:
       - name: "filename"
         in: "query"
@@ -6304,7 +6301,6 @@ paths:
       operationId: "PostPostcardsHistoryExportGet"
       produces:
       - "application/json"
-      - "application/csv"
       parameters:
       - name: "filename"
         in: "query"
@@ -7284,7 +7280,6 @@ paths:
       operationId: "EmailHistoryExportGet"
       produces:
       - "application/json"
-      - "application/csv"
       parameters:
       - name: "filename"
         in: "query"
@@ -8119,7 +8114,6 @@ paths:
       operationId: "EmailCampaignHistoryExportGet"
       produces:
       - "application/json"
-      - "application/csv"
       parameters:
       - name: "email_campaign_id"
         in: "path"
@@ -11673,7 +11667,7 @@ definitions:
     type: "object"
     required:
     - "description"
-    - "email-address"
+    - "email_address"
     - "type"
     discriminator: "classType"
     properties:
@@ -11690,14 +11684,14 @@ definitions:
       client_comments:
         type: "string"
         description: "The user's comments."
-      email-address:
+      email_address:
         type: "string"
         description: "The user's email address."
     title: "DeliveryIssue"
     description: "Issues with message delivery"
     example:
       client_comments: "client_comments"
-      email-address: "email-address"
+      email_address: "email_address"
       description: "description"
       message_id: "message_id"
       type: "type"
