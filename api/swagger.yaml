@@ -7462,7 +7462,7 @@ paths:
       - BasicAuth: []
       x-is-post-method: true
   /email/address-verify/{email_address_id}/send:
-    get:
+    put:
       tags:
       - "Email Marketing"
       summary: "Send verification token"
@@ -7513,9 +7513,9 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
+      x-is-put-method: true
   /email/address-verify/{email_address_id}/verify/{activation_token}:
-    get:
+    put:
       tags:
       - "Email Marketing"
       summary: "Verify email address using verification token"
@@ -7572,7 +7572,7 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
+      x-is-put-method: true
   /email/addresses/{email_address_id}:
     get:
       tags:
@@ -7817,6 +7817,13 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "EmailCampaignId"
+      - in: "body"
+        name: "email-campaign"
+        description: "Email model"
+        required: true
+        schema:
+          $ref: "#/definitions/EmailCampaign"
+        x-exportParamName: "EmailCampaign"
       responses:
         200:
           description: "SUCCESS"
@@ -11519,11 +11526,15 @@ definitions:
       from:
         type: "string"
         description: "Your sender id"
+      subaccount_id:
+        type: "string"
+        description: "Your subaccount id"
     title: "EmailSMSAddress"
     description: "Email-to-SMS Allowed Address"
     example:
       email_address: "email_address"
       from: "from"
+      subaccount_id: "subaccount_id"
   ResellerAccountTransferCredit:
     type: "object"
     required:
@@ -11723,6 +11734,9 @@ definitions:
         description: "From Email object."
         items:
           $ref: "#/definitions/EmailFrom"
+      subject:
+        type: "string"
+        description: "Subject of the email."
       body:
         type: "string"
         description: "Body of the email."
@@ -11742,7 +11756,7 @@ definitions:
         email: "email"
       - name: "name"
         email: "email"
-      schedule: 0.8008281904610115
+      schedule: 1
       bcc:
       - name: "name"
         email: "email"
@@ -11759,6 +11773,7 @@ definitions:
         content_id: "content_id"
         type: "type"
         content: "content"
+      subject: "subject"
       from:
       - name: "name"
         email: "email"
@@ -11880,11 +11895,11 @@ definitions:
     description: "Campaign Model for Email"
     example:
       schedule: 0
-      list_id: 1.4658129805029452
+      list_id: 1
       subject: "subject"
-      from_email_address_id: 0.8008281904610115
+      from_email_address_id: 1
       name: "name"
-      template_id: 6.027456183070403
+      template_id: 1
       body: "body"
       from_name: "from_name"
   EmailTemplateNew:
@@ -11904,7 +11919,7 @@ definitions:
     description: "Model for Email Templates"
     example:
       template_name: "template_name"
-      template_id_master: 0.8008281904610115
+      template_id_master: 1
   EmailTemplateUpdate:
     type: "object"
     required:
@@ -11961,13 +11976,13 @@ definitions:
     title: "InboundSMSRule"
     description: "Model for Inbound SMS Rules"
     example:
-      message_search_type: 0.8008281904610115
+      message_search_type: 1
       message_search_term: "message_search_term"
       action_address: "action_address"
       dedicated_number: "dedicated_number"
       rule_name: "rule_name"
       action: "action"
-      enabled: 6.027456183070403
+      enabled: 1
   InboundFAXRule:
     type: "object"
     required:
@@ -12002,7 +12017,7 @@ definitions:
       dedicated_number: "dedicated_number"
       rule_name: "rule_name"
       action: "action"
-      enabled: 0.8008281904610115
+      enabled: 1
   DeliveryReceiptRule:
     type: "object"
     required:
@@ -12035,6 +12050,6 @@ definitions:
     example:
       action_address: "action_address"
       rule_name: "rule_name"
-      match_type: 0.8008281904610115
+      match_type: 1
       action: "action"
-      enabled: 6.027456183070403
+      enabled: 1

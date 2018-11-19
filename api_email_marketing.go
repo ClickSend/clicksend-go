@@ -1416,10 +1416,11 @@ EmailMarketingApiService Edit email campaign
 Edit email campaign
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param emailCampaignId Allowed email campaign id
+ * @param emailCampaign Email model
 
 @return string
 */
-func (a *EmailMarketingApiService) EmailCampaignPut(ctx context.Context, emailCampaignId int32) (string, *http.Response, error) {
+func (a *EmailMarketingApiService) EmailCampaignPut(ctx context.Context, emailCampaignId int32, emailCampaign EmailCampaign) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -1453,6 +1454,8 @@ func (a *EmailMarketingApiService) EmailCampaignPut(ctx context.Context, emailCa
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	// body params
+	localVarPostBody = &emailCampaign
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1766,7 +1769,7 @@ Send verification token
 */
 func (a *EmailMarketingApiService) SendVerificationTokenGet(ctx context.Context, emailAddressId int32) (string, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
+		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
@@ -2265,7 +2268,7 @@ Verify email address using verification token
 */
 func (a *EmailMarketingApiService) VerifyAllowedEmailAddressGet(ctx context.Context, emailAddressId int32, activationToken string) (string, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
+		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte

@@ -16,4 +16,6 @@ type EmailSmsAddress struct {
 	EmailAddress string `json:"email_address"`
 	// Your sender id
 	From string `json:"from"`
+	// Your subaccount id
+	SubaccountId string `json:"subaccount_id,omitempty"`
 }

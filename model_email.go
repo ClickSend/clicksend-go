@@ -20,6 +20,8 @@ type Email struct {
 	Bcc []EmailRecipient `json:"bcc,omitempty"`
 	// From Email object.
 	From []EmailFrom `json:"from"`
+	// Subject of the email.
+	Subject string `json:"subject,omitempty"`
 	// Body of the email.
 	Body string `json:"body"`
 	// Array of Attachment items.

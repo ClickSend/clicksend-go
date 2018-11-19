@@ -14,10 +14,10 @@ Method | HTTP request | Description
 [**EmailCampaignPricePost**](EmailMarketingApi.md#EmailCampaignPricePost) | **Post** /email-campaigns/price | Calculate email campaign price
 [**EmailCampaignPut**](EmailMarketingApi.md#EmailCampaignPut) | **Put** /email-campaigns/{email_campaign_id} | Edit email campaign
 [**EmailCampaignsGet**](EmailMarketingApi.md#EmailCampaignsGet) | **Get** /email-campaigns | Get all email campaigns
-[**SendVerificationTokenGet**](EmailMarketingApi.md#SendVerificationTokenGet) | **Get** /email/address-verify/{email_address_id}/send | Send verification token
+[**SendVerificationTokenGet**](EmailMarketingApi.md#SendVerificationTokenGet) | **Put** /email/address-verify/{email_address_id}/send | Send verification token
 [**SpecificAllowedEmailAddressDelete**](EmailMarketingApi.md#SpecificAllowedEmailAddressDelete) | **Delete** /email/addresses/{email_address_id} | Delete specific email address
 [**SpecificAllowedEmailAddressGet**](EmailMarketingApi.md#SpecificAllowedEmailAddressGet) | **Get** /email/addresses/{email_address_id} | Get specific email address
-[**VerifyAllowedEmailAddressGet**](EmailMarketingApi.md#VerifyAllowedEmailAddressGet) | **Get** /email/address-verify/{email_address_id}/verify/{activation_token} | Verify email address using verification token
+[**VerifyAllowedEmailAddressGet**](EmailMarketingApi.md#VerifyAllowedEmailAddressGet) | **Put** /email/address-verify/{email_address_id}/verify/{activation_token} | Verify email address using verification token
 
 
 # **AllowedEmailAddressGet**
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **EmailCampaignPut**
-> string EmailCampaignPut(ctx, emailCampaignId)
+> string EmailCampaignPut(ctx, emailCampaignId, emailCampaign)
 Edit email campaign
 
 Edit email campaign
@@ -286,6 +286,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **emailCampaignId** | **int32**| Allowed email campaign id | 
+  **emailCampaign** | [**EmailCampaign**](EmailCampaign.md)| Email model | 
 
 ### Return type
 

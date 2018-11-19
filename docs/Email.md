@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Cc** | [**[]EmailRecipient**](EmailRecipient.md) | Array of Cc Recipient items. | [optional] [default to null]
 **Bcc** | [**[]EmailRecipient**](EmailRecipient.md) | Array of Bcc Recipient items. | [optional] [default to null]
 **From** | [**[]EmailFrom**](EmailFrom.md) | From Email object. | [default to null]
+**Subject** | **string** | Subject of the email. | [optional] [default to null]
 **Body** | **string** | Body of the email. | [default to null]
 **Attachments** | [**[]Attachment**](Attachment.md) | Array of Attachment items. | [optional] [default to null]
 **Schedule** | **float32** | Schedule. | [optional] [default to null]
