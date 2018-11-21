@@ -613,15 +613,16 @@ paths:
       summary: "Add a delivery receipt"
       description: "Add a delivery receipt"
       operationId: "SmsReceiptsPost"
+      consumes:
+      - "application/x-www-form-urlencoded"
       produces:
       - "application/json"
       parameters:
-      - in: "body"
-        name: "url"
-        description: "Your url"
+      - name: "url"
+        in: "formData"
+        description: "Your url."
         required: true
-        schema:
-          type: "string"
+        type: "string"
         x-exportParamName: "Url"
       responses:
         200:
@@ -789,15 +790,16 @@ paths:
       summary: "Create inbound sms"
       description: "Create inbound sms"
       operationId: "SmsInboundPost"
+      consumes:
+      - "application/x-www-form-urlencoded"
       produces:
       - "application/json"
       parameters:
-      - in: "body"
-        name: "url"
-        description: "Your url"
+      - name: "url"
+        in: "formData"
+        description: "Your url."
         required: true
-        schema:
-          type: "string"
+        type: "string"
         x-exportParamName: "Url"
       responses:
         200:
@@ -2130,6 +2132,13 @@ paths:
         exclusiveMinimum: false
         format: "int32"
         x-exportParamName: "ListId"
+      - in: "body"
+        name: "fields"
+        description: "Fields model"
+        required: true
+        schema:
+          $ref: "#/definitions/Fields"
+        x-exportParamName: "Fields"
       responses:
         200:
           description: "SUCCESS"
@@ -2919,16 +2928,25 @@ paths:
       summary: "Forgot username"
       description: "Forgot username"
       operationId: "ForgotUsernamePut"
+      consumes:
+      - "application/x-www-form-urlencoded"
       produces:
       - "application/json"
       parameters:
-      - in: "body"
-        name: "email"
-        description: "Email belonging to account"
-        required: true
-        schema:
-          type: "string"
+      - name: "email"
+        in: "formData"
+        description: "Email belonging to account."
+        required: false
+        type: "string"
         x-exportParamName: "Email"
+        x-optionalDataType: "String"
+      - name: "phone_number"
+        in: "formData"
+        description: "Phone number belonging to account."
+        required: false
+        type: "string"
+        x-exportParamName: "PhoneNumber"
+        x-optionalDataType: "String"
       responses:
         200:
           description: "SUCCESS"
@@ -2977,15 +2995,16 @@ paths:
       summary: "Forgot password"
       description: "Forgot password"
       operationId: "ForgotPasswordPut"
+      consumes:
+      - "application/x-www-form-urlencoded"
       produces:
       - "application/json"
       parameters:
-      - in: "body"
-        name: "username"
-        description: "Username belonging to account"
+      - name: "username"
+        in: "formData"
+        description: "Username belonging to account."
         required: true
-        schema:
-          type: "string"
+        type: "string"
         x-exportParamName: "Username"
       responses:
         200:
@@ -3274,16 +3293,17 @@ paths:
       summary: "Create email to sms stripped string rule"
       description: "Create email to sms stripped string rules"
       operationId: "SmsEmailSmsStrippedStringPost"
+      consumes:
+      - "application/x-www-form-urlencoded"
       produces:
       - "application/json"
       parameters:
-      - in: "body"
-        name: "stripped-string"
+      - name: "strip-string"
+        in: "formData"
         description: "String to be stripped."
         required: true
-        schema:
-          type: "string"
-        x-exportParamName: "StrippedString"
+        type: "string"
+        x-exportParamName: "StripString"
       responses:
         200:
           description: "SUCCESS"
@@ -3381,9 +3401,17 @@ paths:
       summary: "Update email to sms stripped string rule"
       description: "Update email to sms stripped string rule"
       operationId: "SmsEmailSmsStrippedStringPut"
+      consumes:
+      - "application/x-www-form-urlencoded"
       produces:
       - "application/json"
       parameters:
+      - name: "strip-string"
+        in: "formData"
+        description: "String to be stripped."
+        required: true
+        type: "string"
+        x-exportParamName: "StripString"
       - name: "rule_id"
         in: "path"
         description: "Your rule id"
@@ -3393,13 +3421,6 @@ paths:
         exclusiveMinimum: false
         format: "int32"
         x-exportParamName: "RuleId"
-      - in: "body"
-        name: "stripped-string"
-        description: "String to be stripped."
-        required: true
-        schema:
-          type: "string"
-        x-exportParamName: "StrippedString"
       responses:
         200:
           description: "SUCCESS"
@@ -6064,15 +6085,16 @@ paths:
       summary: "Upload File"
       description: "Upload File"
       operationId: "UploadsPost"
+      consumes:
+      - "application/x-www-form-urlencoded"
       produces:
       - "application/json"
       parameters:
-      - in: "body"
-        name: "content"
-        description: "Base64-encoded file contents"
+      - name: "content"
+        in: "formData"
+        description: "Your base64 encoded file."
         required: true
-        schema:
-          type: "string"
+        type: "string"
         x-exportParamName: "Content"
       - name: "convert"
         in: "query"
@@ -7415,15 +7437,16 @@ paths:
       summary: "Create allowed Email Address"
       description: "Create allowed Email Address"
       operationId: "AllowedEmailAddressPost"
+      consumes:
+      - "application/x-www-form-urlencoded"
       produces:
       - "application/json"
       parameters:
-      - in: "body"
-        name: "email_address"
+      - name: "email_address"
+        in: "formData"
         description: "Email to be allowed."
         required: true
-        schema:
-          type: "string"
+        type: "string"
         x-exportParamName: "EmailAddress"
       responses:
         200:
@@ -8356,7 +8379,7 @@ paths:
       security:
       - BasicAuth: []
       x-is-get-method: true
-    post:
+    put:
       tags:
       - "User Email Templates"
       summary: "Update email template"
@@ -8414,7 +8437,7 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
+      x-is-put-method: true
     delete:
       tags:
       - "User Email Templates"
@@ -10846,6 +10869,78 @@ definitions:
       address_line_2: "address_line_2"
       first_name: "first_name"
       email: "email"
+  Fields:
+    type: "object"
+    discriminator: "classType"
+    properties:
+      phone_number:
+        type: "string"
+        description: "Your phone number in E.164 format. Must be provided if no fax\
+          \ number or email."
+      custom_1:
+        type: "string"
+        description: ""
+      email:
+        type: "string"
+        description: "Your email. Must be provided if no phone number or fax number."
+      fax_number:
+        type: "string"
+        description: "Your fax number. Must be provided if no phone number or email."
+      first_name:
+        type: "string"
+        description: "Your first name."
+      address_line_1:
+        type: "string"
+        description: "Your street address"
+      address_line_2:
+        type: "string"
+        description: ""
+      address_city:
+        type: "string"
+        description: "Your nearest city"
+      address_state:
+        type: "string"
+        description: "Your current state"
+      address_postal_code:
+        type: "string"
+        description: "Your current postcode"
+      address_country:
+        type: "string"
+        description: "Your current country"
+      organization_name:
+        type: "string"
+        description: "Your organisation name"
+      custom_2:
+        type: "string"
+        description: ""
+      custom_3:
+        type: "string"
+        description: ""
+      custom_4:
+        type: "string"
+        description: ""
+      last_name:
+        type: "string"
+        description: "Your last name"
+    title: "Fields"
+    description: "Contains all details for the main contact."
+    example:
+      custom_1: "custom_1"
+      custom_3: "custom_3"
+      address_postal_code: "address_postal_code"
+      custom_2: "custom_2"
+      address_country: "address_country"
+      custom_4: "custom_4"
+      address_state: "address_state"
+      last_name: "last_name"
+      organization_name: "organization_name"
+      fax_number: "fax_number"
+      address_city: "address_city"
+      address_line_1: "address_line_1"
+      phone_number: "phone_number"
+      address_line_2: "address_line_2"
+      first_name: "first_name"
+      email: "email"
   PostLetter:
     type: "object"
     required:
@@ -11775,10 +11870,10 @@ definitions:
         content: "content"
       subject: "subject"
       from:
-      - name: "name"
-        email: "email"
-      - name: "name"
-        email: "email"
+      - email_address_id: "email_address_id"
+        name: "name"
+      - email_address_id: "email_address_id"
+        name: "name"
       to:
       - name: "name"
         email: "email"
@@ -11805,20 +11900,20 @@ definitions:
   EmailFrom:
     type: "object"
     required:
-    - "email"
+    - "email_address_id"
     discriminator: "classType"
     properties:
-      email:
+      email_address_id:
         type: "string"
-        description: "Email of the recipient."
+        description: "Email address id of the recipient."
       name:
         type: "string"
         description: "Name of the recipient."
     title: "EmailFrom"
     description: "Email being sent from"
     example:
+      email_address_id: "email_address_id"
       name: "name"
-      email: "email"
   Attachment:
     type: "object"
     required:

@@ -1048,10 +1048,11 @@ ContactListApiService Remove duplicate contacts
 Remove duplicate contacts
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param listId Your list id
+ * @param fields Fields model
 
 @return string
 */
-func (a *ContactListApiService) ListsRemoveDuplicatesByListIdPut(ctx context.Context, listId int32) (string, *http.Response, error) {
+func (a *ContactListApiService) ListsRemoveDuplicatesByListIdPut(ctx context.Context, listId int32, fields Fields) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -1085,6 +1086,8 @@ func (a *ContactListApiService) ListsRemoveDuplicatesByListIdPut(ctx context.Con
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	// body params
+	localVarPostBody = &fields
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err

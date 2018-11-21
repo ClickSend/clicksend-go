@@ -17,6 +17,7 @@ import (
 	"net/url"
 	"strings"
 	"fmt"
+	"github.com/antihax/optional"
 )
 
 // Linger please
@@ -694,7 +695,7 @@ func (a *AccountApiService) AccountVerifyVerifyByActivationTokenPut(ctx context.
 AccountApiService Forgot password
 Forgot password
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param username Username belonging to account
+ * @param username Username belonging to account.
 
 @return string
 */
@@ -715,7 +716,7 @@ func (a *AccountApiService) ForgotPasswordPut(ctx context.Context, username stri
 	localVarFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{"application/json"}
+	localVarHttpContentTypes := []string{"application/x-www-form-urlencoded"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -731,8 +732,7 @@ func (a *AccountApiService) ForgotPasswordPut(ctx context.Context, username stri
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
-	// body params
-	localVarPostBody = &username
+	localVarFormParams.Add("username", parameterToString(username, ""))
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1028,11 +1028,19 @@ func (a *AccountApiService) ForgotPasswordVerifyPut(ctx context.Context, verifyP
 AccountApiService Forgot username
 Forgot username
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param email Email belonging to account
+ * @param optional nil or *ForgotUsernamePutOpts - Optional Parameters:
+     * @param "Email" (optional.String) -  Email belonging to account.
+     * @param "PhoneNumber" (optional.String) -  Phone number belonging to account.
 
 @return string
 */
-func (a *AccountApiService) ForgotUsernamePut(ctx context.Context, email string) (string, *http.Response, error) {
+
+type ForgotUsernamePutOpts struct { 
+	Email optional.String
+	PhoneNumber optional.String
+}
+
+func (a *AccountApiService) ForgotUsernamePut(ctx context.Context, localVarOptionals *ForgotUsernamePutOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -1049,7 +1057,7 @@ func (a *AccountApiService) ForgotUsernamePut(ctx context.Context, email string)
 	localVarFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{"application/json"}
+	localVarHttpContentTypes := []string{"application/x-www-form-urlencoded"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1065,8 +1073,12 @@ func (a *AccountApiService) ForgotUsernamePut(ctx context.Context, email string)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
-	// body params
-	localVarPostBody = &email
+	if localVarOptionals != nil && localVarOptionals.Email.IsSet() {
+		localVarFormParams.Add("email", parameterToString(localVarOptionals.Email.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.PhoneNumber.IsSet() {
+		localVarFormParams.Add("phone_number", parameterToString(localVarOptionals.PhoneNumber.Value(), ""))
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err

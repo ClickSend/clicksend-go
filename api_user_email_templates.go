@@ -537,7 +537,7 @@ Update email template
 */
 func (a *UserEmailTemplatesApiService) EmailTemplatePut(ctx context.Context, templateId int32, emailTemplate EmailTemplateUpdate) (string, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
+		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte

@@ -29,7 +29,7 @@ type UploadApiService service
 UploadApiService Upload File
 Upload File
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param content Base64-encoded file contents
+ * @param content Your base64 encoded file.
  * @param convert 
 
 @return string
@@ -52,7 +52,7 @@ func (a *UploadApiService) UploadsPost(ctx context.Context, content string, conv
 
 	localVarQueryParams.Add("convert", parameterToString(convert, ""))
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{"application/json"}
+	localVarHttpContentTypes := []string{"application/x-www-form-urlencoded"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -68,8 +68,7 @@ func (a *UploadApiService) UploadsPost(ctx context.Context, content string, conv
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
-	// body params
-	localVarPostBody = &content
+	localVarFormParams.Add("content", parameterToString(content, ""))
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err

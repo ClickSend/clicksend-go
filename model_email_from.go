@@ -12,8 +12,8 @@ package clicksend
 
 // Email being sent from
 type EmailFrom struct {
-	// Email of the recipient.
-	Email string `json:"email"`
+	// Email address id of the recipient.
+	EmailAddressId string `json:"email_address_id"`
 	// Name of the recipient.
 	Name string `json:"name,omitempty"`
 }
