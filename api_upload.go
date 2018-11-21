@@ -29,12 +29,18 @@ type UploadApiService service
 UploadApiService Upload File
 Upload File
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param content Your base64 encoded file.
  * @param convert 
+ * @param optional nil or *UploadsPostOpts - Optional Parameters:
+     * @param "UploadFile" (optional.Interface of UploadFile) - 
 
 @return string
 */
-func (a *UploadApiService) UploadsPost(ctx context.Context, content string, convert string) (string, *http.Response, error) {
+
+type UploadsPostOpts struct { 
+	UploadFile optional.Interface
+}
+
+func (a *UploadApiService) UploadsPost(ctx context.Context, convert string, localVarOptionals *UploadsPostOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -52,7 +58,7 @@ func (a *UploadApiService) UploadsPost(ctx context.Context, content string, conv
 
 	localVarQueryParams.Add("convert", parameterToString(convert, ""))
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{"application/x-www-form-urlencoded"}
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -68,7 +74,15 @@ func (a *UploadApiService) UploadsPost(ctx context.Context, content string, conv
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
-	localVarFormParams.Add("content", parameterToString(content, ""))
+	// body params
+	if localVarOptionals != nil && localVarOptionals.UploadFile.IsSet() {
+		
+		localVarOptionalUploadFile, localVarOptionalUploadFileok := localVarOptionals.UploadFile.Value().(UploadFile)
+		if !localVarOptionalUploadFileok {
+				return localVarReturnValue, nil, reportError("uploadFile should be UploadFile")
+		}
+		localVarPostBody = &localVarOptionalUploadFile
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err

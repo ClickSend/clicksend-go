@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **AllowedEmailAddressPost**
-> string AllowedEmailAddressPost(ctx, emailAddress)
+> string AllowedEmailAddressPost(ctx, optional)
 Create allowed Email Address
 
 Create allowed Email Address
@@ -67,7 +67,14 @@ Create allowed Email Address
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **emailAddress** | **string**| Email to be allowed. | 
+ **optional** | ***AllowedEmailAddressPostOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a AllowedEmailAddressPostOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **emailAddress** | [**optional.Interface of EmailAddress**](EmailAddress.md)|  | 
 
 ### Return type
 
@@ -79,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

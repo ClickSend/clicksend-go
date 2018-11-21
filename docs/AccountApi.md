@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ForgotPasswordPut**
-> string ForgotPasswordPut(ctx, username)
+> string ForgotPasswordPut(ctx, optional)
 Forgot password
 
 Forgot password
@@ -132,7 +132,14 @@ Forgot password
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **username** | **string**| Username belonging to account. | 
+ **optional** | ***ForgotPasswordPutOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a ForgotPasswordPutOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **forgotPassword** | [**optional.Interface of ForgotPassword**](ForgotPassword.md)|  | 
 
 ### Return type
 
@@ -144,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -195,8 +202,7 @@ Optional parameters are passed through a pointer to a ForgotUsernamePutOpts stru
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email** | **optional.String**| Email belonging to account. | 
- **phoneNumber** | **optional.String**| Phone number belonging to account. | 
+ **forgotUsername** | [**optional.Interface of ForgotUsername**](ForgotUsername.md)|  | 
 
 ### Return type
 
@@ -208,7 +214,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -709,11 +709,11 @@ func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringGet(ctx context.Context,
 EmailToSmsApiService Create email to sms stripped string rule
 Create email to sms stripped string rules
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param stripString String to be stripped.
+ * @param strippedString StrippedString model
 
 @return string
 */
-func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringPost(ctx context.Context, stripString string) (string, *http.Response, error) {
+func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringPost(ctx context.Context, strippedString StrippedString) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -730,7 +730,7 @@ func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringPost(ctx context.Context
 	localVarFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{"application/x-www-form-urlencoded"}
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -746,7 +746,8 @@ func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringPost(ctx context.Context
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
-	localVarFormParams.Add("strip-string", parameterToString(stripString, ""))
+	// body params
+	localVarPostBody = &strippedString
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -875,12 +876,12 @@ func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringPost(ctx context.Context
 EmailToSmsApiService Update email to sms stripped string rule
 Update email to sms stripped string rule
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param stripString String to be stripped.
+ * @param url Url model
  * @param ruleId Your rule id
 
 @return string
 */
-func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringPut(ctx context.Context, stripString string, ruleId int32) (string, *http.Response, error) {
+func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringPut(ctx context.Context, url Url, ruleId int32) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -898,7 +899,7 @@ func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringPut(ctx context.Context,
 	localVarFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{"application/x-www-form-urlencoded"}
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -914,7 +915,8 @@ func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringPut(ctx context.Context,
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
-	localVarFormParams.Add("strip-string", parameterToString(stripString, ""))
+	// body params
+	localVarPostBody = &url
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err

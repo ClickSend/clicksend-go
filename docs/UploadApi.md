@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **UploadsPost**
-> string UploadsPost(ctx, content, convert)
+> string UploadsPost(ctx, convert, optional)
 Upload File
 
 Upload File
@@ -18,8 +18,16 @@ Upload File
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **content** | **string**| Your base64 encoded file. | 
   **convert** | **string**|  | 
+ **optional** | ***UploadsPostOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a UploadsPostOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **uploadFile** | [**optional.Interface of UploadFile**](UploadFile.md)|  | 
 
 ### Return type
 
@@ -31,7 +39,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

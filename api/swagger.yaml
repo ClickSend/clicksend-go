@@ -613,16 +613,15 @@ paths:
       summary: "Add a delivery receipt"
       description: "Add a delivery receipt"
       operationId: "SmsReceiptsPost"
-      consumes:
-      - "application/x-www-form-urlencoded"
       produces:
       - "application/json"
       parameters:
-      - name: "url"
-        in: "formData"
-        description: "Your url."
+      - in: "body"
+        name: "url"
+        description: "Url model"
         required: true
-        type: "string"
+        schema:
+          $ref: "#/definitions/Url"
         x-exportParamName: "Url"
       responses:
         200:
@@ -790,16 +789,15 @@ paths:
       summary: "Create inbound sms"
       description: "Create inbound sms"
       operationId: "SmsInboundPost"
-      consumes:
-      - "application/x-www-form-urlencoded"
       produces:
       - "application/json"
       parameters:
-      - name: "url"
-        in: "formData"
-        description: "Your url."
+      - in: "body"
+        name: "url"
+        description: "Url model"
         required: true
-        type: "string"
+        schema:
+          $ref: "#/definitions/Url"
         x-exportParamName: "Url"
       responses:
         200:
@@ -2929,24 +2927,16 @@ paths:
       description: "Forgot username"
       operationId: "ForgotUsernamePut"
       consumes:
-      - "application/x-www-form-urlencoded"
+      - "application/json"
       produces:
       - "application/json"
       parameters:
-      - name: "email"
-        in: "formData"
-        description: "Email belonging to account."
+      - in: "body"
+        name: "forgotUsername"
         required: false
-        type: "string"
-        x-exportParamName: "Email"
-        x-optionalDataType: "String"
-      - name: "phone_number"
-        in: "formData"
-        description: "Phone number belonging to account."
-        required: false
-        type: "string"
-        x-exportParamName: "PhoneNumber"
-        x-optionalDataType: "String"
+        schema:
+          $ref: "#/definitions/forgotUsername"
+        x-exportParamName: "ForgotUsername"
       responses:
         200:
           description: "SUCCESS"
@@ -2996,16 +2986,16 @@ paths:
       description: "Forgot password"
       operationId: "ForgotPasswordPut"
       consumes:
-      - "application/x-www-form-urlencoded"
+      - "application/json"
       produces:
       - "application/json"
       parameters:
-      - name: "username"
-        in: "formData"
-        description: "Username belonging to account."
-        required: true
-        type: "string"
-        x-exportParamName: "Username"
+      - in: "body"
+        name: "forgotPassword"
+        required: false
+        schema:
+          $ref: "#/definitions/forgotPassword"
+        x-exportParamName: "ForgotPassword"
       responses:
         200:
           description: "SUCCESS"
@@ -3293,17 +3283,16 @@ paths:
       summary: "Create email to sms stripped string rule"
       description: "Create email to sms stripped string rules"
       operationId: "SmsEmailSmsStrippedStringPost"
-      consumes:
-      - "application/x-www-form-urlencoded"
       produces:
       - "application/json"
       parameters:
-      - name: "strip-string"
-        in: "formData"
-        description: "String to be stripped."
+      - in: "body"
+        name: "strippedString"
+        description: "StrippedString model"
         required: true
-        type: "string"
-        x-exportParamName: "StripString"
+        schema:
+          $ref: "#/definitions/StrippedString"
+        x-exportParamName: "StrippedString"
       responses:
         200:
           description: "SUCCESS"
@@ -3401,17 +3390,16 @@ paths:
       summary: "Update email to sms stripped string rule"
       description: "Update email to sms stripped string rule"
       operationId: "SmsEmailSmsStrippedStringPut"
-      consumes:
-      - "application/x-www-form-urlencoded"
       produces:
       - "application/json"
       parameters:
-      - name: "strip-string"
-        in: "formData"
-        description: "String to be stripped."
+      - in: "body"
+        name: "url"
+        description: "Url model"
         required: true
-        type: "string"
-        x-exportParamName: "StripString"
+        schema:
+          $ref: "#/definitions/Url"
+        x-exportParamName: "Url"
       - name: "rule_id"
         in: "path"
         description: "Your rule id"
@@ -6086,16 +6074,16 @@ paths:
       description: "Upload File"
       operationId: "UploadsPost"
       consumes:
-      - "application/x-www-form-urlencoded"
+      - "application/json"
       produces:
       - "application/json"
       parameters:
-      - name: "content"
-        in: "formData"
-        description: "Your base64 encoded file."
-        required: true
-        type: "string"
-        x-exportParamName: "Content"
+      - in: "body"
+        name: "uploadFile"
+        required: false
+        schema:
+          $ref: "#/definitions/uploadFile"
+        x-exportParamName: "UploadFile"
       - name: "convert"
         in: "query"
         description: ""
@@ -7438,15 +7426,15 @@ paths:
       description: "Create allowed Email Address"
       operationId: "AllowedEmailAddressPost"
       consumes:
-      - "application/x-www-form-urlencoded"
+      - "application/json"
       produces:
       - "application/json"
       parameters:
-      - name: "email_address"
-        in: "formData"
-        description: "Email to be allowed."
-        required: true
-        type: "string"
+      - in: "body"
+        name: "emailAddress"
+        required: false
+        schema:
+          $ref: "#/definitions/emailAddress"
         x-exportParamName: "EmailAddress"
       responses:
         200:
@@ -11897,6 +11885,32 @@ definitions:
     example:
       name: "name"
       email: "email"
+  Url:
+    type: "object"
+    required:
+    - "url"
+    discriminator: "classType"
+    properties:
+      url:
+        type: "string"
+        description: "Your url."
+    title: "Url"
+    description: "Your url."
+    example:
+      url: "url"
+  StrippedString:
+    type: "object"
+    required:
+    - "strip-string"
+    discriminator: "classType"
+    properties:
+      strip-string:
+        type: "string"
+        description: "String to be."
+    title: "StrippedString"
+    description: "String to be stripped."
+    example:
+      strip-string: "strip-string"
   EmailFrom:
     type: "object"
     required:
@@ -12148,3 +12162,36 @@ definitions:
       match_type: 1
       action: "action"
       enabled: 1
+  forgotUsername:
+    type: "object"
+    properties:
+      email:
+        type: "string"
+        description: "Email belonging to account."
+      phone_number:
+        type: "string"
+        description: "Phone number belonging to account."
+  forgotPassword:
+    type: "object"
+    required:
+    - "username"
+    properties:
+      username:
+        type: "string"
+        description: "Username belonging to account."
+  uploadFile:
+    type: "object"
+    required:
+    - "content"
+    properties:
+      content:
+        type: "string"
+        description: "Your base64 encoded file."
+  emailAddress:
+    type: "object"
+    required:
+    - "email_address"
+    properties:
+      email_address:
+        type: "string"
+        description: "Email to be allowed."

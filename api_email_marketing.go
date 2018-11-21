@@ -210,11 +210,17 @@ func (a *EmailMarketingApiService) AllowedEmailAddressGet(ctx context.Context, l
 EmailMarketingApiService Create allowed Email Address
 Create allowed Email Address
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param emailAddress Email to be allowed.
+ * @param optional nil or *AllowedEmailAddressPostOpts - Optional Parameters:
+     * @param "EmailAddress" (optional.Interface of EmailAddress) - 
 
 @return string
 */
-func (a *EmailMarketingApiService) AllowedEmailAddressPost(ctx context.Context, emailAddress string) (string, *http.Response, error) {
+
+type AllowedEmailAddressPostOpts struct { 
+	EmailAddress optional.Interface
+}
+
+func (a *EmailMarketingApiService) AllowedEmailAddressPost(ctx context.Context, localVarOptionals *AllowedEmailAddressPostOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -231,7 +237,7 @@ func (a *EmailMarketingApiService) AllowedEmailAddressPost(ctx context.Context, 
 	localVarFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{"application/x-www-form-urlencoded"}
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -247,7 +253,15 @@ func (a *EmailMarketingApiService) AllowedEmailAddressPost(ctx context.Context, 
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
-	localVarFormParams.Add("email_address", parameterToString(emailAddress, ""))
+	// body params
+	if localVarOptionals != nil && localVarOptionals.EmailAddress.IsSet() {
+		
+		localVarOptionalEmailAddress, localVarOptionalEmailAddressok := localVarOptionals.EmailAddress.Value().(EmailAddress)
+		if !localVarOptionalEmailAddressok {
+				return localVarReturnValue, nil, reportError("emailAddress should be EmailAddress")
+		}
+		localVarPostBody = &localVarOptionalEmailAddress
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err

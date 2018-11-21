@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **SmsEmailSmsStrippedStringPost**
-> string SmsEmailSmsStrippedStringPost(ctx, stripString)
+> string SmsEmailSmsStrippedStringPost(ctx, strippedString)
 Create email to sms stripped string rule
 
 Create email to sms stripped string rules
@@ -144,7 +144,7 @@ Create email to sms stripped string rules
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **stripString** | **string**| String to be stripped. | 
+  **strippedString** | [**StrippedString**](StrippedString.md)| StrippedString model | 
 
 ### Return type
 
@@ -156,13 +156,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **SmsEmailSmsStrippedStringPut**
-> string SmsEmailSmsStrippedStringPut(ctx, stripString, ruleId)
+> string SmsEmailSmsStrippedStringPut(ctx, url, ruleId)
 Update email to sms stripped string rule
 
 Update email to sms stripped string rule
@@ -172,7 +172,7 @@ Update email to sms stripped string rule
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **stripString** | **string**| String to be stripped. | 
+  **url** | [**Url**](Url.md)| Url model | 
   **ruleId** | **int32**| Your rule id | 
 
 ### Return type
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

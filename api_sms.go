@@ -895,11 +895,11 @@ func (a *SMSApiService) SmsInboundGet(ctx context.Context, localVarOptionals *Sm
 SMSApiService Create inbound sms
 Create inbound sms
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param url Your url.
+ * @param url Url model
 
 @return string
 */
-func (a *SMSApiService) SmsInboundPost(ctx context.Context, url string) (string, *http.Response, error) {
+func (a *SMSApiService) SmsInboundPost(ctx context.Context, url Url) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -916,7 +916,7 @@ func (a *SMSApiService) SmsInboundPost(ctx context.Context, url string) (string,
 	localVarFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{"application/x-www-form-urlencoded"}
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -932,7 +932,8 @@ func (a *SMSApiService) SmsInboundPost(ctx context.Context, url string) (string,
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
-	localVarFormParams.Add("url", parameterToString(url, ""))
+	// body params
+	localVarPostBody = &url
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1749,11 +1750,11 @@ func (a *SMSApiService) SmsReceiptsGet(ctx context.Context, localVarOptionals *S
 SMSApiService Add a delivery receipt
 Add a delivery receipt
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param url Your url.
+ * @param url Url model
 
 @return string
 */
-func (a *SMSApiService) SmsReceiptsPost(ctx context.Context, url string) (string, *http.Response, error) {
+func (a *SMSApiService) SmsReceiptsPost(ctx context.Context, url Url) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1770,7 +1771,7 @@ func (a *SMSApiService) SmsReceiptsPost(ctx context.Context, url string) (string
 	localVarFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{"application/x-www-form-urlencoded"}
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1786,7 +1787,8 @@ func (a *SMSApiService) SmsReceiptsPost(ctx context.Context, url string) (string
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
-	localVarFormParams.Add("url", parameterToString(url, ""))
+	// body params
+	localVarPostBody = &url
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err
