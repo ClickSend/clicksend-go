@@ -1,4 +1,4 @@
-# clicksend\NumberApi
+# \NumberApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

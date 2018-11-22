@@ -1,4 +1,4 @@
-# clicksend\SMSApi
+# \SMSApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

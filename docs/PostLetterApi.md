@@ -1,4 +1,4 @@
-# clicksend\PostLetterApi
+# \PostLetterApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

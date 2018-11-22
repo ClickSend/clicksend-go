@@ -1,4 +1,4 @@
-# clicksend\UserEmailTemplatesApi
+# \UserEmailTemplatesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 

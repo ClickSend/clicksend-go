@@ -1,4 +1,4 @@
-# clicksend\CountriesApi
+# \CountriesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
