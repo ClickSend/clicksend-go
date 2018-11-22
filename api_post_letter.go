@@ -44,7 +44,7 @@ func (a *PostLetterApiService) PostLettersExportGet(ctx context.Context, filenam
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/post/letters/export"
+	localVarPath := a.client.cfg.BasePath + "/post/letters/history/export"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}

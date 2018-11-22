@@ -18,8 +18,7 @@ type Email struct {
 	Cc []EmailRecipient `json:"cc,omitempty"`
 	// Array of Bcc Recipient items.
 	Bcc []EmailRecipient `json:"bcc,omitempty"`
-	// From Email object.
-	From []EmailFrom `json:"from"`
+	From *EmailFrom `json:"from"`
 	// Subject of the email.
 	Subject string `json:"subject,omitempty"`
 	// Body of the email.

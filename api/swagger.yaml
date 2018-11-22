@@ -1901,16 +1901,18 @@ paths:
       summary: "Create new contact list"
       description: "Create new contact list"
       operationId: "ListsPost"
+      consumes:
+      - "application/json"
       produces:
       - "application/json"
       parameters:
       - in: "body"
-        name: "list_name"
-        description: "Your contact list name"
+        name: "list"
+        description: "List model"
         required: true
         schema:
-          type: "string"
-        x-exportParamName: "ListName"
+          $ref: "#/definitions/List"
+        x-exportParamName: "List"
       responses:
         200:
           description: "SUCCESS"
@@ -2017,12 +2019,12 @@ paths:
         format: "int32"
         x-exportParamName: "ListId"
       - in: "body"
-        name: "list_name"
-        description: "Your new list name"
+        name: "list"
+        description: "List model"
         required: true
         schema:
-          type: "string"
-        x-exportParamName: "ListName"
+          $ref: "#/definitions/List"
+        x-exportParamName: "List"
       responses:
         200:
           description: "SUCCESS"
@@ -3394,12 +3396,12 @@ paths:
       - "application/json"
       parameters:
       - in: "body"
-        name: "url"
-        description: "Url model"
+        name: "strippedString"
+        description: "StrippedString model"
         required: true
         schema:
-          $ref: "#/definitions/Url"
-        x-exportParamName: "Url"
+          $ref: "#/definitions/StrippedString"
+        x-exportParamName: "StrippedString"
       - name: "rule_id"
         in: "path"
         description: "Your rule id"
@@ -5210,7 +5212,7 @@ paths:
       security:
       - BasicAuth: []
       x-is-get-method: true
-  /post/letters/export:
+  /post/letters/history/export:
     get:
       tags:
       - "Post Letter"
@@ -11813,10 +11815,7 @@ definitions:
         items:
           $ref: "#/definitions/EmailRecipient"
       from:
-        type: "array"
-        description: "From Email object."
-        items:
-          $ref: "#/definitions/EmailFrom"
+        $ref: "#/definitions/Email_from"
       subject:
         type: "string"
         description: "Subject of the email."
@@ -11858,9 +11857,7 @@ definitions:
         content: "content"
       subject: "subject"
       from:
-      - email_address_id: "email_address_id"
-        name: "name"
-      - email_address_id: "email_address_id"
+        email_address_id: "email_address_id"
         name: "name"
       to:
       - name: "name"
@@ -11898,36 +11895,32 @@ definitions:
     description: "Your url."
     example:
       url: "url"
+  List:
+    type: "object"
+    required:
+    - "list_name"
+    discriminator: "classType"
+    properties:
+      list_name:
+        type: "string"
+        description: "Your list name."
+    title: "List"
+    description: "Your list."
+    example:
+      list_name: "list_name"
   StrippedString:
     type: "object"
     required:
-    - "strip-string"
+    - "strip_string"
     discriminator: "classType"
     properties:
-      strip-string:
+      strip_string:
         type: "string"
         description: "String to be."
     title: "StrippedString"
     description: "String to be stripped."
     example:
-      strip-string: "strip-string"
-  EmailFrom:
-    type: "object"
-    required:
-    - "email_address_id"
-    discriminator: "classType"
-    properties:
-      email_address_id:
-        type: "string"
-        description: "Email address id of the recipient."
-      name:
-        type: "string"
-        description: "Name of the recipient."
-    title: "EmailFrom"
-    description: "Email being sent from"
-    example:
-      email_address_id: "email_address_id"
-      name: "name"
+      strip_string: "strip_string"
   Attachment:
     type: "object"
     required:
@@ -12195,3 +12188,17 @@ definitions:
       email_address:
         type: "string"
         description: "Email to be allowed."
+  Email_from:
+    required:
+    - "email_address_id"
+    properties:
+      email_address_id:
+        type: "string"
+        description: "Email address id of the recipient."
+      name:
+        type: "string"
+        description: "Name of the recipient."
+    description: "From Email object."
+    example:
+      email_address_id: "email_address_id"
+      name: "name"

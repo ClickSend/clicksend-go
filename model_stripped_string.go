@@ -13,5 +13,5 @@ package clicksend
 // String to be stripped.
 type StrippedString struct {
 	// String to be.
-	StripString string `json:"strip-string"`
+	StripString string `json:"strip_string"`
 }

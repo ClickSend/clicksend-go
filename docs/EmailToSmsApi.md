@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **SmsEmailSmsStrippedStringPut**
-> string SmsEmailSmsStrippedStringPut(ctx, url, ruleId)
+> string SmsEmailSmsStrippedStringPut(ctx, strippedString, ruleId)
 Update email to sms stripped string rule
 
 Update email to sms stripped string rule
@@ -172,7 +172,7 @@ Update email to sms stripped string rule
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **url** | [**Url**](Url.md)| Url model | 
+  **strippedString** | [**StrippedString**](StrippedString.md)| StrippedString model | 
   **ruleId** | **int32**| Your rule id | 
 
 ### Return type

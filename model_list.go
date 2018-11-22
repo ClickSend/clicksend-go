@@ -10,10 +10,8 @@
 
 package clicksend
 
-// From Email object.
-type EmailFrom struct {
-	// Email address id of the recipient.
-	EmailAddressId string `json:"email_address_id"`
-	// Name of the recipient.
-	Name string `json:"name,omitempty"`
+// Your list.
+type List struct {
+	// Your list name.
+	ListName string `json:"list_name"`
 }

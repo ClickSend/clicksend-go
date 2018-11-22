@@ -876,12 +876,12 @@ func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringPost(ctx context.Context
 EmailToSmsApiService Update email to sms stripped string rule
 Update email to sms stripped string rule
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param url Url model
+ * @param strippedString StrippedString model
  * @param ruleId Your rule id
 
 @return string
 */
-func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringPut(ctx context.Context, url Url, ruleId int32) (string, *http.Response, error) {
+func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringPut(ctx context.Context, strippedString StrippedString, ruleId int32) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -916,7 +916,7 @@ func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringPut(ctx context.Context,
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
 	// body params
-	localVarPostBody = &url
+	localVarPostBody = &strippedString
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err
