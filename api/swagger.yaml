@@ -10863,74 +10863,28 @@ definitions:
     type: "object"
     discriminator: "classType"
     properties:
-      phone_number:
-        type: "string"
-        description: "Your phone number in E.164 format. Must be provided if no fax\
-          \ number or email."
-      custom_1:
-        type: "string"
-        description: ""
-      email:
-        type: "string"
-        description: "Your email. Must be provided if no phone number or fax number."
-      fax_number:
-        type: "string"
-        description: "Your fax number. Must be provided if no phone number or email."
-      first_name:
-        type: "string"
-        description: "Your first name."
-      address_line_1:
-        type: "string"
-        description: "Your street address"
-      address_line_2:
-        type: "string"
-        description: ""
-      address_city:
-        type: "string"
-        description: "Your nearest city"
-      address_state:
-        type: "string"
-        description: "Your current state"
-      address_postal_code:
-        type: "string"
-        description: "Your current postcode"
-      address_country:
-        type: "string"
-        description: "Your current country"
-      organization_name:
-        type: "string"
-        description: "Your organisation name"
-      custom_2:
-        type: "string"
-        description: ""
-      custom_3:
-        type: "string"
-        description: ""
-      custom_4:
-        type: "string"
-        description: ""
-      last_name:
-        type: "string"
-        description: "Your last name"
+      fields:
+        $ref: "#/definitions/Fields_fields"
     title: "Fields"
     description: "Contains all details for the main contact."
     example:
-      custom_1: "custom_1"
-      custom_3: "custom_3"
-      address_postal_code: "address_postal_code"
-      custom_2: "custom_2"
-      address_country: "address_country"
-      custom_4: "custom_4"
-      address_state: "address_state"
-      last_name: "last_name"
-      organization_name: "organization_name"
-      fax_number: "fax_number"
-      address_city: "address_city"
-      address_line_1: "address_line_1"
-      phone_number: "phone_number"
-      address_line_2: "address_line_2"
-      first_name: "first_name"
-      email: "email"
+      fields:
+        custom_1: "custom_1"
+        custom_3: "custom_3"
+        address_postal_code: "address_postal_code"
+        custom_2: "custom_2"
+        address_country: "address_country"
+        custom_4: "custom_4"
+        address_state: "address_state"
+        last_name: "last_name"
+        organization_name: "organization_name"
+        fax_number: "fax_number"
+        address_city: "address_city"
+        address_line_1: "address_line_1"
+        phone_number: "phone_number"
+        address_line_2: "address_line_2"
+        first_name: "first_name"
+        email: "email"
   PostLetter:
     type: "object"
     required:
@@ -12188,6 +12142,75 @@ definitions:
       email_address:
         type: "string"
         description: "Email to be allowed."
+  Fields_fields:
+    properties:
+      phone_number:
+        type: "string"
+        description: "Your phone number in E.164 format. Must be provided if no fax\
+          \ number or email."
+      custom_1:
+        type: "string"
+        description: ""
+      email:
+        type: "string"
+        description: "Your email. Must be provided if no phone number or fax number."
+      fax_number:
+        type: "string"
+        description: "Your fax number. Must be provided if no phone number or email."
+      first_name:
+        type: "string"
+        description: "Your first name."
+      address_line_1:
+        type: "string"
+        description: "Your street address"
+      address_line_2:
+        type: "string"
+        description: ""
+      address_city:
+        type: "string"
+        description: "Your nearest city"
+      address_state:
+        type: "string"
+        description: "Your current state"
+      address_postal_code:
+        type: "string"
+        description: "Your current postcode"
+      address_country:
+        type: "string"
+        description: "Your current country"
+      organization_name:
+        type: "string"
+        description: "Your organisation name"
+      custom_2:
+        type: "string"
+        description: ""
+      custom_3:
+        type: "string"
+        description: ""
+      custom_4:
+        type: "string"
+        description: ""
+      last_name:
+        type: "string"
+        description: "Your last name"
+    description: "From Email object."
+    example:
+      custom_1: "custom_1"
+      custom_3: "custom_3"
+      address_postal_code: "address_postal_code"
+      custom_2: "custom_2"
+      address_country: "address_country"
+      custom_4: "custom_4"
+      address_state: "address_state"
+      last_name: "last_name"
+      organization_name: "organization_name"
+      fax_number: "fax_number"
+      address_city: "address_city"
+      address_line_1: "address_line_1"
+      phone_number: "phone_number"
+      address_line_2: "address_line_2"
+      first_name: "first_name"
+      email: "email"
   Email_from:
     required:
     - "email_address_id"
