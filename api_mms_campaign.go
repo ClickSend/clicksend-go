@@ -45,7 +45,7 @@ func (a *MmsCampaignApiService) MmsCampaignByMmsCampaignIdGet(ctx context.Contex
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/mms-campaign/{mms_campaign_id}"
+	localVarPath := a.client.cfg.BasePath + "/mms-campaigns/{mms_campaign_id}"
 	localVarPath = strings.Replace(localVarPath, "{"+"mms_campaign_id"+"}", fmt.Sprintf("%v", mmsCampaignId), -1)
 
 	localVarHeaderParams := make(map[string]string)

@@ -4367,6 +4367,58 @@ paths:
       - BasicAuth: []
       x-is-post-method: true
   /sms-campaigns/{sms_campaign_id}:
+    get:
+      tags:
+      - "Sms Campaign"
+      summary: "Get specific sms campaign"
+      description: "Get specific sms campaign"
+      operationId: "SmsCampaignBySmsCampaignIdGet"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "sms_campaign_id"
+        in: "path"
+        description: "ID of SMS campaign to retrieve"
+        required: true
+        type: "integer"
+        format: "int32"
+        x-exportParamName: "SmsCampaignId"
+      responses:
+        200:
+          description: "SUCCESS"
+          schema:
+            type: "string"
+        400:
+          description: "BAD_REQUEST"
+          schema:
+            type: "string"
+        401:
+          description: "UNAUTHORIZED"
+          schema:
+            type: "string"
+        403:
+          description: "FORBIDDEN"
+          schema:
+            type: "string"
+        404:
+          description: "NOT_FOUND"
+          schema:
+            type: "string"
+        405:
+          description: "METHOD_NOT_FOUND"
+          schema:
+            type: "string"
+        429:
+          description: "TOO_MANY_REQUESTS"
+          schema:
+            type: "string"
+        default:
+          description: "INTERNAL_SERVER_ERROR"
+          schema:
+            type: "string"
+      security:
+      - BasicAuth: []
+      x-is-get-method: true
     put:
       tags:
       - "Sms Campaign"
@@ -4595,59 +4647,6 @@ paths:
       security:
       - BasicAuth: []
       x-is-get-method: true
-  /sms-campaign/{sms_campaign_id}:
-    get:
-      tags:
-      - "Sms Campaign"
-      summary: "Get specific sms campaign"
-      description: "Get specific sms campaign"
-      operationId: "SmsCampaignBySmsCampaignIdGet"
-      produces:
-      - "application/json"
-      parameters:
-      - name: "sms_campaign_id"
-        in: "path"
-        description: "ID of SMS campaign to retrieve"
-        required: true
-        type: "integer"
-        format: "int32"
-        x-exportParamName: "SmsCampaignId"
-      responses:
-        200:
-          description: "SUCCESS"
-          schema:
-            type: "string"
-        400:
-          description: "BAD_REQUEST"
-          schema:
-            type: "string"
-        401:
-          description: "UNAUTHORIZED"
-          schema:
-            type: "string"
-        403:
-          description: "FORBIDDEN"
-          schema:
-            type: "string"
-        404:
-          description: "NOT_FOUND"
-          schema:
-            type: "string"
-        405:
-          description: "METHOD_NOT_FOUND"
-          schema:
-            type: "string"
-        429:
-          description: "TOO_MANY_REQUESTS"
-          schema:
-            type: "string"
-        default:
-          description: "INTERNAL_SERVER_ERROR"
-          schema:
-            type: "string"
-      security:
-      - BasicAuth: []
-      x-is-get-method: true
   /mms-campaigns/send:
     post:
       tags:
@@ -4755,6 +4754,58 @@ paths:
       - BasicAuth: []
       x-is-post-method: true
   /mms-campaigns/{mms_campaign_id}:
+    get:
+      tags:
+      - "Mms Campaign"
+      summary: "Get specific mms campaign"
+      description: "Get specific mms campaign"
+      operationId: "MmsCampaignByMmsCampaignIdGet"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "mms_campaign_id"
+        in: "path"
+        description: "ID of MMS campaign to retrieve"
+        required: true
+        type: "integer"
+        format: "int32"
+        x-exportParamName: "MmsCampaignId"
+      responses:
+        200:
+          description: "SUCCESS"
+          schema:
+            type: "string"
+        400:
+          description: "BAD_REQUEST"
+          schema:
+            type: "string"
+        401:
+          description: "UNAUTHORIZED"
+          schema:
+            type: "string"
+        403:
+          description: "FORBIDDEN"
+          schema:
+            type: "string"
+        404:
+          description: "NOT_FOUND"
+          schema:
+            type: "string"
+        405:
+          description: "METHOD_NOT_FOUND"
+          schema:
+            type: "string"
+        429:
+          description: "TOO_MANY_REQUESTS"
+          schema:
+            type: "string"
+        default:
+          description: "INTERNAL_SERVER_ERROR"
+          schema:
+            type: "string"
+      security:
+      - BasicAuth: []
+      x-is-get-method: true
     put:
       tags:
       - "Mms Campaign"
@@ -4947,59 +4998,6 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
-      responses:
-        200:
-          description: "SUCCESS"
-          schema:
-            type: "string"
-        400:
-          description: "BAD_REQUEST"
-          schema:
-            type: "string"
-        401:
-          description: "UNAUTHORIZED"
-          schema:
-            type: "string"
-        403:
-          description: "FORBIDDEN"
-          schema:
-            type: "string"
-        404:
-          description: "NOT_FOUND"
-          schema:
-            type: "string"
-        405:
-          description: "METHOD_NOT_FOUND"
-          schema:
-            type: "string"
-        429:
-          description: "TOO_MANY_REQUESTS"
-          schema:
-            type: "string"
-        default:
-          description: "INTERNAL_SERVER_ERROR"
-          schema:
-            type: "string"
-      security:
-      - BasicAuth: []
-      x-is-get-method: true
-  /mms-campaign/{mms_campaign_id}:
-    get:
-      tags:
-      - "Mms Campaign"
-      summary: "Get specific mms campaign"
-      description: "Get specific mms campaign"
-      operationId: "MmsCampaignByMmsCampaignIdGet"
-      produces:
-      - "application/json"
-      parameters:
-      - name: "mms_campaign_id"
-        in: "path"
-        description: "ID of MMS campaign to retrieve"
-        required: true
-        type: "integer"
-        format: "int32"
-        x-exportParamName: "MmsCampaignId"
       responses:
         200:
           description: "SUCCESS"

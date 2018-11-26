@@ -4,7 +4,7 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**SmsCampaignBySmsCampaignIdGet**](SmsCampaignApi.md#SmsCampaignBySmsCampaignIdGet) | **Get** /sms-campaign/{sms_campaign_id} | Get specific sms campaign
+[**SmsCampaignBySmsCampaignIdGet**](SmsCampaignApi.md#SmsCampaignBySmsCampaignIdGet) | **Get** /sms-campaigns/{sms_campaign_id} | Get specific sms campaign
 [**SmsCampaignsBySmsCampaignIdPut**](SmsCampaignApi.md#SmsCampaignsBySmsCampaignIdPut) | **Put** /sms-campaigns/{sms_campaign_id} | Update sms campaign
 [**SmsCampaignsCancelBySmsCampaignIdPut**](SmsCampaignApi.md#SmsCampaignsCancelBySmsCampaignIdPut) | **Put** /sms-campaigns/{sms_campaign_id}/cancel | Cancel sms campaign
 [**SmsCampaignsGet**](SmsCampaignApi.md#SmsCampaignsGet) | **Get** /sms-campaigns | Get list of sms campaigns

@@ -45,7 +45,7 @@ func (a *SmsCampaignApiService) SmsCampaignBySmsCampaignIdGet(ctx context.Contex
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/sms-campaign/{sms_campaign_id}"
+	localVarPath := a.client.cfg.BasePath + "/sms-campaigns/{sms_campaign_id}"
 	localVarPath = strings.Replace(localVarPath, "{"+"sms_campaign_id"+"}", fmt.Sprintf("%v", smsCampaignId), -1)
 
 	localVarHeaderParams := make(map[string]string)
