@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **UploadsPost**
-> string UploadsPost(ctx, convert, optional)
+> string UploadsPost(ctx, uploadFile, convert)
 Upload File
 
 Upload File
@@ -18,16 +18,8 @@ Upload File
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **uploadFile** | [**UploadFile**](UploadFile.md)| Your file to be uploaded | 
   **convert** | **string**|  | 
- **optional** | ***UploadsPostOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a UploadsPostOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **uploadFile** | [**optional.Interface of UploadFile**](UploadFile.md)|  | 
 
 ### Return type
 

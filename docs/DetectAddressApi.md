@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **DetectAddressPost**
-> string DetectAddressPost(ctx, content)
+> string DetectAddressPost(ctx, uploadFile)
 Detects address in uploaded file.
 
 Detects address in uploaded file.
@@ -18,7 +18,7 @@ Detects address in uploaded file.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **content** | **string**| Base64-encoded file contents | 
+  **uploadFile** | [**UploadFile**](UploadFile.md)| Your file to be uploaded | 
 
 ### Return type
 

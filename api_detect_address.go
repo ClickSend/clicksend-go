@@ -29,11 +29,11 @@ type DetectAddressApiService service
 DetectAddressApiService Detects address in uploaded file.
 Detects address in uploaded file.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param content Base64-encoded file contents
+ * @param uploadFile Your file to be uploaded
 
 @return string
 */
-func (a *DetectAddressApiService) DetectAddressPost(ctx context.Context, content string) (string, *http.Response, error) {
+func (a *DetectAddressApiService) DetectAddressPost(ctx context.Context, uploadFile UploadFile) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -67,7 +67,7 @@ func (a *DetectAddressApiService) DetectAddressPost(ctx context.Context, content
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
 	// body params
-	localVarPostBody = &content
+	localVarPostBody = &uploadFile
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err

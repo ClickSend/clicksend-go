@@ -116,7 +116,6 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-      x-is-get-method: true
   /sms/send:
     post:
       tags:
@@ -174,7 +173,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /voice/send:
     post:
       tags:
@@ -227,7 +225,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /account:
     get:
       tags:
@@ -273,7 +270,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     post:
       tags:
       - "Account"
@@ -325,7 +321,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /account-verify/send:
     put:
       tags:
@@ -378,7 +373,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /account-verify/verify/{activation_token}:
     put:
       tags:
@@ -431,7 +425,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /sms/price:
     post:
       tags:
@@ -484,7 +477,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /sms/history/export:
     get:
       tags:
@@ -536,7 +528,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /sms/receipts:
     get:
       tags:
@@ -606,7 +597,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     post:
       tags:
       - "SMS"
@@ -658,7 +648,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /sms/receipts-read:
     put:
       tags:
@@ -712,7 +701,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /sms/inbound:
     get:
       tags:
@@ -782,7 +770,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     post:
       tags:
       - "SMS"
@@ -834,7 +821,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /sms/{message_id}/cancel:
     put:
       tags:
@@ -886,7 +872,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /sms/cancel-all:
     put:
       tags:
@@ -932,7 +917,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /sms/templates:
     get:
       tags:
@@ -1002,7 +986,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     post:
       tags:
       - "SMS"
@@ -1054,7 +1037,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /sms/templates/{template_id}:
     put:
       tags:
@@ -1114,7 +1096,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
     delete:
       tags:
       - "SMS"
@@ -1166,7 +1147,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-delete-method: true
   /voice/price:
     post:
       tags:
@@ -1219,7 +1199,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /voice/lang:
     get:
       tags:
@@ -1265,7 +1244,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /voice/receipts:
     get:
       tags:
@@ -1335,7 +1313,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /voice/{message_id}/cancel:
     put:
       tags:
@@ -1387,7 +1364,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /voice/cancel-all:
     put:
       tags:
@@ -1433,7 +1409,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /voice/history/export:
     get:
       tags:
@@ -1485,7 +1460,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /subaccounts:
     get:
       tags:
@@ -1555,7 +1529,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     post:
       tags:
       - "Subaccount"
@@ -1607,7 +1580,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /subaccounts/{subaccount_id}:
     get:
       tags:
@@ -1660,7 +1632,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     put:
       tags:
       - "Subaccount"
@@ -1719,7 +1690,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
     delete:
       tags:
       - "Subaccount"
@@ -1771,7 +1741,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-delete-method: true
   /subaccounts/{subaccount_id}/regen-api-key:
     put:
       tags:
@@ -1824,7 +1793,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /lists:
     get:
       tags:
@@ -1894,7 +1862,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     post:
       tags:
       - "ContactList"
@@ -1948,7 +1915,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /lists/{list_id}:
     get:
       tags:
@@ -2001,7 +1967,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     put:
       tags:
       - "ContactList"
@@ -2060,7 +2025,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
     delete:
       tags:
       - "ContactList"
@@ -2112,7 +2076,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-delete-method: true
   /lists/{list_id}/remove-duplicates:
     put:
       tags:
@@ -2174,7 +2137,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /lists/{list_id}/contacts:
     get:
       tags:
@@ -2253,7 +2215,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     post:
       tags:
       - "Contact"
@@ -2336,7 +2297,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /lists/{list_id}/contacts/{contact_id}:
     get:
       tags:
@@ -2400,7 +2360,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     put:
       tags:
       - "Contact"
@@ -2466,7 +2425,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
     delete:
       tags:
       - "Contact"
@@ -2525,7 +2483,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-delete-method: true
   /lists/{list_id}/remove-opted-out-contacts/{opt_out_list_id}:
     put:
       tags:
@@ -2589,7 +2546,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /lists/{from_list_id}/contacts/{contact_id}/transfer/{to_list_id}:
     put:
       tags:
@@ -2660,7 +2616,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /numbers:
     get:
       tags:
@@ -2730,7 +2685,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /numbers/buy/{dedicated_number}:
     post:
       tags:
@@ -2782,7 +2736,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /numbers/search/{country}:
     get:
       tags:
@@ -2874,7 +2827,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /statistics/voice:
     get:
       tags:
@@ -2920,7 +2872,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /forgot-username:
     put:
       tags:
@@ -2979,7 +2930,6 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-      x-is-put-method: true
   /forgot-password:
     put:
       tags:
@@ -3033,7 +2983,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /forgot-password/verify:
     put:
       tags:
@@ -3086,7 +3035,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /sms/email-sms:
     get:
       tags:
@@ -3156,7 +3104,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     post:
       tags:
       - "Email To Sms"
@@ -3208,7 +3155,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /sms/email-sms-stripped-strings:
     get:
       tags:
@@ -3278,7 +3224,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     post:
       tags:
       - "Email To Sms"
@@ -3330,7 +3275,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /sms/email-sms-stripped-strings/{rule_id}:
     get:
       tags:
@@ -3385,7 +3329,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     put:
       tags:
       - "Email To Sms"
@@ -3446,7 +3389,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
     delete:
       tags:
       - "Email To Sms"
@@ -3500,7 +3442,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-delete-method: true
   /search/contacts-lists:
     get:
       tags:
@@ -3576,7 +3517,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /referral/accounts:
     get:
       tags:
@@ -3646,7 +3586,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /reseller/accounts:
     get:
       tags:
@@ -3716,7 +3655,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     post:
       tags:
       - "Reseller Account"
@@ -3768,7 +3706,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /reseller/accounts/{client_user_id}:
     get:
       tags:
@@ -3821,7 +3758,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     put:
       tags:
       - "Reseller Account"
@@ -3880,7 +3816,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /reseller/transfer-credit:
     put:
       tags:
@@ -3933,7 +3868,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /recharge/credit-card:
     get:
       tags:
@@ -3979,7 +3913,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     put:
       tags:
       - "Account Recharge"
@@ -4031,7 +3964,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /recharge/packages:
     get:
       tags:
@@ -4084,7 +4016,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /recharge/purchase/{package_id}:
     put:
       tags:
@@ -4137,7 +4068,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /recharge/transactions:
     get:
       tags:
@@ -4207,7 +4137,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /recharge/transactions/{transaction_id}:
     get:
       tags:
@@ -4259,7 +4188,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /sms-campaigns/send:
     post:
       tags:
@@ -4312,7 +4240,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /sms-campaigns/price:
     post:
       tags:
@@ -4365,7 +4292,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /sms-campaigns/{sms_campaign_id}:
     get:
       tags:
@@ -4418,7 +4344,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     put:
       tags:
       - "Sms Campaign"
@@ -4477,7 +4402,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /sms-campaigns/{sms_campaign_id}/cancel:
     put:
       tags:
@@ -4530,7 +4454,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /statistics/sms:
     get:
       tags:
@@ -4576,7 +4499,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /sms-campaigns:
     get:
       tags:
@@ -4646,7 +4568,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /mms-campaigns/send:
     post:
       tags:
@@ -4699,7 +4620,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /mms-campaigns/price:
     post:
       tags:
@@ -4752,7 +4672,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /mms-campaigns/{mms_campaign_id}:
     get:
       tags:
@@ -4805,7 +4724,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     put:
       tags:
       - "Mms Campaign"
@@ -4864,7 +4782,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /mms-campaigns/{mms_campaign_id}/cancel:
     put:
       tags:
@@ -4917,7 +4834,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /statistics/mms:
     get:
       tags:
@@ -4963,7 +4879,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /mms-campaigns:
     get:
       tags:
@@ -5033,7 +4948,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /post/letters/send:
     post:
       tags:
@@ -5086,7 +5000,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /post/letters/price:
     post:
       tags:
@@ -5139,7 +5052,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /post/letters/history:
     get:
       tags:
@@ -5209,7 +5121,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /post/letters/history/export:
     get:
       tags:
@@ -5261,7 +5172,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /post/return-addresses:
     get:
       tags:
@@ -5331,7 +5241,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     post:
       tags:
       - "Post Return Address"
@@ -5383,7 +5292,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /post/return-addresses/{return_address_id}:
     get:
       tags:
@@ -5436,7 +5344,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     put:
       tags:
       - "Post Return Address"
@@ -5495,7 +5402,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
     delete:
       tags:
       - "Post Return Address"
@@ -5547,7 +5453,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-delete-method: true
   /fax/receipts:
     get:
       tags:
@@ -5593,7 +5498,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /fax/receipts/{message_id}:
     get:
       tags:
@@ -5645,7 +5549,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /fax/history:
     get:
       tags:
@@ -5746,7 +5649,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /sms/inbound-read:
     put:
       tags:
@@ -5801,7 +5703,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /sms/receipts/{message_id}:
     get:
       tags:
@@ -5853,7 +5754,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /mms/send:
     post:
       tags:
@@ -5906,7 +5806,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /fax/price:
     post:
       tags:
@@ -5959,7 +5858,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /post/postcards/send:
     post:
       tags:
@@ -6012,7 +5910,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /post/postcards/price:
     post:
       tags:
@@ -6065,7 +5962,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /uploads:
     post:
       tags:
@@ -6080,9 +5976,10 @@ paths:
       parameters:
       - in: "body"
         name: "uploadFile"
-        required: false
+        description: "Your file to be uploaded"
+        required: true
         schema:
-          $ref: "#/definitions/uploadFile"
+          $ref: "#/definitions/UploadFile"
         x-exportParamName: "UploadFile"
       - name: "convert"
         in: "query"
@@ -6125,7 +6022,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /fax/send:
     post:
       tags:
@@ -6178,7 +6074,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /mms/price:
     post:
       tags:
@@ -6231,7 +6126,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /post/postcards/history:
     get:
       tags:
@@ -6301,7 +6195,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /post/postcards/history/export:
     get:
       tags:
@@ -6353,7 +6246,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /post/direct-mail/locations/search/{country}:
     get:
       tags:
@@ -6435,7 +6327,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /post/direct-mail/campaigns/send:
     post:
       tags:
@@ -6488,7 +6379,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /post/direct-mail/campaigns/price:
     post:
       tags:
@@ -6541,7 +6431,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /post/direct-mail/campaigns:
     get:
       tags:
@@ -6611,7 +6500,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /lists/{list_id}/import:
     post:
       tags:
@@ -6671,7 +6559,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /voice/history:
     get:
       tags:
@@ -6757,7 +6644,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /sms/history:
     get:
       tags:
@@ -6843,7 +6729,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /delivery-issues:
     get:
       tags:
@@ -6913,7 +6798,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     post:
       tags:
       - "Delivery Issues"
@@ -6965,7 +6849,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /post/letters/detect-address:
     post:
       tags:
@@ -6977,12 +6860,12 @@ paths:
       - "application/json"
       parameters:
       - in: "body"
-        name: "content"
-        description: "Base64-encoded file contents"
+        name: "uploadFile"
+        description: "Your file to be uploaded"
         required: true
         schema:
-          type: "string"
-        x-exportParamName: "Content"
+          $ref: "#/definitions/UploadFile"
+        x-exportParamName: "UploadFile"
       responses:
         200:
           description: "SUCCESS"
@@ -7018,7 +6901,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /timezones:
     get:
       tags:
@@ -7088,7 +6970,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /email/send:
     post:
       tags:
@@ -7141,7 +7022,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /email/price:
     post:
       tags:
@@ -7194,7 +7074,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /email/history:
     get:
       tags:
@@ -7280,7 +7159,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /email/history/export:
     get:
       tags:
@@ -7348,7 +7226,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /email/addresses:
     get:
       tags:
@@ -7418,7 +7295,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     post:
       tags:
       - "Email Marketing"
@@ -7471,7 +7347,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /email/address-verify/{email_address_id}/send:
     put:
       tags:
@@ -7524,7 +7399,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /email/address-verify/{email_address_id}/verify/{activation_token}:
     put:
       tags:
@@ -7583,7 +7457,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /email/addresses/{email_address_id}:
     get:
       tags:
@@ -7636,7 +7509,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     delete:
       tags:
       - "Email Marketing"
@@ -7688,7 +7560,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-delete-method: true
   /email-campaigns:
     get:
       tags:
@@ -7758,7 +7629,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /email-campaigns/{email_campaign_id}:
     get:
       tags:
@@ -7811,7 +7681,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     put:
       tags:
       - "Email Marketing"
@@ -7870,7 +7739,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /email-campaigns/send:
     post:
       tags:
@@ -7923,7 +7791,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /email-campaigns/{email_campaign_id}/cancel:
     put:
       tags:
@@ -7976,7 +7843,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
   /email-campaigns/price:
     post:
       tags:
@@ -8029,7 +7895,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /email-campaigns/{email_campaign_id}/history:
     get:
       tags:
@@ -8122,7 +7987,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /email-campaigns/{email_campaign_id}/history/export:
     get:
       tags:
@@ -8191,7 +8055,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /email/templates:
     get:
       tags:
@@ -8261,7 +8124,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     post:
       tags:
       - "User Email Templates"
@@ -8313,7 +8175,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /email/templates/{template_id}:
     get:
       tags:
@@ -8366,7 +8227,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     put:
       tags:
       - "User Email Templates"
@@ -8425,7 +8285,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
     delete:
       tags:
       - "User Email Templates"
@@ -8477,7 +8336,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-delete-method: true
   /email/master-templates:
     get:
       tags:
@@ -8547,7 +8405,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /email/master-templates/{template_id}:
     get:
       tags:
@@ -8600,7 +8457,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /email/master-templates-categories:
     get:
       tags:
@@ -8670,7 +8526,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /email/master-templates-categories/{category_id}:
     get:
       tags:
@@ -8723,7 +8578,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /email/master-templates-categories/{category_id}/master-templates:
     get:
       tags:
@@ -8800,7 +8654,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
   /automations/sms/inbound:
     get:
       tags:
@@ -8870,7 +8723,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     post:
       tags:
       - "Inbound SMS Rules"
@@ -8922,7 +8774,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /automations/sms/inbound/{inbound_rule_id}:
     get:
       tags:
@@ -8975,7 +8826,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     put:
       tags:
       - "Inbound SMS Rules"
@@ -9034,7 +8884,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
     delete:
       tags:
       - "Inbound SMS Rules"
@@ -9086,7 +8935,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-delete-method: true
   /automations/sms/receipts:
     get:
       tags:
@@ -9156,7 +9004,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     post:
       tags:
       - "SMS Delivery Receipt Rules"
@@ -9208,7 +9055,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /automations/sms/receipts/{receipt_rule_id}:
     get:
       tags:
@@ -9261,7 +9107,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     put:
       tags:
       - "SMS Delivery Receipt Rules"
@@ -9320,7 +9165,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
     delete:
       tags:
       - "SMS Delivery Receipt Rules"
@@ -9372,7 +9216,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-delete-method: true
   /automations/fax/inbound:
     get:
       tags:
@@ -9442,7 +9285,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     post:
       tags:
       - "Inbound FAX Rules"
@@ -9494,7 +9336,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /automations/fax/inbound/{inbound_rule_id}:
     get:
       tags:
@@ -9547,7 +9388,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     put:
       tags:
       - "Inbound FAX Rules"
@@ -9606,7 +9446,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
     delete:
       tags:
       - "Inbound FAX Rules"
@@ -9658,7 +9497,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-delete-method: true
   /automations/fax/receipts:
     get:
       tags:
@@ -9728,7 +9566,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     post:
       tags:
       - "FAX Delivery Receipt Rules"
@@ -9780,7 +9617,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /automations/fax/receipts/{receipt_rule_id}:
     get:
       tags:
@@ -9833,7 +9669,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     put:
       tags:
       - "FAX Delivery Receipt Rules"
@@ -9892,7 +9727,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
     delete:
       tags:
       - "FAX Delivery Receipt Rules"
@@ -9944,7 +9778,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-delete-method: true
   /automations/voice/receipts:
     get:
       tags:
@@ -10014,7 +9847,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     post:
       tags:
       - "Voice Delivery Receipt Rules"
@@ -10066,7 +9898,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /automations/voice/receipts/{receipt_rule_id}:
     get:
       tags:
@@ -10119,7 +9950,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     put:
       tags:
       - "Voice Delivery Receipt Rules"
@@ -10178,7 +10008,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
     delete:
       tags:
       - "Voice Delivery Receipt Rules"
@@ -10230,7 +10059,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-delete-method: true
   /automations/email/receipts:
     get:
       tags:
@@ -10300,7 +10128,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     post:
       tags:
       - "Email Delivery Receipt Rules"
@@ -10352,7 +10179,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-post-method: true
   /automations/email/receipts/{receipt_rule_id}:
     get:
       tags:
@@ -10405,7 +10231,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-get-method: true
     put:
       tags:
       - "Email Delivery Receipt Rules"
@@ -10464,7 +10289,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-put-method: true
     delete:
       tags:
       - "Email Delivery Receipt Rules"
@@ -10516,7 +10340,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-      x-is-delete-method: true
 securityDefinitions:
   BasicAuth:
     type: "basic"
@@ -11847,6 +11670,19 @@ definitions:
     description: "Your url."
     example:
       url: "url"
+  UploadFile:
+    type: "object"
+    required:
+    - "content"
+    discriminator: "classType"
+    properties:
+      content:
+        type: "string"
+        description: "Your base64 encoded file string."
+    title: "UploadFile"
+    description: "Your file to be uploaded."
+    example:
+      content: "content"
   List:
     type: "object"
     required:
@@ -12124,14 +11960,6 @@ definitions:
       username:
         type: "string"
         description: "Username belonging to account."
-  uploadFile:
-    type: "object"
-    required:
-    - "content"
-    properties:
-      content:
-        type: "string"
-        description: "Your base64 encoded file."
   emailAddress:
     type: "object"
     required:

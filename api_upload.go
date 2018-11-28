@@ -29,18 +29,12 @@ type UploadApiService service
 UploadApiService Upload File
 Upload File
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ * @param uploadFile Your file to be uploaded
  * @param convert 
- * @param optional nil or *UploadsPostOpts - Optional Parameters:
-     * @param "UploadFile" (optional.Interface of UploadFile) - 
 
 @return string
 */
-
-type UploadsPostOpts struct { 
-	UploadFile optional.Interface
-}
-
-func (a *UploadApiService) UploadsPost(ctx context.Context, convert string, localVarOptionals *UploadsPostOpts) (string, *http.Response, error) {
+func (a *UploadApiService) UploadsPost(ctx context.Context, uploadFile UploadFile, convert string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -75,14 +69,7 @@ func (a *UploadApiService) UploadsPost(ctx context.Context, convert string, loca
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
 	// body params
-	if localVarOptionals != nil && localVarOptionals.UploadFile.IsSet() {
-		
-		localVarOptionalUploadFile, localVarOptionalUploadFileok := localVarOptionals.UploadFile.Value().(UploadFile)
-		if !localVarOptionalUploadFileok {
-				return localVarReturnValue, nil, reportError("uploadFile should be UploadFile")
-		}
-		localVarPostBody = &localVarOptionalUploadFile
-	}
+	localVarPostBody = &uploadFile
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err
