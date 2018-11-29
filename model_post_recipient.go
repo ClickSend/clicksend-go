@@ -17,7 +17,7 @@ type PostRecipient struct {
 	// First line of address
 	AddressLine1 string `json:"address_line_1"`
 	// Second line of address
-	AddressLine2 string `json:"address_line_2"`
+	AddressLine2 string `json:"address_line_2,omitempty"`
 	// City
 	AddressCity string `json:"address_city"`
 	// State

@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AddressName** | **string** | Name of address | [default to null]
 **AddressLine1** | **string** | First line of address | [default to null]
-**AddressLine2** | **string** | Second line of address | [default to null]
+**AddressLine2** | **string** | Second line of address | [optional] [default to null]
 **AddressCity** | **string** | City | [default to null]
 **AddressState** | **string** | State | [default to null]
 **AddressPostalCode** | **string** | Postal code | [default to null]

@@ -10373,7 +10373,6 @@ definitions:
         example: 0
         description: "Your schedule timestamp."
         default: 0
-    title: "SmsCampaign"
     description: "Campaign Model for SMS"
     example:
       schedule: 0
@@ -10416,7 +10415,6 @@ definitions:
       media_file:
         type: "string"
         description: "URL pointing to media file."
-    title: "MmsCampaign"
     description: "Campaign Model for MMS"
     example:
       schedule: 0
@@ -10457,7 +10455,6 @@ definitions:
       address_state:
         type: "string"
         description: "Your state"
-    title: "Address"
     description: "Base model for all address-related objects."
     example:
       address_postal_code: "address_postal_code"
@@ -10478,7 +10475,6 @@ definitions:
         description: "Array of SmsMessage items"
         items:
           $ref: "#/definitions/SmsMessage"
-    title: "SmsMessageCollection"
     description: "Array of SmsMessage items"
     example:
       messages:
@@ -10545,7 +10541,6 @@ definitions:
         type: "string"
         description: "An email address where the reply should be emailed to. If omitted,\
           \ the reply will be emailed back to the user who sent the outgoing SMS."
-    title: "SmsMessage"
     description: "SmsMessage model"
     example:
       schedule: 0
@@ -10594,7 +10589,6 @@ definitions:
       country:
         type: "string"
         description: "Your country"
-    title: "Account"
     description: "Complete account details needed for the user."
     example:
       country: "country"
@@ -10661,7 +10655,6 @@ definitions:
       last_name:
         type: "string"
         description: "Your last name"
-    title: "Contact"
     description: "Contains all details for the main contact."
     example:
       custom_1: "custom_1"
@@ -10686,7 +10679,6 @@ definitions:
     properties:
       fields:
         $ref: "#/definitions/Fields_fields"
-    title: "Fields"
     description: "Contains all details for the main contact."
     example:
       fields:
@@ -10750,7 +10742,6 @@ definitions:
         example: "sdk"
         description: "Source being sent from"
         default: "sdk"
-    title: "PostLetter"
     description: "PostLetter model"
     example:
       file_url: "file_url"
@@ -10784,7 +10775,6 @@ definitions:
     - "address_city"
     - "address_country"
     - "address_line_1"
-    - "address_line_2"
     - "address_name"
     - "address_postal_code"
     - "address_state"
@@ -10822,7 +10812,6 @@ definitions:
         example: 0
         description: "When to send letter (0/null=now)"
         default: 0
-    title: "PostRecipient"
     description: "PostRecipient model"
     example:
       return_address_id: 0
@@ -10871,7 +10860,6 @@ definitions:
       from_email:
         type: "string"
         description: "An email address where the reply should be emailed to."
-    title: "FaxMessage"
     description: "Base model for Fax Messages"
     example:
       schedule: 6
@@ -10897,7 +10885,6 @@ definitions:
         description: "Array of MmsMessage models"
         items:
           $ref: "#/definitions/MmsMessage"
-    title: "MmsMessageCollection"
     description: "Array of MmsMessage items"
     example:
       messages:
@@ -10968,7 +10955,6 @@ definitions:
       from_email:
         type: "string"
         description: "Email to send replies to"
-    title: "MmsMessage"
     description: "Single MMS message model"
     example:
       country: "country"
@@ -10998,7 +10984,6 @@ definitions:
         description: "Array of recipients"
         items:
           $ref: "#/definitions/PostRecipient"
-    title: "PostPostcard"
     description: "PostPostcard model"
     example:
       recipients:
@@ -11034,7 +11019,6 @@ definitions:
         description: "Array of VoiceMessage items"
         items:
           $ref: "#/definitions/VoiceMessage"
-    title: "VoiceMessageCollection"
     description: "Array of VoiceMessage items"
     example:
       messages:
@@ -11117,7 +11101,6 @@ definitions:
         description: "Whether to attempt to detect an answering machine or voicemail\
           \ service and leave a message"
         default: 0
-    title: "VoiceMessage"
     description: "VoiceMessage fields: source, to, list_id, body, lang, voice, schedule,\
       \ custom_string, country"
     example:
@@ -11169,7 +11152,6 @@ definitions:
       country:
         type: "string"
         description: "Country of account holder"
-    title: "ResellerAccount"
     description: "ResellerAccount model"
     example:
       country: "country"
@@ -11220,7 +11202,6 @@ definitions:
       custom_string:
         type: "string"
         description: "A custom string for your own reference"
-    title: "PostDirectMail"
     description: "Post direct mail model"
     example:
       schedule: 0
@@ -11251,7 +11232,6 @@ definitions:
         type: "integer"
         format: "int32"
         description: "Number of items to send"
-    title: "PostDirectMailArea"
     description: "PostDirectMailArea model"
     example:
       quantity: 6
@@ -11271,7 +11251,6 @@ definitions:
       file_url:
         type: "string"
         description: "URL of file to send"
-    title: "FaxMessageCollection"
     description: "Array of FaxMessage items"
     example:
       file_url: "file_url"
@@ -11305,7 +11284,6 @@ definitions:
       body:
         type: "string"
         description: "Body of template"
-    title: "SmsTemplate"
     description: "SmsTemplate model"
     example:
       template_name: "template_name"
@@ -11328,7 +11306,6 @@ definitions:
         type: "string"
         example: "sms"
         description: "Type of verification"
-    title: "AccountVerify"
     description: "Verifies an account by token that should have been sent to the user's\
       \ phone"
     example:
@@ -11353,7 +11330,6 @@ definitions:
       password:
         type: "string"
         description: "Password"
-    title: "AccountForgotPasswordVerify"
     example:
       activation_token: "activation_token"
       password: "password"
@@ -11373,7 +11349,6 @@ definitions:
         description: "Order of fields in file"
         items:
           type: "string"
-    title: "ContactListImport"
     description: "Contact list import model"
     example:
       file_url: "file_url"
@@ -11396,7 +11371,6 @@ definitions:
       subaccount_id:
         type: "string"
         description: "Your subaccount id"
-    title: "EmailSMSAddress"
     description: "Email-to-SMS Allowed Address"
     example:
       email_address: "email_address"
@@ -11421,7 +11395,6 @@ definitions:
       currency:
         type: "string"
         description: "Currency of balance to transfer"
-    title: "ResellerAccountTransferCredit"
     description: "ResellerAccountTransferCredit model"
     example:
       balance: 6
@@ -11459,7 +11432,6 @@ definitions:
       bank_name:
         type: "string"
         description: "Name of bank that credit card belongs to"
-    title: "CreditCard"
     description: "Credit card model"
     example:
       number: "number"
@@ -11527,7 +11499,6 @@ definitions:
         example: 1
         description: "Your access settings flag value, must be 1 or 0."
         default: 1
-    title: "Subaccount"
     description: "Accounts that are maintained under a main account"
     example:
       api_username: "api_username"
@@ -11565,7 +11536,6 @@ definitions:
       email_address:
         type: "string"
         description: "The user's email address."
-    title: "DeliveryIssue"
     description: "Issues with message delivery"
     example:
       client_comments: "client_comments"
@@ -11612,7 +11582,6 @@ definitions:
       schedule:
         type: "number"
         description: "Schedule."
-    title: "Email"
     description: "Send Email"
     example:
       cc:
@@ -11659,7 +11628,6 @@ definitions:
       name:
         type: "string"
         description: "Name of the recipient."
-    title: "EmailRecipient"
     description: "Recipient of an email, either To, Cc, or Bcc."
     example:
       name: "name"
@@ -11673,7 +11641,6 @@ definitions:
       url:
         type: "string"
         description: "Your url."
-    title: "Url"
     description: "Your url."
     example:
       url: "url"
@@ -11686,7 +11653,6 @@ definitions:
       content:
         type: "string"
         description: "Your base64 encoded file string."
-    title: "UploadFile"
     description: "Your file to be uploaded."
     example:
       content: "content"
@@ -11699,7 +11665,6 @@ definitions:
       list_name:
         type: "string"
         description: "Your list name."
-    title: "List"
     description: "Your list."
     example:
       list_name: "list_name"
@@ -11712,7 +11677,6 @@ definitions:
       strip_string:
         type: "string"
         description: "String to be."
-    title: "StrippedString"
     description: "String to be stripped."
     example:
       strip_string: "strip_string"
@@ -11742,7 +11706,6 @@ definitions:
       content_id:
         type: "string"
         description: "An ID for the content."
-    title: "Attachment"
     description: "Email attachment"
     example:
       disposition: "disposition"
@@ -11788,7 +11751,6 @@ definitions:
         example: 0
         description: "Your schedule timestamp."
         default: 0
-    title: "EmailCampaign"
     description: "Campaign Model for Email"
     example:
       schedule: 0
@@ -11812,7 +11774,6 @@ definitions:
       template_id_master:
         type: "number"
         description: "The ID of the master template you want to base on."
-    title: "EmailTemplateNew"
     description: "Model for Email Templates"
     example:
       template_name: "template_name"
@@ -11829,7 +11790,6 @@ definitions:
       body:
         type: "string"
         description: "Your template body."
-    title: "EmailTemplateUpdate"
     description: "Model for Email Templates"
     example:
       template_name: "template_name"
@@ -11870,7 +11830,6 @@ definitions:
       enabled:
         type: "number"
         description: "Enabled: Disabled=0 or Enabled=1."
-    title: "InboundSMSRule"
     description: "Model for Inbound SMS Rules"
     example:
       message_search_type: 1
@@ -11907,7 +11866,6 @@ definitions:
       enabled:
         type: "number"
         description: "Enabled: Disabled=0 or Enabled=1."
-    title: "InboundFAXRule"
     description: "Model for Inbound FAX Rules"
     example:
       action_address: "action_address"
@@ -11942,7 +11900,6 @@ definitions:
       enabled:
         type: "number"
         description: "Enabled: Disabled=0 or Enabled=1."
-    title: "DeliveryReceipt"
     description: "Model for a Delivery Receipt"
     example:
       action_address: "action_address"
