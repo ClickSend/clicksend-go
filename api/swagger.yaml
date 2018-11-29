@@ -10739,6 +10739,12 @@ definitions:
         example: 0
         description: "Whether letter is in colour"
         default: 0
+      priority_post:
+        type: "integer"
+        format: "int32"
+        example: 0
+        description: "Whether letter is priority"
+        default: 0
       source:
         type: "string"
         example: "sdk"
@@ -10771,6 +10777,7 @@ definitions:
       template_used: 0
       duplex: 0
       source: "sdk"
+      priority_post: 0
   PostRecipient:
     type: "object"
     required:

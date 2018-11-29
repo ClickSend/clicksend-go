@@ -22,6 +22,8 @@ type PostLetter struct {
 	Duplex int32 `json:"duplex,omitempty"`
 	// Whether letter is in colour
 	Colour int32 `json:"colour,omitempty"`
+	// Whether letter is priority
+	PriorityPost int32 `json:"priority_post,omitempty"`
 	// Source being sent from
 	Source string `json:"source,omitempty"`
 }
