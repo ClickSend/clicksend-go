@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **FaxDeliveryReceiptAutomationsGet**
-> string FaxDeliveryReceiptAutomationsGet(ctx, optional)
+> string FaxDeliveryReceiptAutomationsGet(ctx, q, optional)
 Get all fax delivery receipt automations
 
 Get all fax delivery receipt automations
@@ -135,6 +135,7 @@ Get all fax delivery receipt automations
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **q** | **string**| Your keyword or query. | 
  **optional** | ***FaxDeliveryReceiptAutomationsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -142,6 +143,7 @@ Optional parameters are passed through a pointer to a FaxDeliveryReceiptAutomati
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+
  **page** | **optional.Int32**| Page number | [default to 1]
  **limit** | **optional.Int32**| Number of records per page | [default to 10]
 

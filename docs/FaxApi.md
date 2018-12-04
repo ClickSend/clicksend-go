@@ -108,13 +108,27 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **FaxReceiptsGet**
-> string FaxReceiptsGet(ctx, )
+> string FaxReceiptsGet(ctx, q, optional)
 Get List of Fax Receipts
 
 Get List of Fax Receipts
 
 ### Required Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **q** | **string**| Your keyword or query. | 
+ **optional** | ***FaxReceiptsGetOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a FaxReceiptsGetOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **page** | **optional.Int32**| Page number | [default to 1]
+ **limit** | **optional.Int32**| Number of records per page | [default to 10]
 
 ### Return type
 

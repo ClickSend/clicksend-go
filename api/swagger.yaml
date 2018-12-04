@@ -538,6 +538,12 @@ paths:
       produces:
       - "application/json"
       parameters:
+      - name: "q"
+        in: "query"
+        description: "Your keyword or query."
+        required: true
+        type: "string"
+        x-exportParamName: "Q"
       - name: "page"
         in: "query"
         description: "Page number"
@@ -711,6 +717,12 @@ paths:
       produces:
       - "application/json"
       parameters:
+      - name: "q"
+        in: "query"
+        description: "Your keyword or query."
+        required: true
+        type: "string"
+        x-exportParamName: "Q"
       - name: "page"
         in: "query"
         description: "Page number"
@@ -1254,6 +1266,12 @@ paths:
       produces:
       - "application/json"
       parameters:
+      - name: "q"
+        in: "query"
+        description: "Your keyword or query."
+        required: true
+        type: "string"
+        x-exportParamName: "Q"
       - name: "page"
         in: "query"
         description: "Page number"
@@ -2238,30 +2256,6 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "ListId"
-      - name: "page"
-        in: "query"
-        description: "Page number"
-        required: false
-        type: "integer"
-        default: 1
-        exclusiveMaximum: false
-        minimum: 1
-        exclusiveMinimum: false
-        format: "int32"
-        x-exportParamName: "Page"
-        x-optionalDataType: "Int32"
-      - name: "limit"
-        in: "query"
-        description: "Number of records per page"
-        required: false
-        type: "integer"
-        default: 10
-        exclusiveMaximum: false
-        minimum: 1
-        exclusiveMinimum: false
-        format: "int32"
-        x-exportParamName: "Limit"
-        x-optionalDataType: "Int32"
       responses:
         200:
           description: "SUCCESS"
@@ -4834,51 +4828,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-  /statistics/mms:
-    get:
-      tags:
-      - "Statistics"
-      summary: "Get mms statistics"
-      description: "Get mms statistics"
-      operationId: "StatisticsMmsGet"
-      produces:
-      - "application/json"
-      parameters: []
-      responses:
-        200:
-          description: "SUCCESS"
-          schema:
-            type: "string"
-        400:
-          description: "BAD_REQUEST"
-          schema:
-            type: "string"
-        401:
-          description: "UNAUTHORIZED"
-          schema:
-            type: "string"
-        403:
-          description: "FORBIDDEN"
-          schema:
-            type: "string"
-        404:
-          description: "NOT_FOUND"
-          schema:
-            type: "string"
-        405:
-          description: "METHOD_NOT_FOUND"
-          schema:
-            type: "string"
-        429:
-          description: "TOO_MANY_REQUESTS"
-          schema:
-            type: "string"
-        default:
-          description: "INTERNAL_SERVER_ERROR"
-          schema:
-            type: "string"
-      security:
-      - BasicAuth: []
   /mms-campaigns:
     get:
       tags:
@@ -5462,7 +5411,37 @@ paths:
       operationId: "FaxReceiptsGet"
       produces:
       - "application/json"
-      parameters: []
+      parameters:
+      - name: "q"
+        in: "query"
+        description: "Your keyword or query."
+        required: true
+        type: "string"
+        x-exportParamName: "Q"
+      - name: "page"
+        in: "query"
+        description: "Page number"
+        required: false
+        type: "integer"
+        default: 1
+        exclusiveMaximum: false
+        minimum: 1
+        exclusiveMinimum: false
+        format: "int32"
+        x-exportParamName: "Page"
+        x-optionalDataType: "Int32"
+      - name: "limit"
+        in: "query"
+        description: "Number of records per page"
+        required: false
+        type: "integer"
+        default: 10
+        exclusiveMaximum: false
+        minimum: 1
+        exclusiveMinimum: false
+        format: "int32"
+        x-exportParamName: "Limit"
+        x-optionalDataType: "Int32"
       responses:
         200:
           description: "SUCCESS"
@@ -6211,260 +6190,6 @@ paths:
         required: true
         type: "string"
         x-exportParamName: "Filename"
-      responses:
-        200:
-          description: "SUCCESS"
-          schema:
-            type: "string"
-        400:
-          description: "BAD_REQUEST"
-          schema:
-            type: "string"
-        401:
-          description: "UNAUTHORIZED"
-          schema:
-            type: "string"
-        403:
-          description: "FORBIDDEN"
-          schema:
-            type: "string"
-        404:
-          description: "NOT_FOUND"
-          schema:
-            type: "string"
-        405:
-          description: "METHOD_NOT_FOUND"
-          schema:
-            type: "string"
-        429:
-          description: "TOO_MANY_REQUESTS"
-          schema:
-            type: "string"
-        default:
-          description: "INTERNAL_SERVER_ERROR"
-          schema:
-            type: "string"
-      security:
-      - BasicAuth: []
-  /post/direct-mail/locations/search/{country}:
-    get:
-      tags:
-      - "Post Direct Mail"
-      summary: "Search for a location"
-      description: "Search for a location"
-      operationId: "PostDirectMailLocationsSearchByCountryGet"
-      produces:
-      - "application/json"
-      parameters:
-      - name: "country"
-        in: "path"
-        description: "Country Code to search"
-        required: true
-        type: "string"
-        x-exportParamName: "Country"
-      - name: "q"
-        in: "query"
-        description: "Search term (e.g. post code, city name)"
-        required: true
-        type: "string"
-        x-exportParamName: "Q"
-      - name: "page"
-        in: "query"
-        description: "Page number"
-        required: false
-        type: "integer"
-        default: 1
-        exclusiveMaximum: false
-        minimum: 1
-        exclusiveMinimum: false
-        format: "int32"
-        x-exportParamName: "Page"
-        x-optionalDataType: "Int32"
-      - name: "limit"
-        in: "query"
-        description: "Number of records per page"
-        required: false
-        type: "integer"
-        default: 10
-        exclusiveMaximum: false
-        minimum: 1
-        exclusiveMinimum: false
-        format: "int32"
-        x-exportParamName: "Limit"
-        x-optionalDataType: "Int32"
-      responses:
-        200:
-          description: "SUCCESS"
-          schema:
-            type: "string"
-        400:
-          description: "BAD_REQUEST"
-          schema:
-            type: "string"
-        401:
-          description: "UNAUTHORIZED"
-          schema:
-            type: "string"
-        403:
-          description: "FORBIDDEN"
-          schema:
-            type: "string"
-        404:
-          description: "NOT_FOUND"
-          schema:
-            type: "string"
-        405:
-          description: "METHOD_NOT_FOUND"
-          schema:
-            type: "string"
-        429:
-          description: "TOO_MANY_REQUESTS"
-          schema:
-            type: "string"
-        default:
-          description: "INTERNAL_SERVER_ERROR"
-          schema:
-            type: "string"
-      security:
-      - BasicAuth: []
-  /post/direct-mail/campaigns/send:
-    post:
-      tags:
-      - "Post Direct Mail"
-      summary: "Send direct mail campaign"
-      description: "Send direct mail campaign"
-      operationId: "PostDirectMailCampaignsSendPost"
-      produces:
-      - "application/json"
-      parameters:
-      - in: "body"
-        name: "postDirectMail"
-        description: "PostDirectMail model"
-        required: true
-        schema:
-          $ref: "#/definitions/PostDirectMail"
-        x-exportParamName: "PostDirectMail"
-      responses:
-        200:
-          description: "SUCCESS"
-          schema:
-            type: "string"
-        400:
-          description: "BAD_REQUEST"
-          schema:
-            type: "string"
-        401:
-          description: "UNAUTHORIZED"
-          schema:
-            type: "string"
-        403:
-          description: "FORBIDDEN"
-          schema:
-            type: "string"
-        404:
-          description: "NOT_FOUND"
-          schema:
-            type: "string"
-        405:
-          description: "METHOD_NOT_FOUND"
-          schema:
-            type: "string"
-        429:
-          description: "TOO_MANY_REQUESTS"
-          schema:
-            type: "string"
-        default:
-          description: "INTERNAL_SERVER_ERROR"
-          schema:
-            type: "string"
-      security:
-      - BasicAuth: []
-  /post/direct-mail/campaigns/price:
-    post:
-      tags:
-      - "Post Direct Mail"
-      summary: "Calculate direct mail campaign price"
-      description: "Calculate direct mail campaign price"
-      operationId: "PostDirectMailCampaignsPricePost"
-      produces:
-      - "application/json"
-      parameters:
-      - in: "body"
-        name: "postDirectMail"
-        description: "PostDirectMail model"
-        required: true
-        schema:
-          $ref: "#/definitions/PostDirectMail"
-        x-exportParamName: "PostDirectMail"
-      responses:
-        200:
-          description: "SUCCESS"
-          schema:
-            type: "string"
-        400:
-          description: "BAD_REQUEST"
-          schema:
-            type: "string"
-        401:
-          description: "UNAUTHORIZED"
-          schema:
-            type: "string"
-        403:
-          description: "FORBIDDEN"
-          schema:
-            type: "string"
-        404:
-          description: "NOT_FOUND"
-          schema:
-            type: "string"
-        405:
-          description: "METHOD_NOT_FOUND"
-          schema:
-            type: "string"
-        429:
-          description: "TOO_MANY_REQUESTS"
-          schema:
-            type: "string"
-        default:
-          description: "INTERNAL_SERVER_ERROR"
-          schema:
-            type: "string"
-      security:
-      - BasicAuth: []
-  /post/direct-mail/campaigns:
-    get:
-      tags:
-      - "Post Direct Mail"
-      summary: "Get direct mail campaigns"
-      description: "Get direct mail campaigns"
-      operationId: "PostDirectMailCampaignsGet"
-      produces:
-      - "application/json"
-      parameters:
-      - name: "page"
-        in: "query"
-        description: "Page number"
-        required: false
-        type: "integer"
-        default: 1
-        exclusiveMaximum: false
-        minimum: 1
-        exclusiveMinimum: false
-        format: "int32"
-        x-exportParamName: "Page"
-        x-optionalDataType: "Int32"
-      - name: "limit"
-        in: "query"
-        description: "Number of records per page"
-        required: false
-        type: "integer"
-        default: 10
-        exclusiveMaximum: false
-        minimum: 1
-        exclusiveMinimum: false
-        format: "int32"
-        x-exportParamName: "Limit"
-        x-optionalDataType: "Int32"
       responses:
         200:
           description: "SUCCESS"
@@ -8945,6 +8670,12 @@ paths:
       produces:
       - "application/json"
       parameters:
+      - name: "q"
+        in: "query"
+        description: "Your keyword or query."
+        required: true
+        type: "string"
+        x-exportParamName: "Q"
       - name: "page"
         in: "query"
         description: "Page number"
@@ -9226,6 +8957,12 @@ paths:
       produces:
       - "application/json"
       parameters:
+      - name: "q"
+        in: "query"
+        description: "Your keyword or query."
+        required: true
+        type: "string"
+        x-exportParamName: "Q"
       - name: "page"
         in: "query"
         description: "Page number"
@@ -9507,6 +9244,12 @@ paths:
       produces:
       - "application/json"
       parameters:
+      - name: "q"
+        in: "query"
+        description: "Your keyword or query."
+        required: true
+        type: "string"
+        x-exportParamName: "Q"
       - name: "page"
         in: "query"
         description: "Page number"
@@ -9788,6 +9531,12 @@ paths:
       produces:
       - "application/json"
       parameters:
+      - name: "q"
+        in: "query"
+        description: "Your keyword or query."
+        required: true
+        type: "string"
+        x-exportParamName: "Q"
       - name: "page"
         in: "query"
         description: "Page number"
@@ -10069,6 +9818,12 @@ paths:
       produces:
       - "application/json"
       parameters:
+      - name: "q"
+        in: "query"
+        description: "Your keyword or query."
+        required: true
+        type: "string"
+        x-exportParamName: "Q"
       - name: "page"
         in: "query"
         description: "Page number"
@@ -10708,6 +10463,12 @@ definitions:
       file_url:
         type: "string"
         description: "URL of file to send"
+      priority_post:
+        type: "integer"
+        format: "int32"
+        example: 0
+        description: "Whether letter is priority"
+        default: 0
       recipients:
         type: "array"
         description: "Array of PostRecipient models"
@@ -10730,12 +10491,6 @@ definitions:
         format: "int32"
         example: 0
         description: "Whether letter is in colour"
-        default: 0
-      priority_post:
-        type: "integer"
-        format: "int32"
-        example: 0
-        description: "Whether letter is priority"
         default: 0
       source:
         type: "string"
@@ -11162,80 +10917,6 @@ definitions:
       account_name: "account_name"
       user_phone: "user_phone"
       username: "username"
-  PostDirectMail:
-    type: "object"
-    required:
-    - "areas"
-    - "file_urls"
-    - "name"
-    - "size"
-    discriminator: "classType"
-    properties:
-      name:
-        type: "string"
-        description: "Campaign name"
-      file_urls:
-        type: "array"
-        description: "Campaign file URLs (maximum 2)"
-        items:
-          type: "string"
-      size:
-        type: "string"
-        description: "Document size - A5 or DL"
-      areas:
-        type: "array"
-        description: "PostDirectMailArea model"
-        items:
-          $ref: "#/definitions/PostDirectMailArea"
-      schedule:
-        type: "integer"
-        format: "int32"
-        example: 0
-        description: "Leave blank for immediate delivery. Your schedule time in unix\
-          \ format."
-        default: 0
-      source:
-        type: "string"
-        example: "sdk"
-        description: "Your method of sending e.g. 'wordpress', 'php', 'c#'."
-        default: "sdk"
-      custom_string:
-        type: "string"
-        description: "A custom string for your own reference"
-    description: "Post direct mail model"
-    example:
-      schedule: 0
-      size: "size"
-      name: "name"
-      areas:
-      - quantity: 6
-        location_id: 0
-      - quantity: 6
-        location_id: 0
-      source: "sdk"
-      file_urls:
-      - "file_urls"
-      - "file_urls"
-      custom_string: "custom_string"
-  PostDirectMailArea:
-    type: "object"
-    required:
-    - "location_id"
-    - "quantity"
-    discriminator: "classType"
-    properties:
-      location_id:
-        type: "integer"
-        format: "int32"
-        description: "Location ID to send to"
-      quantity:
-        type: "integer"
-        format: "int32"
-        description: "Number of items to send"
-    description: "PostDirectMailArea model"
-    example:
-      quantity: 6
-      location_id: 0
   FaxMessageCollection:
     type: "object"
     required:

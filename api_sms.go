@@ -716,6 +716,7 @@ func (a *SMSApiService) SmsHistoryGet(ctx context.Context, localVarOptionals *Sm
 SMSApiService Get all inbound sms
 Get all inbound sms
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ * @param q Your keyword or query.
  * @param optional nil or *SmsInboundGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
@@ -728,7 +729,7 @@ type SmsInboundGetOpts struct {
 	Limit optional.Int32
 }
 
-func (a *SMSApiService) SmsInboundGet(ctx context.Context, localVarOptionals *SmsInboundGetOpts) (string, *http.Response, error) {
+func (a *SMSApiService) SmsInboundGet(ctx context.Context, q string, localVarOptionals *SmsInboundGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -744,6 +745,7 @@ func (a *SMSApiService) SmsInboundGet(ctx context.Context, localVarOptionals *Sm
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	localVarQueryParams.Add("q", parameterToString(q, ""))
 	if localVarOptionals != nil && localVarOptionals.Page.IsSet() {
 		localVarQueryParams.Add("page", parameterToString(localVarOptionals.Page.Value(), ""))
 	}
@@ -1571,6 +1573,7 @@ func (a *SMSApiService) SmsReceiptsByMessageIdGet(ctx context.Context, messageId
 SMSApiService Get all delivery receipts
 Get all delivery receipts
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ * @param q Your keyword or query.
  * @param optional nil or *SmsReceiptsGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
@@ -1583,7 +1586,7 @@ type SmsReceiptsGetOpts struct {
 	Limit optional.Int32
 }
 
-func (a *SMSApiService) SmsReceiptsGet(ctx context.Context, localVarOptionals *SmsReceiptsGetOpts) (string, *http.Response, error) {
+func (a *SMSApiService) SmsReceiptsGet(ctx context.Context, q string, localVarOptionals *SmsReceiptsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1599,6 +1602,7 @@ func (a *SMSApiService) SmsReceiptsGet(ctx context.Context, localVarOptionals *S
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	localVarQueryParams.Add("q", parameterToString(q, ""))
 	if localVarOptionals != nil && localVarOptionals.Page.IsSet() {
 		localVarQueryParams.Add("page", parameterToString(localVarOptionals.Page.Value(), ""))
 	}

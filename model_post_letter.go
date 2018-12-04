@@ -14,6 +14,8 @@ package clicksend
 type PostLetter struct {
 	// URL of file to send
 	FileUrl string `json:"file_url"`
+	// Whether letter is priority
+	PriorityPost int32 `json:"priority_post,omitempty"`
 	// Array of PostRecipient models
 	Recipients []PostRecipient `json:"recipients"`
 	// Whether using our template
@@ -22,8 +24,6 @@ type PostLetter struct {
 	Duplex int32 `json:"duplex,omitempty"`
 	// Whether letter is in colour
 	Colour int32 `json:"colour,omitempty"`
-	// Whether letter is priority
-	PriorityPost int32 `json:"priority_post,omitempty"`
 	// Source being sent from
 	Source string `json:"source,omitempty"`
 }

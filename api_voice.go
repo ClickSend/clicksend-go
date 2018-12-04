@@ -1047,6 +1047,7 @@ func (a *VoiceApiService) VoicePricePost(ctx context.Context, voiceMessages Voic
 VoiceApiService Get all voice receipts
 Get all voice receipts
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ * @param q Your keyword or query.
  * @param optional nil or *VoiceReceiptsGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
@@ -1059,7 +1060,7 @@ type VoiceReceiptsGetOpts struct {
 	Limit optional.Int32
 }
 
-func (a *VoiceApiService) VoiceReceiptsGet(ctx context.Context, localVarOptionals *VoiceReceiptsGetOpts) (string, *http.Response, error) {
+func (a *VoiceApiService) VoiceReceiptsGet(ctx context.Context, q string, localVarOptionals *VoiceReceiptsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1075,6 +1076,7 @@ func (a *VoiceApiService) VoiceReceiptsGet(ctx context.Context, localVarOptional
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	localVarQueryParams.Add("q", parameterToString(q, ""))
 	if localVarOptionals != nil && localVarOptionals.Page.IsSet() {
 		localVarQueryParams.Add("page", parameterToString(localVarOptionals.Page.Value(), ""))
 	}

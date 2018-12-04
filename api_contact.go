@@ -721,19 +721,10 @@ Create new contact
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param contact Contact model
  * @param listId List id
- * @param optional nil or *ListsContactsByListIdPostOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Page number
-     * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
-
-type ListsContactsByListIdPostOpts struct { 
-	Page optional.Int32
-	Limit optional.Int32
-}
-
-func (a *ContactApiService) ListsContactsByListIdPost(ctx context.Context, contact Contact, listId int32, localVarOptionals *ListsContactsByListIdPostOpts) (string, *http.Response, error) {
+func (a *ContactApiService) ListsContactsByListIdPost(ctx context.Context, contact Contact, listId int32) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -750,12 +741,6 @@ func (a *ContactApiService) ListsContactsByListIdPost(ctx context.Context, conta
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-	if localVarOptionals != nil && localVarOptionals.Page.IsSet() {
-		localVarQueryParams.Add("page", parameterToString(localVarOptionals.Page.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Limit.IsSet() {
-		localVarQueryParams.Add("limit", parameterToString(localVarOptionals.Limit.Value(), ""))
-	}
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{"application/json"}
 

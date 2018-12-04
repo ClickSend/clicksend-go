@@ -82,8 +82,6 @@ type APIClient struct {
 
 	NumberApi *NumberApiService
 
-	PostDirectMailApi *PostDirectMailApiService
-
 	PostLetterApi *PostLetterApiService
 
 	PostPostcardApi *PostPostcardApiService
@@ -155,7 +153,6 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.MasterEmailTemplatesApi = (*MasterEmailTemplatesApiService)(&c.common)
 	c.MmsCampaignApi = (*MmsCampaignApiService)(&c.common)
 	c.NumberApi = (*NumberApiService)(&c.common)
-	c.PostDirectMailApi = (*PostDirectMailApiService)(&c.common)
 	c.PostLetterApi = (*PostLetterApiService)(&c.common)
 	c.PostPostcardApi = (*PostPostcardApiService)(&c.common)
 	c.PostReturnAddressApi = (*PostReturnAddressApiService)(&c.common)

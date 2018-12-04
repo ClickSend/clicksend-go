@@ -699,6 +699,7 @@ func (a *SMSDeliveryReceiptRulesApiService) SmsDeliveryReceiptAutomationPut(ctx 
 SMSDeliveryReceiptRulesApiService Get all sms delivery receipt automations
 Get all sms delivery receipt automations
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ * @param q Your keyword or query.
  * @param optional nil or *SmsDeliveryReceiptAutomationsGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
@@ -711,7 +712,7 @@ type SmsDeliveryReceiptAutomationsGetOpts struct {
 	Limit optional.Int32
 }
 
-func (a *SMSDeliveryReceiptRulesApiService) SmsDeliveryReceiptAutomationsGet(ctx context.Context, localVarOptionals *SmsDeliveryReceiptAutomationsGetOpts) (string, *http.Response, error) {
+func (a *SMSDeliveryReceiptRulesApiService) SmsDeliveryReceiptAutomationsGet(ctx context.Context, q string, localVarOptionals *SmsDeliveryReceiptAutomationsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -727,6 +728,7 @@ func (a *SMSDeliveryReceiptRulesApiService) SmsDeliveryReceiptAutomationsGet(ctx
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	localVarQueryParams.Add("q", parameterToString(q, ""))
 	if localVarOptionals != nil && localVarOptionals.Page.IsSet() {
 		localVarQueryParams.Add("page", parameterToString(localVarOptionals.Page.Value(), ""))
 	}

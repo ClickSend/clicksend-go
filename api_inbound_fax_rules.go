@@ -699,6 +699,7 @@ func (a *InboundFAXRulesApiService) FaxInboundAutomationPut(ctx context.Context,
 InboundFAXRulesApiService Get all inbound fax automations
 Get all inbound fax automations
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ * @param q Your keyword or query.
  * @param optional nil or *FaxInboundAutomationsGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
@@ -711,7 +712,7 @@ type FaxInboundAutomationsGetOpts struct {
 	Limit optional.Int32
 }
 
-func (a *InboundFAXRulesApiService) FaxInboundAutomationsGet(ctx context.Context, localVarOptionals *FaxInboundAutomationsGetOpts) (string, *http.Response, error) {
+func (a *InboundFAXRulesApiService) FaxInboundAutomationsGet(ctx context.Context, q string, localVarOptionals *FaxInboundAutomationsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -727,6 +728,7 @@ func (a *InboundFAXRulesApiService) FaxInboundAutomationsGet(ctx context.Context
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	localVarQueryParams.Add("q", parameterToString(q, ""))
 	if localVarOptionals != nil && localVarOptionals.Page.IsSet() {
 		localVarQueryParams.Add("page", parameterToString(localVarOptionals.Page.Value(), ""))
 	}

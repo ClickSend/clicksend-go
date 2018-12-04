@@ -699,6 +699,7 @@ func (a *VoiceDeliveryReceiptRulesApiService) VoiceDeliveryReceiptAutomationPut(
 VoiceDeliveryReceiptRulesApiService Get all voice delivery receipt automations
 Get all voice delivery receipt automations
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ * @param q Your keyword or query.
  * @param optional nil or *VoiceDeliveryReceiptAutomationsGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
@@ -711,7 +712,7 @@ type VoiceDeliveryReceiptAutomationsGetOpts struct {
 	Limit optional.Int32
 }
 
-func (a *VoiceDeliveryReceiptRulesApiService) VoiceDeliveryReceiptAutomationsGet(ctx context.Context, localVarOptionals *VoiceDeliveryReceiptAutomationsGetOpts) (string, *http.Response, error) {
+func (a *VoiceDeliveryReceiptRulesApiService) VoiceDeliveryReceiptAutomationsGet(ctx context.Context, q string, localVarOptionals *VoiceDeliveryReceiptAutomationsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -727,6 +728,7 @@ func (a *VoiceDeliveryReceiptRulesApiService) VoiceDeliveryReceiptAutomationsGet
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	localVarQueryParams.Add("q", parameterToString(q, ""))
 	if localVarOptionals != nil && localVarOptionals.Page.IsSet() {
 		localVarQueryParams.Add("page", parameterToString(localVarOptionals.Page.Value(), ""))
 	}
