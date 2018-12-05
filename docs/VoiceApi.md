@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **VoiceReceiptsGet**
-> string VoiceReceiptsGet(ctx, q, optional)
+> string VoiceReceiptsGet(ctx, optional)
 Get all voice receipts
 
 Get all voice receipts
@@ -195,7 +195,6 @@ Get all voice receipts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **q** | **string**| Your keyword or query. | 
  **optional** | ***VoiceReceiptsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -203,7 +202,7 @@ Optional parameters are passed through a pointer to a VoiceReceiptsGetOpts struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
+ **q** | **optional.String**| Your keyword or query. | 
  **page** | **optional.Int32**| Page number | [default to 1]
  **limit** | **optional.Int32**| Number of records per page | [default to 10]
 

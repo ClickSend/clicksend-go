@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **SmsInboundGet**
-> string SmsInboundGet(ctx, q, optional)
+> string SmsInboundGet(ctx, optional)
 Get all inbound sms
 
 Get all inbound sms
@@ -152,7 +152,6 @@ Get all inbound sms
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **q** | **string**| Your keyword or query. | 
  **optional** | ***SmsInboundGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -160,7 +159,7 @@ Optional parameters are passed through a pointer to a SmsInboundGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
+ **q** | **optional.String**| Your keyword or query. | 
  **page** | **optional.Int32**| Page number | [default to 1]
  **limit** | **optional.Int32**| Number of records per page | [default to 10]
 
@@ -299,7 +298,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **SmsReceiptsGet**
-> string SmsReceiptsGet(ctx, q, optional)
+> string SmsReceiptsGet(ctx, optional)
 Get all delivery receipts
 
 Get all delivery receipts
@@ -309,7 +308,6 @@ Get all delivery receipts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **q** | **string**| Your keyword or query. | 
  **optional** | ***SmsReceiptsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -317,7 +315,7 @@ Optional parameters are passed through a pointer to a SmsReceiptsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
+ **q** | **optional.String**| Your keyword or query. | 
  **page** | **optional.Int32**| Page number | [default to 1]
  **limit** | **optional.Int32**| Number of records per page | [default to 10]
 

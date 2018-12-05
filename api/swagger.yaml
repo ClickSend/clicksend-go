@@ -1,13 +1,13 @@
 ---
 swagger: "2.0"
 info:
-  description: "\nThis is the official [ClickSend](https://clicksend.com) SDK.\n\n\
-    *You'll need to create a free account to use the API. You can register [here](https://www.clicksend.com/signup).*\n\
-    \nYou can use our API documentation along with the SDK. Our API docs can be found\
-    \ [here](https://developers.clicksend.com).\n"
-  version: "3.1.0"
-  title: "ClickSend v3 REST API"
-  termsOfService: "https://www.clicksend.com/en/legal/terms-of-service/"
+  description: "\nThis is an official SDK for [ClickSend](https://clicksend.com)\n\
+    \nBelow you will find a current list of the available methods for clicksend.\n\
+    \n*NOTE: You will need to create a free account to use the API. You can register\
+    \ [here](https://dashboard.clicksend.com/#/signup/step1/)..*\n"
+  version: "3.1"
+  title: "ClickSend v3 API"
+  termsOfService: "https://www.clicksend.com/au/legal/terms-of-service/"
   contact:
     email: "support@clicksend.com"
 host: "rest.clicksend.com"
@@ -541,9 +541,10 @@ paths:
       - name: "q"
         in: "query"
         description: "Your keyword or query."
-        required: true
+        required: false
         type: "string"
         x-exportParamName: "Q"
+        x-optionalDataType: "String"
       - name: "page"
         in: "query"
         description: "Page number"
@@ -720,9 +721,10 @@ paths:
       - name: "q"
         in: "query"
         description: "Your keyword or query."
-        required: true
+        required: false
         type: "string"
         x-exportParamName: "Q"
+        x-optionalDataType: "String"
       - name: "page"
         in: "query"
         description: "Page number"
@@ -1269,9 +1271,10 @@ paths:
       - name: "q"
         in: "query"
         description: "Your keyword or query."
-        required: true
+        required: false
         type: "string"
         x-exportParamName: "Q"
+        x-optionalDataType: "String"
       - name: "page"
         in: "query"
         description: "Page number"
@@ -5415,9 +5418,10 @@ paths:
       - name: "q"
         in: "query"
         description: "Your keyword or query."
-        required: true
+        required: false
         type: "string"
         x-exportParamName: "Q"
+        x-optionalDataType: "String"
       - name: "page"
         in: "query"
         description: "Page number"
@@ -8673,9 +8677,10 @@ paths:
       - name: "q"
         in: "query"
         description: "Your keyword or query."
-        required: true
+        required: false
         type: "string"
         x-exportParamName: "Q"
+        x-optionalDataType: "String"
       - name: "page"
         in: "query"
         description: "Page number"
@@ -8960,9 +8965,10 @@ paths:
       - name: "q"
         in: "query"
         description: "Your keyword or query."
-        required: true
+        required: false
         type: "string"
         x-exportParamName: "Q"
+        x-optionalDataType: "String"
       - name: "page"
         in: "query"
         description: "Page number"
@@ -9247,9 +9253,10 @@ paths:
       - name: "q"
         in: "query"
         description: "Your keyword or query."
-        required: true
+        required: false
         type: "string"
         x-exportParamName: "Q"
+        x-optionalDataType: "String"
       - name: "page"
         in: "query"
         description: "Page number"
@@ -9534,9 +9541,10 @@ paths:
       - name: "q"
         in: "query"
         description: "Your keyword or query."
-        required: true
+        required: false
         type: "string"
         x-exportParamName: "Q"
+        x-optionalDataType: "String"
       - name: "page"
         in: "query"
         description: "Page number"
@@ -9821,9 +9829,10 @@ paths:
       - name: "q"
         in: "query"
         description: "Your keyword or query."
-        required: true
+        required: false
         type: "string"
         x-exportParamName: "Q"
+        x-optionalDataType: "String"
       - name: "page"
         in: "query"
         description: "Page number"
