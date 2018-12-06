@@ -700,6 +700,7 @@ InboundSMSRulesApiService Get all inbound sms automations
 Get all inbound sms automations
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SmsInboundAutomationsGetOpts - Optional Parameters:
+     * @param "Q" (optional.String) -  Your keyword or query.
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
@@ -707,6 +708,7 @@ Get all inbound sms automations
 */
 
 type SmsInboundAutomationsGetOpts struct { 
+	Q optional.String
 	Page optional.Int32
 	Limit optional.Int32
 }
@@ -727,6 +729,9 @@ func (a *InboundSMSRulesApiService) SmsInboundAutomationsGet(ctx context.Context
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	if localVarOptionals != nil && localVarOptionals.Q.IsSet() {
+		localVarQueryParams.Add("q", parameterToString(localVarOptionals.Q.Value(), ""))
+	}
 	if localVarOptionals != nil && localVarOptionals.Page.IsSet() {
 		localVarQueryParams.Add("page", parameterToString(localVarOptionals.Page.Value(), ""))
 	}

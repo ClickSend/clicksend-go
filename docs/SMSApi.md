@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**SmsHistoryGet**](SMSApi.md#SmsHistoryGet) | **Get** /sms/history | Get all sms history
 [**SmsInboundGet**](SMSApi.md#SmsInboundGet) | **Get** /sms/inbound | Get all inbound sms
 [**SmsInboundPost**](SMSApi.md#SmsInboundPost) | **Post** /sms/inbound | Create inbound sms
+[**SmsInboundReadByMessageIdPut**](SMSApi.md#SmsInboundReadByMessageIdPut) | **Put** /sms/inbound-read/{message_id} | Mark inbound SMS as read
 [**SmsInboundReadPut**](SMSApi.md#SmsInboundReadPut) | **Put** /sms/inbound-read | Mark inbound SMS as read
 [**SmsPricePost**](SMSApi.md#SmsPricePost) | **Post** /sms/price | Calculate sms price
 [**SmsReceiptsByMessageIdGet**](SMSApi.md#SmsReceiptsByMessageIdGet) | **Get** /sms/receipts/{message_id} | Get a Specific Delivery Receipt
@@ -206,6 +207,34 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **SmsInboundReadByMessageIdPut**
+> string SmsInboundReadByMessageIdPut(ctx, messageId)
+Mark inbound SMS as read
+
+Mark specific inbound SMS as read
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **messageId** | **string**| Message ID | 
+
+### Return type
+
+**string**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **SmsInboundReadPut**
 > string SmsInboundReadPut(ctx, optional)
 Mark inbound SMS as read
@@ -224,7 +253,7 @@ Optional parameters are passed through a pointer to a SmsInboundReadPutOpts stru
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dateBefore** | **optional.String**| An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. | 
+ **dateBefore** | **optional.Float32**| An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. | 
 
 ### Return type
 
@@ -315,7 +344,6 @@ Optional parameters are passed through a pointer to a SmsReceiptsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q** | **optional.String**| Your keyword or query. | 
  **page** | **optional.Int32**| Page number | [default to 1]
  **limit** | **optional.Int32**| Number of records per page | [default to 10]
 
@@ -380,7 +408,7 @@ Optional parameters are passed through a pointer to a SmsReceiptsReadPutOpts str
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dateBefore** | **optional.String**| Mark all as read before this timestamp | 
+ **dateBefore** | **optional.Float32**| Mark all as read before this timestamp | 
 
 ### Return type
 

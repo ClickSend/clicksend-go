@@ -538,13 +538,6 @@ paths:
       produces:
       - "application/json"
       parameters:
-      - name: "q"
-        in: "query"
-        description: "Your keyword or query."
-        required: false
-        type: "string"
-        x-exportParamName: "Q"
-        x-optionalDataType: "String"
       - name: "page"
         in: "query"
         description: "Page number"
@@ -670,9 +663,9 @@ paths:
         description: "Mark all as read before this timestamp"
         required: false
         schema:
-          type: "string"
+          type: "number"
         x-exportParamName: "DateBefore"
-        x-optionalDataType: "String"
+        x-optionalDataType: "Float32"
       responses:
         200:
           description: "SUCCESS"
@@ -1268,13 +1261,6 @@ paths:
       produces:
       - "application/json"
       parameters:
-      - name: "q"
-        in: "query"
-        description: "Your keyword or query."
-        required: false
-        type: "string"
-        x-exportParamName: "Q"
-        x-optionalDataType: "String"
       - name: "page"
         in: "query"
         description: "Page number"
@@ -5415,13 +5401,6 @@ paths:
       produces:
       - "application/json"
       parameters:
-      - name: "q"
-        in: "query"
-        description: "Your keyword or query."
-        required: false
-        type: "string"
-        x-exportParamName: "Q"
-        x-optionalDataType: "String"
       - name: "page"
         in: "query"
         description: "Page number"
@@ -5648,9 +5627,60 @@ paths:
           \ If not given, all messages will be marked as read."
         required: false
         schema:
-          type: "string"
+          type: "number"
         x-exportParamName: "DateBefore"
-        x-optionalDataType: "String"
+        x-optionalDataType: "Float32"
+      responses:
+        200:
+          description: "SUCCESS"
+          schema:
+            type: "string"
+        400:
+          description: "BAD_REQUEST"
+          schema:
+            type: "string"
+        401:
+          description: "UNAUTHORIZED"
+          schema:
+            type: "string"
+        403:
+          description: "FORBIDDEN"
+          schema:
+            type: "string"
+        404:
+          description: "NOT_FOUND"
+          schema:
+            type: "string"
+        405:
+          description: "METHOD_NOT_FOUND"
+          schema:
+            type: "string"
+        429:
+          description: "TOO_MANY_REQUESTS"
+          schema:
+            type: "string"
+        default:
+          description: "INTERNAL_SERVER_ERROR"
+          schema:
+            type: "string"
+      security:
+      - BasicAuth: []
+  /sms/inbound-read/{message_id}:
+    put:
+      tags:
+      - "SMS"
+      summary: "Mark inbound SMS as read"
+      description: "Mark specific inbound SMS as read"
+      operationId: "SmsInboundReadByMessageIdPut"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "message_id"
+        in: "path"
+        description: "Message ID"
+        required: true
+        type: "string"
+        x-exportParamName: "MessageId"
       responses:
         200:
           description: "SUCCESS"
@@ -8393,6 +8423,13 @@ paths:
       produces:
       - "application/json"
       parameters:
+      - name: "q"
+        in: "query"
+        description: "Your keyword or query."
+        required: false
+        type: "string"
+        x-exportParamName: "Q"
+        x-optionalDataType: "String"
       - name: "page"
         in: "query"
         description: "Page number"

@@ -202,7 +202,6 @@ Optional parameters are passed through a pointer to a VoiceReceiptsGetOpts struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q** | **optional.String**| Your keyword or query. | 
  **page** | **optional.Int32**| Page number | [default to 1]
  **limit** | **optional.Int32**| Number of records per page | [default to 10]
 
