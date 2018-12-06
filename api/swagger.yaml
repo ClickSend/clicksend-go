@@ -11373,12 +11373,12 @@ definitions:
     discriminator: "classType"
     properties:
       date_before:
-        type: "string"
+        type: "number"
         description: "An optional timestamp - mark all as read before this timestamp.\
           \ If not given, all messages will be marked as read."
     description: "All dates before specified timestam."
     example:
-      date_before: "date_before"
+      date_before: 1
   UploadFile:
     type: "object"
     required:
