@@ -6410,6 +6410,13 @@ paths:
       produces:
       - "application/json"
       parameters:
+      - name: "q"
+        in: "query"
+        description: "Custom query Example: from:{number},status_code:201."
+        required: false
+        type: "string"
+        x-exportParamName: "Q"
+        x-optionalDataType: "String"
       - name: "date_from"
         in: "query"
         description: "Start date"

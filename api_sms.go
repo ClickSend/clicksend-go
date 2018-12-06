@@ -528,6 +528,7 @@ SMSApiService Get all sms history
 Get all sms history
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SmsHistoryGetOpts - Optional Parameters:
+     * @param "Q" (optional.String) -  Custom query Example: from:{number},status_code:201.
      * @param "DateFrom" (optional.Int32) -  Start date
      * @param "DateTo" (optional.Int32) -  End date
      * @param "Page" (optional.Int32) -  Page number
@@ -537,6 +538,7 @@ Get all sms history
 */
 
 type SmsHistoryGetOpts struct { 
+	Q optional.String
 	DateFrom optional.Int32
 	DateTo optional.Int32
 	Page optional.Int32
@@ -559,6 +561,9 @@ func (a *SMSApiService) SmsHistoryGet(ctx context.Context, localVarOptionals *Sm
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	if localVarOptionals != nil && localVarOptionals.Q.IsSet() {
+		localVarQueryParams.Add("q", parameterToString(localVarOptionals.Q.Value(), ""))
+	}
 	if localVarOptionals != nil && localVarOptionals.DateFrom.IsSet() {
 		localVarQueryParams.Add("date_from", parameterToString(localVarOptionals.DateFrom.Value(), ""))
 	}

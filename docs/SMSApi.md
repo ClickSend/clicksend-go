@@ -122,6 +122,7 @@ Optional parameters are passed through a pointer to a SmsHistoryGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **q** | **optional.String**| Custom query Example: from:{number},status_code:201. | 
  **dateFrom** | **optional.Int32**| Start date | 
  **dateTo** | **optional.Int32**| End date | 
  **page** | **optional.Int32**| Page number | [default to 1]
