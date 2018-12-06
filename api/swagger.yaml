@@ -659,13 +659,12 @@ paths:
       - "application/json"
       parameters:
       - in: "body"
-        name: "date_before"
-        description: "Mark all as read before this timestamp"
+        name: "dateBefore"
+        description: "DateBefore model"
         required: false
         schema:
-          type: "number"
+          $ref: "#/definitions/DateBefore"
         x-exportParamName: "DateBefore"
-        x-optionalDataType: "Float32"
       responses:
         200:
           description: "SUCCESS"
@@ -5622,14 +5621,12 @@ paths:
       - "application/json"
       parameters:
       - in: "body"
-        name: "date_before"
-        description: "An optional timestamp - mark all as read before this timestamp.\
-          \ If not given, all messages will be marked as read."
+        name: "dateBefore"
+        description: "DateBefore model"
         required: false
         schema:
-          type: "number"
+          $ref: "#/definitions/DateBefore"
         x-exportParamName: "DateBefore"
-        x-optionalDataType: "Float32"
       responses:
         200:
           description: "SUCCESS"
@@ -11371,6 +11368,17 @@ definitions:
     description: "Your url."
     example:
       url: "url"
+  DateBefore:
+    type: "object"
+    discriminator: "classType"
+    properties:
+      date_before:
+        type: "string"
+        description: "An optional timestamp - mark all as read before this timestamp.\
+          \ If not given, all messages will be marked as read."
+    description: "All dates before specified timestam."
+    example:
+      date_before: "date_before"
   UploadFile:
     type: "object"
     required:

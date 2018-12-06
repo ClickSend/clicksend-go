@@ -1234,13 +1234,13 @@ SMSApiService Mark inbound SMS as read
 Mark all inbound SMS as read optionally before a certain date
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SmsInboundReadPutOpts - Optional Parameters:
-     * @param "DateBefore" (optional.Float32) -  An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
+     * @param "DateBefore" (optional.Interface of DateBefore) -  DateBefore model
 
 @return string
 */
 
 type SmsInboundReadPutOpts struct { 
-	DateBefore optional.Float32
+	DateBefore optional.Interface
 }
 
 func (a *SMSApiService) SmsInboundReadPut(ctx context.Context, localVarOptionals *SmsInboundReadPutOpts) (string, *http.Response, error) {
@@ -1278,8 +1278,12 @@ func (a *SMSApiService) SmsInboundReadPut(ctx context.Context, localVarOptionals
 	}
 	// body params
 	if localVarOptionals != nil && localVarOptionals.DateBefore.IsSet() {
-		localVarPostBody = &localVarOptionals.DateBefore.Value()
 		
+		localVarOptionalDateBefore, localVarOptionalDateBeforeok := localVarOptionals.DateBefore.Value().(DateBefore)
+		if !localVarOptionalDateBeforeok {
+				return localVarReturnValue, nil, reportError("dateBefore should be DateBefore")
+		}
+		localVarPostBody = &localVarOptionalDateBefore
 	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
@@ -2089,13 +2093,13 @@ SMSApiService Mark delivery receipts as read
 Mark delivery receipts as read
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SmsReceiptsReadPutOpts - Optional Parameters:
-     * @param "DateBefore" (optional.Float32) -  Mark all as read before this timestamp
+     * @param "DateBefore" (optional.Interface of DateBefore) -  DateBefore model
 
 @return string
 */
 
 type SmsReceiptsReadPutOpts struct { 
-	DateBefore optional.Float32
+	DateBefore optional.Interface
 }
 
 func (a *SMSApiService) SmsReceiptsReadPut(ctx context.Context, localVarOptionals *SmsReceiptsReadPutOpts) (string, *http.Response, error) {
@@ -2133,8 +2137,12 @@ func (a *SMSApiService) SmsReceiptsReadPut(ctx context.Context, localVarOptional
 	}
 	// body params
 	if localVarOptionals != nil && localVarOptionals.DateBefore.IsSet() {
-		localVarPostBody = &localVarOptionals.DateBefore.Value()
 		
+		localVarOptionalDateBefore, localVarOptionalDateBeforeok := localVarOptionals.DateBefore.Value().(DateBefore)
+		if !localVarOptionalDateBeforeok {
+				return localVarReturnValue, nil, reportError("dateBefore should be DateBefore")
+		}
+		localVarPostBody = &localVarOptionalDateBefore
 	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {

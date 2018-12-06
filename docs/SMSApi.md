@@ -253,7 +253,7 @@ Optional parameters are passed through a pointer to a SmsInboundReadPutOpts stru
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dateBefore** | **optional.Float32**| An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. | 
+ **dateBefore** | [**optional.Interface of DateBefore**](DateBefore.md)| DateBefore model | 
 
 ### Return type
 
@@ -408,7 +408,7 @@ Optional parameters are passed through a pointer to a SmsReceiptsReadPutOpts str
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dateBefore** | **optional.Float32**| Mark all as read before this timestamp | 
+ **dateBefore** | [**optional.Interface of DateBefore**](DateBefore.md)| DateBefore model | 
 
 ### Return type
 
