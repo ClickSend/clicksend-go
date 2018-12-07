@@ -1,45 +1,16 @@
-# \MMSApi
+# \FAXApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**MmsPricePost**](MMSApi.md#MmsPricePost) | **Post** /mms/price | Get Price for MMS sent
-[**MmsReceiptsGet**](MMSApi.md#MmsReceiptsGet) | **Get** /mms/receipts | Get all delivery receipts
-[**MmsReceiptsReadPut**](MMSApi.md#MmsReceiptsReadPut) | **Put** /mms/receipts-read | Mark delivery receipts as read
-[**MmsSendPost**](MMSApi.md#MmsSendPost) | **Post** /mms/send | Send MMS
+[**FaxReceiptsGet**](FAXApi.md#FaxReceiptsGet) | **Get** /fax/receipts | Get all delivery receipts
+[**FaxReceiptsPost**](FAXApi.md#FaxReceiptsPost) | **Post** /fax/receipts | Add a delivery receipt
+[**FaxReceiptsReadPut**](FAXApi.md#FaxReceiptsReadPut) | **Put** /fax/receipts-read | Mark delivery receipts as read
 
 
-# **MmsPricePost**
-> string MmsPricePost(ctx, mmsMessages)
-Get Price for MMS sent
-
-Get Price for MMS sent
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **mmsMessages** | [**MmsMessageCollection**](MmsMessageCollection.md)| MmsMessageCollection model | 
-
-### Return type
-
-**string**
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **MmsReceiptsGet**
-> string MmsReceiptsGet(ctx, optional)
+# **FaxReceiptsGet**
+> string FaxReceiptsGet(ctx, optional)
 Get all delivery receipts
 
 Get all delivery receipts
@@ -49,10 +20,10 @@ Get all delivery receipts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***MmsReceiptsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***FaxReceiptsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a MmsReceiptsGetOpts struct
+Optional parameters are passed through a pointer to a FaxReceiptsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -74,25 +45,18 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **MmsReceiptsReadPut**
-> string MmsReceiptsReadPut(ctx, optional)
-Mark delivery receipts as read
+# **FaxReceiptsPost**
+> string FaxReceiptsPost(ctx, url)
+Add a delivery receipt
 
-Mark delivery receipts as read
+Add a delivery receipt
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***MmsReceiptsReadPutOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a MmsReceiptsReadPutOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dateBefore** | [**optional.Interface of DateBefore**](DateBefore.md)| DateBefore model | 
+  **url** | [**Url**](Url.md)| Url model | 
 
 ### Return type
 
@@ -109,18 +73,25 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **MmsSendPost**
-> string MmsSendPost(ctx, mmsMessages)
-Send MMS
+# **FaxReceiptsReadPut**
+> string FaxReceiptsReadPut(ctx, optional)
+Mark delivery receipts as read
 
-Send MMS
+Mark delivery receipts as read
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **mmsMessages** | [**MmsMessageCollection**](MmsMessageCollection.md)| MmsMessageCollection model | 
+ **optional** | ***FaxReceiptsReadPutOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a FaxReceiptsReadPutOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **dateBefore** | [**optional.Interface of DateBefore**](DateBefore.md)| DateBefore model | 
 
 ### Return type
 

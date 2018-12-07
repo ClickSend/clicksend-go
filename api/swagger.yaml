@@ -321,6 +321,65 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
+  /account/usage/{year}/{month}/subaccount:
+    get:
+      tags:
+      - "Account"
+      summary: "Get account useage by subaccount"
+      description: "Get account useage by subaccount"
+      operationId: "AccountUseageBySubaccountGet"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "year"
+        in: "path"
+        description: "Year to filter by (yyyy)"
+        required: true
+        type: "integer"
+        format: "int32"
+        x-exportParamName: "Year"
+      - name: "month"
+        in: "path"
+        description: "Month to filter by (mm)"
+        required: true
+        type: "integer"
+        format: "int32"
+        x-exportParamName: "Month"
+      responses:
+        200:
+          description: "SUCCESS"
+          schema:
+            type: "string"
+        400:
+          description: "BAD_REQUEST"
+          schema:
+            type: "string"
+        401:
+          description: "UNAUTHORIZED"
+          schema:
+            type: "string"
+        403:
+          description: "FORBIDDEN"
+          schema:
+            type: "string"
+        404:
+          description: "NOT_FOUND"
+          schema:
+            type: "string"
+        405:
+          description: "METHOD_NOT_FOUND"
+          schema:
+            type: "string"
+        429:
+          description: "TOO_MANY_REQUESTS"
+          schema:
+            type: "string"
+        default:
+          description: "INTERNAL_SERVER_ERROR"
+          schema:
+            type: "string"
+      security:
+      - BasicAuth: []
   /account-verify/send:
     put:
       tags:
@@ -1254,8 +1313,8 @@ paths:
     get:
       tags:
       - "Voice"
-      summary: "Get all voice receipts"
-      description: "Get all voice receipts"
+      summary: "Get all delivery receipts"
+      description: "Get all delivery receipts"
       operationId: "VoiceReceiptsGet"
       produces:
       - "application/json"
@@ -1284,6 +1343,109 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      responses:
+        200:
+          description: "SUCCESS"
+          schema:
+            type: "string"
+        400:
+          description: "BAD_REQUEST"
+          schema:
+            type: "string"
+        401:
+          description: "UNAUTHORIZED"
+          schema:
+            type: "string"
+        403:
+          description: "FORBIDDEN"
+          schema:
+            type: "string"
+        404:
+          description: "NOT_FOUND"
+          schema:
+            type: "string"
+        405:
+          description: "METHOD_NOT_FOUND"
+          schema:
+            type: "string"
+        429:
+          description: "TOO_MANY_REQUESTS"
+          schema:
+            type: "string"
+        default:
+          description: "INTERNAL_SERVER_ERROR"
+          schema:
+            type: "string"
+      security:
+      - BasicAuth: []
+    post:
+      tags:
+      - "Voice"
+      summary: "Add a delivery receipt"
+      description: "Add a delivery receipt"
+      operationId: "VoiceReceiptsPost"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "url"
+        description: "Url model"
+        required: true
+        schema:
+          $ref: "#/definitions/Url"
+        x-exportParamName: "Url"
+      responses:
+        200:
+          description: "SUCCESS"
+          schema:
+            type: "string"
+        400:
+          description: "BAD_REQUEST"
+          schema:
+            type: "string"
+        401:
+          description: "UNAUTHORIZED"
+          schema:
+            type: "string"
+        403:
+          description: "FORBIDDEN"
+          schema:
+            type: "string"
+        404:
+          description: "NOT_FOUND"
+          schema:
+            type: "string"
+        405:
+          description: "METHOD_NOT_FOUND"
+          schema:
+            type: "string"
+        429:
+          description: "TOO_MANY_REQUESTS"
+          schema:
+            type: "string"
+        default:
+          description: "INTERNAL_SERVER_ERROR"
+          schema:
+            type: "string"
+      security:
+      - BasicAuth: []
+  /voice/receipts-read:
+    put:
+      tags:
+      - "Voice"
+      summary: "Mark delivery receipts as read"
+      description: "Mark delivery receipts as read"
+      operationId: "VoiceReceiptsReadPut"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "dateBefore"
+        description: "DateBefore model"
+        required: false
+        schema:
+          $ref: "#/definitions/DateBefore"
+        x-exportParamName: "DateBefore"
       responses:
         200:
           description: "SUCCESS"
@@ -5393,9 +5555,9 @@ paths:
   /fax/receipts:
     get:
       tags:
-      - "Fax"
-      summary: "Get List of Fax Receipts"
-      description: "Get List of Fax Receipts"
+      - "FAX"
+      summary: "Get all delivery receipts"
+      description: "Get all delivery receipts"
       operationId: "FaxReceiptsGet"
       produces:
       - "application/json"
@@ -5459,6 +5621,57 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
+    post:
+      tags:
+      - "FAX"
+      summary: "Add a delivery receipt"
+      description: "Add a delivery receipt"
+      operationId: "FaxReceiptsPost"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "url"
+        description: "Url model"
+        required: true
+        schema:
+          $ref: "#/definitions/Url"
+        x-exportParamName: "Url"
+      responses:
+        200:
+          description: "SUCCESS"
+          schema:
+            type: "string"
+        400:
+          description: "BAD_REQUEST"
+          schema:
+            type: "string"
+        401:
+          description: "UNAUTHORIZED"
+          schema:
+            type: "string"
+        403:
+          description: "FORBIDDEN"
+          schema:
+            type: "string"
+        404:
+          description: "NOT_FOUND"
+          schema:
+            type: "string"
+        405:
+          description: "METHOD_NOT_FOUND"
+          schema:
+            type: "string"
+        429:
+          description: "TOO_MANY_REQUESTS"
+          schema:
+            type: "string"
+        default:
+          description: "INTERNAL_SERVER_ERROR"
+          schema:
+            type: "string"
+      security:
+      - BasicAuth: []
   /fax/receipts/{message_id}:
     get:
       tags:
@@ -5475,6 +5688,58 @@ paths:
         required: true
         type: "string"
         x-exportParamName: "MessageId"
+      responses:
+        200:
+          description: "SUCCESS"
+          schema:
+            type: "string"
+        400:
+          description: "BAD_REQUEST"
+          schema:
+            type: "string"
+        401:
+          description: "UNAUTHORIZED"
+          schema:
+            type: "string"
+        403:
+          description: "FORBIDDEN"
+          schema:
+            type: "string"
+        404:
+          description: "NOT_FOUND"
+          schema:
+            type: "string"
+        405:
+          description: "METHOD_NOT_FOUND"
+          schema:
+            type: "string"
+        429:
+          description: "TOO_MANY_REQUESTS"
+          schema:
+            type: "string"
+        default:
+          description: "INTERNAL_SERVER_ERROR"
+          schema:
+            type: "string"
+      security:
+      - BasicAuth: []
+  /fax/receipts-read:
+    put:
+      tags:
+      - "FAX"
+      summary: "Mark delivery receipts as read"
+      description: "Mark delivery receipts as read"
+      operationId: "FaxReceiptsReadPut"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "dateBefore"
+        description: "DateBefore model"
+        required: false
+        schema:
+          $ref: "#/definitions/DateBefore"
+        x-exportParamName: "DateBefore"
       responses:
         200:
           description: "SUCCESS"
@@ -6101,6 +6366,127 @@ paths:
         schema:
           $ref: "#/definitions/MmsMessageCollection"
         x-exportParamName: "MmsMessages"
+      responses:
+        200:
+          description: "SUCCESS"
+          schema:
+            type: "string"
+        400:
+          description: "BAD_REQUEST"
+          schema:
+            type: "string"
+        401:
+          description: "UNAUTHORIZED"
+          schema:
+            type: "string"
+        403:
+          description: "FORBIDDEN"
+          schema:
+            type: "string"
+        404:
+          description: "NOT_FOUND"
+          schema:
+            type: "string"
+        405:
+          description: "METHOD_NOT_FOUND"
+          schema:
+            type: "string"
+        429:
+          description: "TOO_MANY_REQUESTS"
+          schema:
+            type: "string"
+        default:
+          description: "INTERNAL_SERVER_ERROR"
+          schema:
+            type: "string"
+      security:
+      - BasicAuth: []
+  /mms/receipts:
+    get:
+      tags:
+      - "MMS"
+      summary: "Get all delivery receipts"
+      description: "Get all delivery receipts"
+      operationId: "MmsReceiptsGet"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "page"
+        in: "query"
+        description: "Page number"
+        required: false
+        type: "integer"
+        default: 1
+        exclusiveMaximum: false
+        minimum: 1
+        exclusiveMinimum: false
+        format: "int32"
+        x-exportParamName: "Page"
+        x-optionalDataType: "Int32"
+      - name: "limit"
+        in: "query"
+        description: "Number of records per page"
+        required: false
+        type: "integer"
+        default: 10
+        exclusiveMaximum: false
+        minimum: 1
+        exclusiveMinimum: false
+        format: "int32"
+        x-exportParamName: "Limit"
+        x-optionalDataType: "Int32"
+      responses:
+        200:
+          description: "SUCCESS"
+          schema:
+            type: "string"
+        400:
+          description: "BAD_REQUEST"
+          schema:
+            type: "string"
+        401:
+          description: "UNAUTHORIZED"
+          schema:
+            type: "string"
+        403:
+          description: "FORBIDDEN"
+          schema:
+            type: "string"
+        404:
+          description: "NOT_FOUND"
+          schema:
+            type: "string"
+        405:
+          description: "METHOD_NOT_FOUND"
+          schema:
+            type: "string"
+        429:
+          description: "TOO_MANY_REQUESTS"
+          schema:
+            type: "string"
+        default:
+          description: "INTERNAL_SERVER_ERROR"
+          schema:
+            type: "string"
+      security:
+      - BasicAuth: []
+  /mms/receipts-read:
+    put:
+      tags:
+      - "MMS"
+      summary: "Mark delivery receipts as read"
+      description: "Mark delivery receipts as read"
+      operationId: "MmsReceiptsReadPut"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "dateBefore"
+        description: "DateBefore model"
+        required: false
+        schema:
+          $ref: "#/definitions/DateBefore"
+        x-exportParamName: "DateBefore"
       responses:
         200:
           description: "SUCCESS"

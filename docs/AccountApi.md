@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AccountGet**](AccountApi.md#AccountGet) | **Get** /account | Get account information
 [**AccountPost**](AccountApi.md#AccountPost) | **Post** /account | Create a new account
+[**AccountUseageBySubaccountGet**](AccountApi.md#AccountUseageBySubaccountGet) | **Get** /account/usage/{year}/{month}/subaccount | Get account useage by subaccount
 [**AccountVerifySendPut**](AccountApi.md#AccountVerifySendPut) | **Put** /account-verify/send | Send account activation token
 [**AccountVerifyVerifyByActivationTokenPut**](AccountApi.md#AccountVerifyVerifyByActivationTokenPut) | **Put** /account-verify/verify/{activation_token} | Verify new account
 [**ForgotPasswordPut**](AccountApi.md#ForgotPasswordPut) | **Put** /forgot-password | Forgot password
@@ -49,6 +50,35 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **account** | [**Account**](Account.md)| Account model | 
+
+### Return type
+
+**string**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **AccountUseageBySubaccountGet**
+> string AccountUseageBySubaccountGet(ctx, year, month)
+Get account useage by subaccount
+
+Get account useage by subaccount
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **year** | **int32**| Year to filter by (yyyy) | 
+  **month** | **int32**| Month to filter by (mm) | 
 
 ### Return type
 
