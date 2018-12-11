@@ -70,8 +70,6 @@ type APIClient struct {
 
 	FAXDeliveryReceiptRulesApi *FAXDeliveryReceiptRulesApiService
 
-	FaxApi *FaxApiService
-
 	InboundFAXRulesApi *InboundFAXRulesApiService
 
 	InboundSMSRulesApi *InboundSMSRulesApiService
@@ -149,7 +147,6 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.EmailToSmsApi = (*EmailToSmsApiService)(&c.common)
 	c.FAXApi = (*FAXApiService)(&c.common)
 	c.FAXDeliveryReceiptRulesApi = (*FAXDeliveryReceiptRulesApiService)(&c.common)
-	c.FaxApi = (*FaxApiService)(&c.common)
 	c.InboundFAXRulesApi = (*InboundFAXRulesApiService)(&c.common)
 	c.InboundSMSRulesApi = (*InboundSMSRulesApiService)(&c.common)
 	c.MMSApi = (*MMSApiService)(&c.common)

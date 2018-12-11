@@ -5675,7 +5675,7 @@ paths:
   /fax/receipts/{message_id}:
     get:
       tags:
-      - "Fax"
+      - "FAX"
       summary: "Get a single fax receipt based on message id."
       description: "Get a single fax receipt based on message id."
       operationId: "FaxReceiptsByMessageIdGet"
@@ -5778,7 +5778,7 @@ paths:
   /fax/history:
     get:
       tags:
-      - "Fax"
+      - "FAX"
       summary: "Get a list of Fax History."
       description: "Get a list of Fax History."
       operationId: "FaxHistoryGet"
@@ -6084,7 +6084,7 @@ paths:
   /fax/price:
     post:
       tags:
-      - "Fax"
+      - "FAX"
       summary: "Calculate Total Price for Fax Messages sent"
       description: "Calculate Total Price for Fax Messages sent"
       operationId: "FaxPricePost"
@@ -6300,7 +6300,7 @@ paths:
   /fax/send:
     post:
       tags:
-      - "Fax"
+      - "FAX"
       summary: "Send a fax using supplied supported file-types."
       description: "Send a fax using supplied supported file-types."
       operationId: "FaxSendPost"
@@ -9469,7 +9469,7 @@ paths:
         description: "Inbound fax rule model"
         required: true
         schema:
-          $ref: "#/definitions/InboundFAXRule"
+          $ref: "#/definitions/InboundFaxRule"
         x-exportParamName: "InboundFaxRule"
       responses:
         200:
@@ -9579,7 +9579,7 @@ paths:
         description: "Inbound fax rule model"
         required: true
         schema:
-          $ref: "#/definitions/InboundFAXRule"
+          $ref: "#/definitions/InboundFaxRule"
         x-exportParamName: "InboundFaxRule"
       responses:
         200:
@@ -11967,7 +11967,7 @@ definitions:
       rule_name: "rule_name"
       action: "action"
       enabled: 1
-  InboundFAXRule:
+  InboundFaxRule:
     type: "object"
     required:
     - "action"
