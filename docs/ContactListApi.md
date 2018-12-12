@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ListsByListIdPut**
-> string ListsByListIdPut(ctx, listId, list)
+> string ListsByListIdPut(ctx, listId, contactList)
 Update specific contact list
 
 Update specific contact list
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **listId** | **int32**| Your list id | 
-  **list** | [**List**](List.md)| List model | 
+  **contactList** | [**ContactList**](ContactList.md)| Contact list model | 
 
 ### Return type
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ListsPost**
-> string ListsPost(ctx, list)
+> string ListsPost(ctx, contactList)
 Create new contact list
 
 Create new contact list
@@ -174,7 +174,7 @@ Create new contact list
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **list** | [**List**](List.md)| List model | 
+  **contactList** | [**ContactList**](ContactList.md)| Contact list model | 
 
 ### Return type
 

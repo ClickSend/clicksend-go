@@ -364,11 +364,11 @@ ContactListApiService Update specific contact list
 Update specific contact list
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param listId Your list id
- * @param list List model
+ * @param contactList Contact list model
 
 @return string
 */
-func (a *ContactListApiService) ListsByListIdPut(ctx context.Context, listId int32, list List) (string, *http.Response, error) {
+func (a *ContactListApiService) ListsByListIdPut(ctx context.Context, listId int32, contactList ContactList) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -403,7 +403,7 @@ func (a *ContactListApiService) ListsByListIdPut(ctx context.Context, listId int
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
 	// body params
-	localVarPostBody = &list
+	localVarPostBody = &contactList
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -880,11 +880,11 @@ func (a *ContactListApiService) ListsImportByListIdPost(ctx context.Context, lis
 ContactListApiService Create new contact list
 Create new contact list
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param list List model
+ * @param contactList Contact list model
 
 @return string
 */
-func (a *ContactListApiService) ListsPost(ctx context.Context, list List) (string, *http.Response, error) {
+func (a *ContactListApiService) ListsPost(ctx context.Context, contactList ContactList) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -918,7 +918,7 @@ func (a *ContactListApiService) ListsPost(ctx context.Context, list List) (strin
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
 	// body params
-	localVarPostBody = &list
+	localVarPostBody = &contactList
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err

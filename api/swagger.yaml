@@ -2042,12 +2042,12 @@ paths:
       - "application/json"
       parameters:
       - in: "body"
-        name: "list"
-        description: "List model"
+        name: "contactList"
+        description: "Contact list model"
         required: true
         schema:
-          $ref: "#/definitions/List"
-        x-exportParamName: "List"
+          $ref: "#/definitions/ContactList"
+        x-exportParamName: "ContactList"
       responses:
         200:
           description: "SUCCESS"
@@ -2152,12 +2152,12 @@ paths:
         format: "int32"
         x-exportParamName: "ListId"
       - in: "body"
-        name: "list"
-        description: "List model"
+        name: "contactList"
+        description: "Contact list model"
         required: true
         schema:
-          $ref: "#/definitions/List"
-        x-exportParamName: "List"
+          $ref: "#/definitions/ContactList"
+        x-exportParamName: "ContactList"
       responses:
         200:
           description: "SUCCESS"
@@ -11489,10 +11489,6 @@ definitions:
         type: "string"
         description: "Your subaccount id"
     description: "Email-to-SMS Allowed Address"
-    example:
-      email_address: "email_address"
-      from: "from"
-      subaccount_id: "subaccount_id"
   ResellerAccountTransferCredit:
     type: "object"
     required:
@@ -11706,7 +11702,7 @@ definitions:
         email: "email"
       - name: "name"
         email: "email"
-      schedule: 1
+      schedule: 0.80082819046101150206595775671303272247314453125
       bcc:
       - name: "name"
         email: "email"
@@ -11771,7 +11767,7 @@ definitions:
           \ If not given, all messages will be marked as read."
     description: "All dates before specified timestam."
     example:
-      date_before: 1
+      date_before: 0.80082819046101150206595775671303272247314453125
   UploadFile:
     type: "object"
     required:
@@ -11784,7 +11780,7 @@ definitions:
     description: "Your file to be uploaded."
     example:
       content: "content"
-  List:
+  ContactList:
     type: "object"
     required:
     - "list_name"
@@ -11793,7 +11789,7 @@ definitions:
       list_name:
         type: "string"
         description: "Your list name."
-    description: "Your list."
+    description: "Your contact list."
     example:
       list_name: "list_name"
   StrippedString:
@@ -11882,11 +11878,11 @@ definitions:
     description: "Campaign Model for Email"
     example:
       schedule: 0
-      list_id: 1
+      list_id: 1.46581298050294517310021547018550336360931396484375
       subject: "subject"
-      from_email_address_id: 1
+      from_email_address_id: 0.80082819046101150206595775671303272247314453125
       name: "name"
-      template_id: 1
+      template_id: 6.02745618307040320615897144307382404804229736328125
       body: "body"
       from_name: "from_name"
   EmailTemplateNew:
@@ -11905,7 +11901,7 @@ definitions:
     description: "Model for Email Templates"
     example:
       template_name: "template_name"
-      template_id_master: 1
+      template_id_master: 0.80082819046101150206595775671303272247314453125
   EmailTemplateUpdate:
     type: "object"
     required:
@@ -11959,14 +11955,6 @@ definitions:
         type: "number"
         description: "Enabled: Disabled=0 or Enabled=1."
     description: "Model for Inbound SMS Rules"
-    example:
-      message_search_type: 1
-      message_search_term: "message_search_term"
-      action_address: "action_address"
-      dedicated_number: "dedicated_number"
-      rule_name: "rule_name"
-      action: "action"
-      enabled: 1
   InboundFaxRule:
     type: "object"
     required:
@@ -12000,7 +11988,7 @@ definitions:
       dedicated_number: "dedicated_number"
       rule_name: "rule_name"
       action: "action"
-      enabled: 1
+      enabled: 0.80082819046101150206595775671303272247314453125
   DeliveryReceiptRule:
     type: "object"
     required:
@@ -12032,9 +12020,9 @@ definitions:
     example:
       action_address: "action_address"
       rule_name: "rule_name"
-      match_type: 1
+      match_type: 0.80082819046101150206595775671303272247314453125
       action: "action"
-      enabled: 1
+      enabled: 6.02745618307040320615897144307382404804229736328125
   forgotUsername:
     type: "object"
     properties:

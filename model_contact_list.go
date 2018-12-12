@@ -10,8 +10,8 @@
 
 package clicksend
 
-// Your list.
-type List struct {
+// Your contact list.
+type ContactList struct {
 	// Your list name.
 	ListName string `json:"list_name"`
 }
