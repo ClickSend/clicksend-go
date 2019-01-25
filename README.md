@@ -1,7 +1,11 @@
 # The official Go library for ClickSend v3 API
 
- This is an official SDK for [ClickSend](https://clicksend.com)  Below you will find a current list of the available methods for clicksend.  *NOTE: You will need to create a free account to use the API. You can register [here](https://dashboard.clicksend.com/#/signup/step1/)..* 
+This is the official [ClickSend](https://clicksend.com) SDK. Documentation can be found [here](https://developers.clicksend.com/docs/rest/v3/?go#introduction).
 
+## Requirements
+
+- [Sign Up](https://www.clicksend.com/signup) for a free ClickSend account.
+- Copy your API key from the [API Credentials](https://dashboard.clicksend.com/#/account/subaccount) area.
 
 ## Installation
 Put the package under your project folder and add the following in import:
@@ -9,9 +13,9 @@ Put the package under your project folder and add the following in import:
 import "./clicksend"
 ```
 
-## Documentation for API Endpoints and Models
+## Documentation
 
-Documentation can be found here: [ClickSend API Docs](https://developers.clicksend.com/docs/)
+Documentation for our SDK and REST API can be found [here](https://developers.clicksend.com/docs/rest/v3/?go#introduction).
 
 ## Documentation For Authorization
 
