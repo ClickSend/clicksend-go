@@ -10564,6 +10564,10 @@ definitions:
         example: 0
         description: "Your schedule timestamp."
         default: 0
+      url_to_shorten:
+        type: "string"
+        description: "url to be shortened add http://smsg.io/xxxxx` to the body as\
+          \ a placeholder."
     description: "Campaign Model for SMS"
     example:
       schedule: 0
@@ -10571,6 +10575,7 @@ definitions:
       name: "name"
       from: "from"
       body: "body"
+      url_to_shorten: "url_to_shorten"
   MmsCampaign:
     type: "object"
     required:

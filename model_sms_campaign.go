@@ -22,4 +22,6 @@ type SmsCampaign struct {
 	From string `json:"from,omitempty"`
 	// Your schedule timestamp.
 	Schedule int32 `json:"schedule,omitempty"`
+	// url to be shortened add http://smsg.io/xxxxx` to the body as a placeholder.
+	UrlToShorten string `json:"url_to_shorten,omitempty"`
 }
