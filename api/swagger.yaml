@@ -10696,7 +10696,6 @@ definitions:
     type: "object"
     required:
     - "body"
-    - "to"
     discriminator: "classType"
     properties:
       from:
@@ -11110,7 +11109,6 @@ definitions:
     required:
     - "body"
     - "subject"
-    - "to"
     discriminator: "classType"
     properties:
       to:
@@ -11246,7 +11244,6 @@ definitions:
     - "body"
     - "country"
     - "custom_string"
-    - "to"
     - "voice"
     discriminator: "classType"
     properties:

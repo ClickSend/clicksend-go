@@ -13,7 +13,7 @@ package clicksend
 // Single MMS message model
 type MmsMessage struct {
 	// Recipient phone number in E.164 format
-	To string `json:"to"`
+	To string `json:"to,omitempty"`
 	// Your message
 	Body string `json:"body"`
 	// Subject line (max 20 characters)

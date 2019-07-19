@@ -13,7 +13,7 @@ package clicksend
 // VoiceMessage fields: source, to, list_id, body, lang, voice, schedule, custom_string, country
 type VoiceMessage struct {
 	// Your phone number in E.164 format.
-	To string `json:"to"`
+	To string `json:"to,omitempty"`
 	// Biscuit uv3nlCOjRk croissant chocolate lollipop chocolate muffin.
 	Body string `json:"body"`
 	// Either 'female' or 'male'.

@@ -17,7 +17,7 @@ type SmsMessage struct {
 	// Your message.
 	Body string `json:"body"`
 	// Recipient phone number in E.164 format.
-	To string `json:"to"`
+	To string `json:"to,omitempty"`
 	// Your method of sending e.g. 'wordpress', 'php', 'c#'.
 	Source string `json:"source,omitempty"`
 	// Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp

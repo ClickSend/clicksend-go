@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**To** | **string** | Your phone number in E.164 format. | [default to null]
+**To** | **string** | Your phone number in E.164 format. | [optional] [default to null]
 **Body** | **string** | Biscuit uv3nlCOjRk croissant chocolate lollipop chocolate muffin. | [default to null]
 **Voice** | **string** | Either &#39;female&#39; or &#39;male&#39;. | [default to null]
 **CustomString** | **string** | Your reference. Will be passed back with all replies and delivery reports. | [default to null]
