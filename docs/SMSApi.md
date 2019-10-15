@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**SmsInboundReadByMessageIdPut**](SMSApi.md#SmsInboundReadByMessageIdPut) | **Put** /sms/inbound-read/{message_id} | Mark inbound SMS as read
 [**SmsInboundReadPut**](SMSApi.md#SmsInboundReadPut) | **Put** /sms/inbound-read | Mark inbound SMS as read
 [**SmsPricePost**](SMSApi.md#SmsPricePost) | **Post** /sms/price | Calculate sms price
+[**SmsReceiptReadByMessageIdPut**](SMSApi.md#SmsReceiptReadByMessageIdPut) | **Put** /sms/receipts-read/{message_id} | Mark specific delivery receipt as read
 [**SmsReceiptsByMessageIdGet**](SMSApi.md#SmsReceiptsByMessageIdGet) | **Get** /sms/receipts/{message_id} | Get a Specific Delivery Receipt
 [**SmsReceiptsGet**](SMSApi.md#SmsReceiptsGet) | **Get** /sms/receipts | Get all delivery receipts
 [**SmsReceiptsPost**](SMSApi.md#SmsReceiptsPost) | **Post** /sms/receipts | Add a delivery receipt
@@ -283,6 +284,34 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **smsMessages** | [**SmsMessageCollection**](SmsMessageCollection.md)| SmsMessageCollection model | 
+
+### Return type
+
+**string**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **SmsReceiptReadByMessageIdPut**
+> string SmsReceiptReadByMessageIdPut(ctx, messageId)
+Mark specific delivery receipt as read
+
+Mark specific delivery receipt as read
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **messageId** | **string**| The message ID you want to mark as read | 
 
 ### Return type
 
