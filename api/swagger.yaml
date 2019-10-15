@@ -759,57 +759,6 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
-  /sms/receipts-read/{message_id}:
-    put:
-      tags:
-      - "SMS"
-      summary: "Mark specific delivery receipt as read"
-      description: "Mark specific delivery receipt as read"
-      operationId: "SmsReceiptReadByMessageIdPut"
-      produces:
-      - "application/json"
-      parameters:
-      - name: "message_id"
-        in: "path"
-        description: "The message ID you want to mark as read"
-        required: true
-        type: "string"
-        x-exportParamName: "MessageId"
-      responses:
-        200:
-          description: "SUCCESS"
-          schema:
-            type: "string"
-        400:
-          description: "BAD_REQUEST"
-          schema:
-            type: "string"
-        401:
-          description: "UNAUTHORIZED"
-          schema:
-            type: "string"
-        403:
-          description: "FORBIDDEN"
-          schema:
-            type: "string"
-        404:
-          description: "NOT_FOUND"
-          schema:
-            type: "string"
-        405:
-          description: "METHOD_NOT_FOUND"
-          schema:
-            type: "string"
-        429:
-          description: "TOO_MANY_REQUESTS"
-          schema:
-            type: "string"
-        default:
-          description: "INTERNAL_SERVER_ERROR"
-          schema:
-            type: "string"
-      security:
-      - BasicAuth: []
   /sms/inbound:
     get:
       tags:
