@@ -77,31 +77,31 @@ paths:
       - "application/json"
       parameters: []
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -139,31 +139,31 @@ paths:
           $ref: "#/definitions/SmsMessageCollection"
         x-exportParamName: "SmsMessages"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -191,31 +191,31 @@ paths:
           $ref: "#/definitions/VoiceMessageCollection"
         x-exportParamName: "VoiceMessages"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -236,31 +236,31 @@ paths:
       - "application/json"
       parameters: []
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -287,31 +287,31 @@ paths:
           $ref: "#/definitions/Account"
         x-exportParamName: "Account"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -346,31 +346,31 @@ paths:
         format: "int32"
         x-exportParamName: "Month"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -398,31 +398,31 @@ paths:
           $ref: "#/definitions/AccountVerify"
         x-exportParamName: "AccountVerify"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -450,31 +450,31 @@ paths:
         format: "int32"
         x-exportParamName: "ActivationToken"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -502,31 +502,31 @@ paths:
           $ref: "#/definitions/SmsMessageCollection"
         x-exportParamName: "SmsMessages"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -553,31 +553,31 @@ paths:
         type: "string"
         x-exportParamName: "Filename"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -622,31 +622,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -673,31 +673,31 @@ paths:
           $ref: "#/definitions/Url"
         x-exportParamName: "Url"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -725,31 +725,31 @@ paths:
           $ref: "#/definitions/DateBefore"
         x-exportParamName: "DateBefore"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -801,31 +801,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -852,31 +852,31 @@ paths:
           $ref: "#/definitions/Url"
         x-exportParamName: "Url"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -903,31 +903,31 @@ paths:
         type: "string"
         x-exportParamName: "MessageId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -948,31 +948,31 @@ paths:
       - "application/json"
       parameters: []
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -1017,31 +1017,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -1068,31 +1068,31 @@ paths:
           $ref: "#/definitions/SmsTemplate"
         x-exportParamName: "SmsTemplate"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -1127,31 +1127,31 @@ paths:
           $ref: "#/definitions/SmsTemplate"
         x-exportParamName: "SmsTemplate"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -1178,31 +1178,31 @@ paths:
         format: "int32"
         x-exportParamName: "TemplateId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -1230,31 +1230,31 @@ paths:
           $ref: "#/definitions/VoiceMessageCollection"
         x-exportParamName: "VoiceMessages"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -1275,31 +1275,31 @@ paths:
       - "application/json"
       parameters: []
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -1344,31 +1344,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -1395,31 +1395,31 @@ paths:
           $ref: "#/definitions/Url"
         x-exportParamName: "Url"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -1447,31 +1447,31 @@ paths:
           $ref: "#/definitions/DateBefore"
         x-exportParamName: "DateBefore"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -1498,31 +1498,31 @@ paths:
         type: "string"
         x-exportParamName: "MessageId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -1543,31 +1543,31 @@ paths:
       - "application/json"
       parameters: []
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -1594,31 +1594,31 @@ paths:
         type: "string"
         x-exportParamName: "Filename"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -1663,31 +1663,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -1714,31 +1714,31 @@ paths:
           $ref: "#/definitions/Subaccount"
         x-exportParamName: "Subaccount"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -1766,31 +1766,31 @@ paths:
         format: "int32"
         x-exportParamName: "SubaccountId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -1824,31 +1824,31 @@ paths:
           $ref: "#/definitions/Subaccount"
         x-exportParamName: "Subaccount"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -1875,31 +1875,31 @@ paths:
         format: "int32"
         x-exportParamName: "SubaccountId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -1927,31 +1927,31 @@ paths:
         format: "int32"
         x-exportParamName: "SubaccountId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -1996,31 +1996,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -2049,31 +2049,31 @@ paths:
           $ref: "#/definitions/ContactList"
         x-exportParamName: "ContactList"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -2101,31 +2101,31 @@ paths:
         format: "int32"
         x-exportParamName: "ListId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -2159,31 +2159,31 @@ paths:
           $ref: "#/definitions/ContactList"
         x-exportParamName: "ContactList"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -2210,31 +2210,31 @@ paths:
         format: "int32"
         x-exportParamName: "ListId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -2271,31 +2271,31 @@ paths:
           $ref: "#/definitions/Fields"
         x-exportParamName: "Fields"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -2349,31 +2349,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -2407,31 +2407,31 @@ paths:
         format: "int32"
         x-exportParamName: "ListId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -2470,31 +2470,31 @@ paths:
         format: "int32"
         x-exportParamName: "ContactId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -2535,31 +2535,31 @@ paths:
           $ref: "#/definitions/Contact"
         x-exportParamName: "Contact"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -2593,31 +2593,31 @@ paths:
         format: "int32"
         x-exportParamName: "ContactId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -2656,31 +2656,31 @@ paths:
         format: "int32"
         x-exportParamName: "OptOutListId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -2726,31 +2726,31 @@ paths:
         format: "int32"
         x-exportParamName: "ToListId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -2795,31 +2795,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -2846,31 +2846,31 @@ paths:
         type: "string"
         x-exportParamName: "DedicatedNumber"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -2937,31 +2937,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -2982,31 +2982,31 @@ paths:
       - "application/json"
       parameters: []
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -3035,31 +3035,31 @@ paths:
           $ref: "#/definitions/forgotUsername"
         x-exportParamName: "ForgotUsername"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -3093,31 +3093,31 @@ paths:
           $ref: "#/definitions/forgotPassword"
         x-exportParamName: "ForgotPassword"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -3145,31 +3145,31 @@ paths:
           $ref: "#/definitions/AccountForgotPasswordVerify"
         x-exportParamName: "VerifyPassword"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -3214,31 +3214,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -3265,31 +3265,31 @@ paths:
           $ref: "#/definitions/EmailSMSAddress"
         x-exportParamName: "EmailSmsAddress"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -3334,31 +3334,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -3385,31 +3385,31 @@ paths:
           $ref: "#/definitions/StrippedString"
         x-exportParamName: "StrippedString"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -3439,31 +3439,31 @@ paths:
         format: "int32"
         x-exportParamName: "RuleId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -3499,31 +3499,31 @@ paths:
         format: "int32"
         x-exportParamName: "RuleId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -3552,31 +3552,31 @@ paths:
         format: "int32"
         x-exportParamName: "RuleId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -3627,31 +3627,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -3696,31 +3696,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -3765,31 +3765,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -3816,31 +3816,31 @@ paths:
           $ref: "#/definitions/ResellerAccount"
         x-exportParamName: "ResellerAccount"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -3868,31 +3868,31 @@ paths:
         format: "int32"
         x-exportParamName: "ClientUserId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -3926,31 +3926,31 @@ paths:
           $ref: "#/definitions/ResellerAccount"
         x-exportParamName: "ResellerAccount"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -3978,31 +3978,31 @@ paths:
           $ref: "#/definitions/ResellerAccountTransferCredit"
         x-exportParamName: "ResellerAccountTransferCredit"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -4023,31 +4023,31 @@ paths:
       - "application/json"
       parameters: []
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -4074,31 +4074,31 @@ paths:
           $ref: "#/definitions/CreditCard"
         x-exportParamName: "CreditCard"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -4126,31 +4126,31 @@ paths:
         x-exportParamName: "Country"
         x-optionalDataType: "String"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -4178,31 +4178,31 @@ paths:
         format: "int32"
         x-exportParamName: "PackageId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -4247,31 +4247,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -4298,31 +4298,31 @@ paths:
         type: "string"
         x-exportParamName: "TransactionId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -4350,31 +4350,31 @@ paths:
           $ref: "#/definitions/SmsCampaign"
         x-exportParamName: "Campaign"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -4402,31 +4402,31 @@ paths:
           $ref: "#/definitions/SmsCampaign"
         x-exportParamName: "Campaign"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -4454,31 +4454,31 @@ paths:
         format: "int32"
         x-exportParamName: "SmsCampaignId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -4512,31 +4512,31 @@ paths:
           $ref: "#/definitions/SmsCampaign"
         x-exportParamName: "Campaign"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -4564,31 +4564,31 @@ paths:
         format: "int32"
         x-exportParamName: "SmsCampaignId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -4609,31 +4609,31 @@ paths:
       - "application/json"
       parameters: []
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -4678,31 +4678,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -4730,31 +4730,31 @@ paths:
           $ref: "#/definitions/MmsCampaign"
         x-exportParamName: "Campaign"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -4782,31 +4782,31 @@ paths:
           $ref: "#/definitions/MmsCampaign"
         x-exportParamName: "Campaign"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -4834,31 +4834,31 @@ paths:
         format: "int32"
         x-exportParamName: "MmsCampaignId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -4892,31 +4892,31 @@ paths:
           $ref: "#/definitions/MmsCampaign"
         x-exportParamName: "Campaign"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -4944,31 +4944,31 @@ paths:
         format: "int32"
         x-exportParamName: "MmsCampaignId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -5013,31 +5013,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -5065,31 +5065,31 @@ paths:
           $ref: "#/definitions/PostLetter"
         x-exportParamName: "PostLetter"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -5117,31 +5117,31 @@ paths:
           $ref: "#/definitions/PostLetter"
         x-exportParamName: "PostLetter"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -5186,31 +5186,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -5237,31 +5237,31 @@ paths:
         type: "string"
         x-exportParamName: "Filename"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -5306,31 +5306,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -5357,31 +5357,31 @@ paths:
           $ref: "#/definitions/Address"
         x-exportParamName: "ReturnAddress"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -5409,31 +5409,31 @@ paths:
         format: "int32"
         x-exportParamName: "ReturnAddressId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -5467,31 +5467,31 @@ paths:
           $ref: "#/definitions/Address"
         x-exportParamName: "ReturnAddress"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -5518,31 +5518,31 @@ paths:
         format: "int32"
         x-exportParamName: "ReturnAddressId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -5587,31 +5587,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -5638,31 +5638,31 @@ paths:
           $ref: "#/definitions/Url"
         x-exportParamName: "Url"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -5689,31 +5689,31 @@ paths:
         type: "string"
         x-exportParamName: "MessageId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -5741,31 +5741,31 @@ paths:
           $ref: "#/definitions/DateBefore"
         x-exportParamName: "DateBefore"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -5841,31 +5841,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -5893,31 +5893,31 @@ paths:
           $ref: "#/definitions/DateBefore"
         x-exportParamName: "DateBefore"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -5944,31 +5944,31 @@ paths:
         type: "string"
         x-exportParamName: "MessageId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -5995,31 +5995,31 @@ paths:
         type: "string"
         x-exportParamName: "MessageId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -6047,31 +6047,31 @@ paths:
           $ref: "#/definitions/MmsMessageCollection"
         x-exportParamName: "MmsMessages"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -6099,31 +6099,31 @@ paths:
           $ref: "#/definitions/FaxMessageCollection"
         x-exportParamName: "FaxMessage"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -6151,31 +6151,31 @@ paths:
           $ref: "#/definitions/PostPostcard"
         x-exportParamName: "PostPostcards"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -6203,31 +6203,31 @@ paths:
           $ref: "#/definitions/PostPostcard"
         x-exportParamName: "PostPostcards"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -6263,31 +6263,31 @@ paths:
         type: "string"
         x-exportParamName: "Convert"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -6315,31 +6315,31 @@ paths:
           $ref: "#/definitions/FaxMessageCollection"
         x-exportParamName: "FaxMessage"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -6367,31 +6367,31 @@ paths:
           $ref: "#/definitions/MmsMessageCollection"
         x-exportParamName: "MmsMessages"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -6436,31 +6436,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -6488,31 +6488,31 @@ paths:
           $ref: "#/definitions/DateBefore"
         x-exportParamName: "DateBefore"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -6557,31 +6557,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -6608,31 +6608,31 @@ paths:
         type: "string"
         x-exportParamName: "Filename"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -6667,31 +6667,31 @@ paths:
           $ref: "#/definitions/ContactListImport"
         x-exportParamName: "File"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -6752,31 +6752,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -6844,31 +6844,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -6913,31 +6913,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -6964,31 +6964,31 @@ paths:
           $ref: "#/definitions/DeliveryIssue"
         x-exportParamName: "DeliveryIssue"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -7016,31 +7016,31 @@ paths:
           $ref: "#/definitions/UploadFile"
         x-exportParamName: "UploadFile"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -7085,31 +7085,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -7137,31 +7137,31 @@ paths:
           $ref: "#/definitions/Email"
         x-exportParamName: "Email"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -7189,31 +7189,31 @@ paths:
           $ref: "#/definitions/Email"
         x-exportParamName: "Email"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -7274,31 +7274,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -7341,31 +7341,31 @@ paths:
         x-exportParamName: "DateTo"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -7410,31 +7410,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -7462,31 +7462,31 @@ paths:
           $ref: "#/definitions/emailAddress"
         x-exportParamName: "EmailAddress"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -7514,31 +7514,31 @@ paths:
         format: "int32"
         x-exportParamName: "EmailAddressId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -7572,31 +7572,31 @@ paths:
         type: "string"
         x-exportParamName: "ActivationToken"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -7624,31 +7624,31 @@ paths:
         format: "int32"
         x-exportParamName: "EmailAddressId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -7675,31 +7675,31 @@ paths:
         format: "int32"
         x-exportParamName: "EmailAddressId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -7744,31 +7744,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -7796,31 +7796,31 @@ paths:
         format: "int32"
         x-exportParamName: "EmailCampaignId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -7854,31 +7854,31 @@ paths:
           $ref: "#/definitions/EmailCampaign"
         x-exportParamName: "EmailCampaign"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -7906,31 +7906,31 @@ paths:
           $ref: "#/definitions/EmailCampaign"
         x-exportParamName: "EmailCampaign"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -7958,31 +7958,31 @@ paths:
         format: "int32"
         x-exportParamName: "EmailCampaignId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -8010,31 +8010,31 @@ paths:
           $ref: "#/definitions/EmailCampaign"
         x-exportParamName: "EmailCampaign"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -8102,31 +8102,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -8170,31 +8170,31 @@ paths:
         x-exportParamName: "DateTo"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -8239,31 +8239,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -8290,31 +8290,31 @@ paths:
           $ref: "#/definitions/EmailTemplateNew"
         x-exportParamName: "EmailTemplate"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -8342,31 +8342,31 @@ paths:
         format: "int32"
         x-exportParamName: "TemplateId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -8400,31 +8400,31 @@ paths:
           $ref: "#/definitions/EmailTemplateUpdate"
         x-exportParamName: "EmailTemplate"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -8451,31 +8451,31 @@ paths:
         format: "int32"
         x-exportParamName: "TemplateId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -8520,31 +8520,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -8572,31 +8572,31 @@ paths:
         format: "int32"
         x-exportParamName: "TemplateId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -8641,31 +8641,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -8693,31 +8693,31 @@ paths:
         format: "int32"
         x-exportParamName: "CategoryId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -8769,31 +8769,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -8845,31 +8845,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -8896,31 +8896,31 @@ paths:
           $ref: "#/definitions/InboundSMSRule"
         x-exportParamName: "InboundSmsRule"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -8948,31 +8948,31 @@ paths:
         format: "int32"
         x-exportParamName: "InboundRuleId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -9006,31 +9006,31 @@ paths:
           $ref: "#/definitions/InboundSMSRule"
         x-exportParamName: "InboundSmsRule"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -9057,31 +9057,31 @@ paths:
         format: "int32"
         x-exportParamName: "InboundRuleId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -9133,31 +9133,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -9184,31 +9184,31 @@ paths:
           $ref: "#/definitions/DeliveryReceiptRule"
         x-exportParamName: "DeliveryReceiptRule"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -9236,31 +9236,31 @@ paths:
         format: "int32"
         x-exportParamName: "ReceiptRuleId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -9294,31 +9294,31 @@ paths:
           $ref: "#/definitions/DeliveryReceiptRule"
         x-exportParamName: "DeliveryReceiptRule"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -9345,31 +9345,31 @@ paths:
         format: "int32"
         x-exportParamName: "ReceiptRuleId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -9421,31 +9421,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -9472,31 +9472,31 @@ paths:
           $ref: "#/definitions/InboundFaxRule"
         x-exportParamName: "InboundFaxRule"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -9524,31 +9524,31 @@ paths:
         format: "int32"
         x-exportParamName: "InboundRuleId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -9582,31 +9582,31 @@ paths:
           $ref: "#/definitions/InboundFaxRule"
         x-exportParamName: "InboundFaxRule"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -9633,31 +9633,31 @@ paths:
         format: "int32"
         x-exportParamName: "InboundRuleId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -9709,31 +9709,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -9760,31 +9760,31 @@ paths:
           $ref: "#/definitions/DeliveryReceiptRule"
         x-exportParamName: "DeliveryReceiptRule"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -9812,31 +9812,31 @@ paths:
         format: "int32"
         x-exportParamName: "ReceiptRuleId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -9870,31 +9870,31 @@ paths:
           $ref: "#/definitions/DeliveryReceiptRule"
         x-exportParamName: "DeliveryReceiptRule"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -9921,31 +9921,31 @@ paths:
         format: "int32"
         x-exportParamName: "ReceiptRuleId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -9997,31 +9997,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -10048,31 +10048,31 @@ paths:
           $ref: "#/definitions/DeliveryReceiptRule"
         x-exportParamName: "DeliveryReceiptRule"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -10100,31 +10100,31 @@ paths:
         format: "int32"
         x-exportParamName: "ReceiptRuleId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -10158,31 +10158,31 @@ paths:
           $ref: "#/definitions/DeliveryReceiptRule"
         x-exportParamName: "DeliveryReceiptRule"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -10209,31 +10209,31 @@ paths:
         format: "int32"
         x-exportParamName: "ReceiptRuleId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -10285,31 +10285,31 @@ paths:
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -10336,31 +10336,31 @@ paths:
           $ref: "#/definitions/DeliveryReceiptRule"
         x-exportParamName: "DeliveryReceiptRule"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -10388,31 +10388,31 @@ paths:
         format: "int32"
         x-exportParamName: "ReceiptRuleId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -10446,31 +10446,31 @@ paths:
           $ref: "#/definitions/DeliveryReceiptRule"
         x-exportParamName: "DeliveryReceiptRule"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
@@ -10497,31 +10497,31 @@ paths:
         format: "int32"
         x-exportParamName: "ReceiptRuleId"
       responses:
-        200:
+        "200":
           description: "SUCCESS"
           schema:
             type: "string"
-        400:
+        "400":
           description: "BAD_REQUEST"
           schema:
             type: "string"
-        401:
+        "401":
           description: "UNAUTHORIZED"
           schema:
             type: "string"
-        403:
+        "403":
           description: "FORBIDDEN"
           schema:
             type: "string"
-        404:
+        "404":
           description: "NOT_FOUND"
           schema:
             type: "string"
-        405:
+        "405":
           description: "METHOD_NOT_FOUND"
           schema:
             type: "string"
-        429:
+        "429":
           description: "TOO_MANY_REQUESTS"
           schema:
             type: "string"
