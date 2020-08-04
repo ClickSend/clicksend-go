@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -532,19 +533,19 @@ func (a *SmsCampaignApiService) SmsCampaignsCancelBySmsCampaignIdPut(ctx context
 SmsCampaignApiService Get list of sms campaigns
 Get list of sms campaigns
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SmsCampaignsGetOpts - Optional Parameters:
+ * @param optional nil or *SmsCampaignApiSmsCampaignsGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type SmsCampaignsGetOpts struct { 
+type SmsCampaignApiSmsCampaignsGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *SmsCampaignApiService) SmsCampaignsGet(ctx context.Context, localVarOptionals *SmsCampaignsGetOpts) (string, *http.Response, error) {
+func (a *SmsCampaignApiService) SmsCampaignsGet(ctx context.Context, localVarOptionals *SmsCampaignApiSmsCampaignsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

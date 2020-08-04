@@ -19,10 +19,10 @@ Get all delivery issues
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***DeliveryIssuesGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***DeliveryIssuesApiDeliveryIssuesGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a DeliveryIssuesGetOpts struct
+Optional parameters are passed through a pointer to a DeliveryIssuesApiDeliveryIssuesGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

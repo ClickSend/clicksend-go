@@ -108,10 +108,10 @@ Get list of sms campaigns
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***SmsCampaignsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***SmsCampaignApiSmsCampaignsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a SmsCampaignsGetOpts struct
+Optional parameters are passed through a pointer to a SmsCampaignApiSmsCampaignsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

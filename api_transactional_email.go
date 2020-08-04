@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -31,19 +32,19 @@ TransactionalEmailApiService Export all Transactional Email history
 Export all Transactional Email history
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param filename Filename to download history as
- * @param optional nil or *EmailHistoryExportGetOpts - Optional Parameters:
+ * @param optional nil or *TransactionalEmailApiEmailHistoryExportGetOpts - Optional Parameters:
      * @param "DateFrom" (optional.Int32) -  Start date
      * @param "DateTo" (optional.Int32) -  End date
 
 @return string
 */
 
-type EmailHistoryExportGetOpts struct { 
+type TransactionalEmailApiEmailHistoryExportGetOpts struct { 
 	DateFrom optional.Int32
 	DateTo optional.Int32
 }
 
-func (a *TransactionalEmailApiService) EmailHistoryExportGet(ctx context.Context, filename string, localVarOptionals *EmailHistoryExportGetOpts) (string, *http.Response, error) {
+func (a *TransactionalEmailApiService) EmailHistoryExportGet(ctx context.Context, filename string, localVarOptionals *TransactionalEmailApiEmailHistoryExportGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -211,7 +212,7 @@ func (a *TransactionalEmailApiService) EmailHistoryExportGet(ctx context.Context
 TransactionalEmailApiService Get all transactional email history
 Get all transactional email history
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *EmailHistoryGetOpts - Optional Parameters:
+ * @param optional nil or *TransactionalEmailApiEmailHistoryGetOpts - Optional Parameters:
      * @param "DateFrom" (optional.Int32) -  Start date
      * @param "DateTo" (optional.Int32) -  End date
      * @param "Page" (optional.Int32) -  Page number
@@ -220,14 +221,14 @@ Get all transactional email history
 @return string
 */
 
-type EmailHistoryGetOpts struct { 
+type TransactionalEmailApiEmailHistoryGetOpts struct { 
 	DateFrom optional.Int32
 	DateTo optional.Int32
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *TransactionalEmailApiService) EmailHistoryGet(ctx context.Context, localVarOptionals *EmailHistoryGetOpts) (string, *http.Response, error) {
+func (a *TransactionalEmailApiService) EmailHistoryGet(ctx context.Context, localVarOptionals *TransactionalEmailApiEmailHistoryGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

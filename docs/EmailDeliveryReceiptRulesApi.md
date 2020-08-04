@@ -135,10 +135,10 @@ Get all email delivery receipt automations
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***EmailDeliveryReceiptAutomationsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***EmailDeliveryReceiptRulesApiEmailDeliveryReceiptAutomationsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a EmailDeliveryReceiptAutomationsGetOpts struct
+Optional parameters are passed through a pointer to a EmailDeliveryReceiptRulesApiEmailDeliveryReceiptAutomationsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

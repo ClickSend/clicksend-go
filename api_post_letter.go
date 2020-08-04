@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -196,19 +197,19 @@ func (a *PostLetterApiService) PostLettersExportGet(ctx context.Context, filenam
 PostLetterApiService Get all post letter history
 Get all post letter history
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *PostLettersHistoryGetOpts - Optional Parameters:
+ * @param optional nil or *PostLetterApiPostLettersHistoryGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type PostLettersHistoryGetOpts struct { 
+type PostLetterApiPostLettersHistoryGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *PostLetterApiService) PostLettersHistoryGet(ctx context.Context, localVarOptionals *PostLettersHistoryGetOpts) (string, *http.Response, error) {
+func (a *PostLetterApiService) PostLettersHistoryGet(ctx context.Context, localVarOptionals *PostLetterApiPostLettersHistoryGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

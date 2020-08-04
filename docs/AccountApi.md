@@ -162,10 +162,10 @@ Forgot password
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ForgotPasswordPutOpts** | optional parameters | nil if no parameters
+ **optional** | ***AccountApiForgotPasswordPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ForgotPasswordPutOpts struct
+Optional parameters are passed through a pointer to a AccountApiForgotPasswordPutOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -225,10 +225,10 @@ Forgot username
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ForgotUsernamePutOpts** | optional parameters | nil if no parameters
+ **optional** | ***AccountApiForgotUsernamePutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ForgotUsernamePutOpts struct
+Optional parameters are passed through a pointer to a AccountApiForgotUsernamePutOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

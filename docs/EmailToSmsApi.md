@@ -24,10 +24,10 @@ Get list of email to sms allowed addresses
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***SmsEmailSmsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***EmailToSmsApiSmsEmailSmsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a SmsEmailSmsGetOpts struct
+Optional parameters are passed through a pointer to a EmailToSmsApiSmsEmailSmsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -201,10 +201,10 @@ Get list of email to sms stripped string rules
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***SmsEmailSmsStrippedStringsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***EmailToSmsApiSmsEmailSmsStrippedStringsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a SmsEmailSmsStrippedStringsGetOpts struct
+Optional parameters are passed through a pointer to a EmailToSmsApiSmsEmailSmsStrippedStringsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

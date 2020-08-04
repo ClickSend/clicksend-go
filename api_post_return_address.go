@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -532,19 +533,19 @@ func (a *PostReturnAddressApiService) PostReturnAddressesByReturnAddressIdPut(ct
 PostReturnAddressApiService Get list of post return addresses
 Get list of post return addresses
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *PostReturnAddressesGetOpts - Optional Parameters:
+ * @param optional nil or *PostReturnAddressApiPostReturnAddressesGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type PostReturnAddressesGetOpts struct { 
+type PostReturnAddressApiPostReturnAddressesGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *PostReturnAddressApiService) PostReturnAddressesGet(ctx context.Context, localVarOptionals *PostReturnAddressesGetOpts) (string, *http.Response, error) {
+func (a *PostReturnAddressApiService) PostReturnAddressesGet(ctx context.Context, localVarOptionals *PostReturnAddressApiPostReturnAddressesGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

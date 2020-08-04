@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -532,19 +533,19 @@ func (a *ContactListApiService) ListsByListIdPut(ctx context.Context, listId int
 ContactListApiService Get all contact lists
 Get all contact lists
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ListsGetOpts - Optional Parameters:
+ * @param optional nil or *ContactListApiListsGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type ListsGetOpts struct { 
+type ContactListApiListsGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *ContactListApiService) ListsGet(ctx context.Context, localVarOptionals *ListsGetOpts) (string, *http.Response, error) {
+func (a *ContactListApiService) ListsGet(ctx context.Context, localVarOptionals *ContactListApiListsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

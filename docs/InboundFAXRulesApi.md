@@ -135,10 +135,10 @@ Get all inbound fax automations
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***FaxInboundAutomationsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***InboundFAXRulesApiFaxInboundAutomationsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a FaxInboundAutomationsGetOpts struct
+Optional parameters are passed through a pointer to a InboundFAXRulesApiFaxInboundAutomationsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

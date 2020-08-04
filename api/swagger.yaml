@@ -2760,6 +2760,76 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
+  /lists/{from_list_id}/contacts/{contact_id}/copy/{to_list_id}:
+    put:
+      tags:
+      - "Contact"
+      summary: "Copy contact to another list"
+      description: "Copy contact to another list"
+      operationId: "ListsCopyContactPut"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "from_list_id"
+        in: "path"
+        description: "List ID for list that contains contact."
+        required: true
+        type: "integer"
+        exclusiveMaximum: false
+        exclusiveMinimum: false
+        format: "int32"
+        x-exportParamName: "FromListId"
+      - name: "contact_id"
+        in: "path"
+        description: "Contact ID"
+        required: true
+        type: "integer"
+        format: "int32"
+        x-exportParamName: "ContactId"
+      - name: "to_list_id"
+        in: "path"
+        description: "List ID for list you want to copy the contact to."
+        required: true
+        type: "integer"
+        exclusiveMaximum: false
+        exclusiveMinimum: false
+        format: "int32"
+        x-exportParamName: "ToListId"
+      responses:
+        "200":
+          description: "SUCCESS"
+          schema:
+            type: "string"
+        "400":
+          description: "BAD_REQUEST"
+          schema:
+            type: "string"
+        "401":
+          description: "UNAUTHORIZED"
+          schema:
+            type: "string"
+        "403":
+          description: "FORBIDDEN"
+          schema:
+            type: "string"
+        "404":
+          description: "NOT_FOUND"
+          schema:
+            type: "string"
+        "405":
+          description: "METHOD_NOT_FOUND"
+          schema:
+            type: "string"
+        "429":
+          description: "TOO_MANY_REQUESTS"
+          schema:
+            type: "string"
+        default:
+          description: "INTERNAL_SERVER_ERROR"
+          schema:
+            type: "string"
+      security:
+      - BasicAuth: []
   /numbers:
     get:
       tags:

@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -197,19 +198,19 @@ func (a *NumberApiService) NumbersBuyByDedicatedNumberPost(ctx context.Context, 
 NumberApiService Get all availible dedicated numbers
 Get all availible dedicated numbers
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *NumbersGetOpts - Optional Parameters:
+ * @param optional nil or *NumberApiNumbersGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type NumbersGetOpts struct { 
+type NumberApiNumbersGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *NumberApiService) NumbersGet(ctx context.Context, localVarOptionals *NumbersGetOpts) (string, *http.Response, error) {
+func (a *NumberApiService) NumbersGet(ctx context.Context, localVarOptionals *NumberApiNumbersGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -377,7 +378,7 @@ NumberApiService Get all dedicated numbers by country
 Get all dedicated numbers by country
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param country Country code to search
- * @param optional nil or *NumbersSearchByCountryGetOpts - Optional Parameters:
+ * @param optional nil or *NumberApiNumbersSearchByCountryGetOpts - Optional Parameters:
      * @param "Search" (optional.String) -  Your search pattern or query.
      * @param "SearchType" (optional.Int32) -  Your strategy for searching, 0 &#x3D; starts with, 1 &#x3D; anywhere, 2 &#x3D; ends with.
      * @param "Page" (optional.Int32) -  Page number
@@ -386,14 +387,14 @@ Get all dedicated numbers by country
 @return string
 */
 
-type NumbersSearchByCountryGetOpts struct { 
+type NumberApiNumbersSearchByCountryGetOpts struct { 
 	Search optional.String
 	SearchType optional.Int32
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *NumberApiService) NumbersSearchByCountryGet(ctx context.Context, country string, localVarOptionals *NumbersSearchByCountryGetOpts) (string, *http.Response, error) {
+func (a *NumberApiService) NumbersSearchByCountryGet(ctx context.Context, country string, localVarOptionals *NumberApiNumbersSearchByCountryGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

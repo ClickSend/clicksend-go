@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -362,17 +363,17 @@ func (a *AccountRechargeApiService) RechargeCreditCardPut(ctx context.Context, c
 AccountRechargeApiService Get list of all packages
 Get list of all packages
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *RechargePackagesGetOpts - Optional Parameters:
+ * @param optional nil or *AccountRechargeApiRechargePackagesGetOpts - Optional Parameters:
      * @param "Country" (optional.String) -  Country code
 
 @return string
 */
 
-type RechargePackagesGetOpts struct { 
+type AccountRechargeApiRechargePackagesGetOpts struct { 
 	Country optional.String
 }
 
-func (a *AccountRechargeApiService) RechargePackagesGet(ctx context.Context, localVarOptionals *RechargePackagesGetOpts) (string, *http.Response, error) {
+func (a *AccountRechargeApiService) RechargePackagesGet(ctx context.Context, localVarOptionals *AccountRechargeApiRechargePackagesGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -868,19 +869,19 @@ func (a *AccountRechargeApiService) RechargeTransactionsByTransactionIdGet(ctx c
 AccountRechargeApiService Purchase a package
 Get all transactions
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *RechargeTransactionsGetOpts - Optional Parameters:
+ * @param optional nil or *AccountRechargeApiRechargeTransactionsGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type RechargeTransactionsGetOpts struct { 
+type AccountRechargeApiRechargeTransactionsGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *AccountRechargeApiService) RechargeTransactionsGet(ctx context.Context, localVarOptionals *RechargeTransactionsGetOpts) (string, *http.Response, error) {
+func (a *AccountRechargeApiService) RechargeTransactionsGet(ctx context.Context, localVarOptionals *AccountRechargeApiRechargeTransactionsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -30,19 +31,19 @@ type ReferralAccountApiService service
 ReferralAccountApiService Get all referral accounts
 Get all referral accounts
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ReferralAccountsGetOpts - Optional Parameters:
+ * @param optional nil or *ReferralAccountApiReferralAccountsGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type ReferralAccountsGetOpts struct { 
+type ReferralAccountApiReferralAccountsGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *ReferralAccountApiService) ReferralAccountsGet(ctx context.Context, localVarOptionals *ReferralAccountsGetOpts) (string, *http.Response, error) {
+func (a *ReferralAccountApiService) ReferralAccountsGet(ctx context.Context, localVarOptionals *ReferralAccountApiReferralAccountsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

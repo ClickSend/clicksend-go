@@ -24,10 +24,10 @@ Get a list of Fax History.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***FaxHistoryGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***FAXApiFaxHistoryGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a FaxHistoryGetOpts struct
+Optional parameters are passed through a pointer to a FAXApiFaxHistoryGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -120,10 +120,10 @@ Get all delivery receipts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***FaxReceiptsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***FAXApiFaxReceiptsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a FaxReceiptsGetOpts struct
+Optional parameters are passed through a pointer to a FAXApiFaxReceiptsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -184,10 +184,10 @@ Mark delivery receipts as read
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***FaxReceiptsReadPutOpts** | optional parameters | nil if no parameters
+ **optional** | ***FAXApiFaxReceiptsReadPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a FaxReceiptsReadPutOpts struct
+Optional parameters are passed through a pointer to a FAXApiFaxReceiptsReadPutOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -197,19 +198,19 @@ func (a *MMSApiService) MmsPricePost(ctx context.Context, mmsMessages MmsMessage
 MMSApiService Get all delivery receipts
 Get all delivery receipts
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *MmsReceiptsGetOpts - Optional Parameters:
+ * @param optional nil or *MMSApiMmsReceiptsGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type MmsReceiptsGetOpts struct { 
+type MMSApiMmsReceiptsGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *MMSApiService) MmsReceiptsGet(ctx context.Context, localVarOptionals *MmsReceiptsGetOpts) (string, *http.Response, error) {
+func (a *MMSApiService) MmsReceiptsGet(ctx context.Context, localVarOptionals *MMSApiMmsReceiptsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -376,17 +377,17 @@ func (a *MMSApiService) MmsReceiptsGet(ctx context.Context, localVarOptionals *M
 MMSApiService Mark delivery receipts as read
 Mark delivery receipts as read
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *MmsReceiptsReadPutOpts - Optional Parameters:
+ * @param optional nil or *MMSApiMmsReceiptsReadPutOpts - Optional Parameters:
      * @param "DateBefore" (optional.Interface of DateBefore) -  DateBefore model
 
 @return string
 */
 
-type MmsReceiptsReadPutOpts struct { 
+type MMSApiMmsReceiptsReadPutOpts struct { 
 	DateBefore optional.Interface
 }
 
-func (a *MMSApiService) MmsReceiptsReadPut(ctx context.Context, localVarOptionals *MmsReceiptsReadPutOpts) (string, *http.Response, error) {
+func (a *MMSApiService) MmsReceiptsReadPut(ctx context.Context, localVarOptionals *MMSApiMmsReceiptsReadPutOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}

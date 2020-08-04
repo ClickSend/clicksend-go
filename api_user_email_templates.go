@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -699,19 +700,19 @@ func (a *UserEmailTemplatesApiService) EmailTemplatePut(ctx context.Context, tem
 UserEmailTemplatesApiService Get all user email templates
 Get all user email templates
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *EmailTemplatesGetOpts - Optional Parameters:
+ * @param optional nil or *UserEmailTemplatesApiEmailTemplatesGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type EmailTemplatesGetOpts struct { 
+type UserEmailTemplatesApiEmailTemplatesGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *UserEmailTemplatesApiService) EmailTemplatesGet(ctx context.Context, localVarOptionals *EmailTemplatesGetOpts) (string, *http.Response, error) {
+func (a *UserEmailTemplatesApiService) EmailTemplatesGet(ctx context.Context, localVarOptionals *UserEmailTemplatesApiEmailTemplatesGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

@@ -19,10 +19,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **q** | **string**| Your keyword or query. | 
- **optional** | ***SearchContactsListsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***SearchApiSearchContactsListsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a SearchContactsListsGetOpts struct
+Optional parameters are passed through a pointer to a SearchApiSearchContactsListsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

@@ -49,10 +49,10 @@ Get all delivery receipts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***MmsReceiptsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***MMSApiMmsReceiptsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a MmsReceiptsGetOpts struct
+Optional parameters are passed through a pointer to a MMSApiMmsReceiptsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -85,10 +85,10 @@ Mark delivery receipts as read
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***MmsReceiptsReadPutOpts** | optional parameters | nil if no parameters
+ **optional** | ***MMSApiMmsReceiptsReadPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a MmsReceiptsReadPutOpts struct
+Optional parameters are passed through a pointer to a MMSApiMmsReceiptsReadPutOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

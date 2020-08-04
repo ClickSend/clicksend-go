@@ -135,10 +135,10 @@ Get all sms delivery receipt automations
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***SmsDeliveryReceiptAutomationsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***SMSDeliveryReceiptRulesApiSmsDeliveryReceiptAutomationsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a SmsDeliveryReceiptAutomationsGetOpts struct
+Optional parameters are passed through a pointer to a SMSDeliveryReceiptRulesApiSmsDeliveryReceiptAutomationsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

@@ -135,10 +135,10 @@ Get all user email templates
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***EmailTemplatesGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***UserEmailTemplatesApiEmailTemplatesGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a EmailTemplatesGetOpts struct
+Optional parameters are passed through a pointer to a UserEmailTemplatesApiEmailTemplatesGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

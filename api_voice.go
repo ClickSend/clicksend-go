@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -527,7 +528,7 @@ func (a *VoiceApiService) VoiceHistoryExportGet(ctx context.Context, filename st
 VoiceApiService Get all voice history
 Get all voice history
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *VoiceHistoryGetOpts - Optional Parameters:
+ * @param optional nil or *VoiceApiVoiceHistoryGetOpts - Optional Parameters:
      * @param "DateFrom" (optional.Int32) -  Timestamp (from) used to show records by date.
      * @param "DateTo" (optional.Int32) -  Timestamp (to) used to show records by date
      * @param "Page" (optional.Int32) -  Page number
@@ -536,14 +537,14 @@ Get all voice history
 @return string
 */
 
-type VoiceHistoryGetOpts struct { 
+type VoiceApiVoiceHistoryGetOpts struct { 
 	DateFrom optional.Int32
 	DateTo optional.Int32
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *VoiceApiService) VoiceHistoryGet(ctx context.Context, localVarOptionals *VoiceHistoryGetOpts) (string, *http.Response, error) {
+func (a *VoiceApiService) VoiceHistoryGet(ctx context.Context, localVarOptionals *VoiceApiVoiceHistoryGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1047,19 +1048,19 @@ func (a *VoiceApiService) VoicePricePost(ctx context.Context, voiceMessages Voic
 VoiceApiService Get all delivery receipts
 Get all delivery receipts
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *VoiceReceiptsGetOpts - Optional Parameters:
+ * @param optional nil or *VoiceApiVoiceReceiptsGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type VoiceReceiptsGetOpts struct { 
+type VoiceApiVoiceReceiptsGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *VoiceApiService) VoiceReceiptsGet(ctx context.Context, localVarOptionals *VoiceReceiptsGetOpts) (string, *http.Response, error) {
+func (a *VoiceApiService) VoiceReceiptsGet(ctx context.Context, localVarOptionals *VoiceApiVoiceReceiptsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1393,17 +1394,17 @@ func (a *VoiceApiService) VoiceReceiptsPost(ctx context.Context, url Url) (strin
 VoiceApiService Mark delivery receipts as read
 Mark delivery receipts as read
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *VoiceReceiptsReadPutOpts - Optional Parameters:
+ * @param optional nil or *VoiceApiVoiceReceiptsReadPutOpts - Optional Parameters:
      * @param "DateBefore" (optional.Interface of DateBefore) -  DateBefore model
 
 @return string
 */
 
-type VoiceReceiptsReadPutOpts struct { 
+type VoiceApiVoiceReceiptsReadPutOpts struct { 
 	DateBefore optional.Interface
 }
 
-func (a *VoiceApiService) VoiceReceiptsReadPut(ctx context.Context, localVarOptionals *VoiceReceiptsReadPutOpts) (string, *http.Response, error) {
+func (a *VoiceApiService) VoiceReceiptsReadPut(ctx context.Context, localVarOptionals *VoiceApiVoiceReceiptsReadPutOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}

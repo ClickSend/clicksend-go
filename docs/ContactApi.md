@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**ListsContactsByListIdAndContactIdPut**](ContactApi.md#ListsContactsByListIdAndContactIdPut) | **Put** /lists/{list_id}/contacts/{contact_id} | Update specific contact
 [**ListsContactsByListIdGet**](ContactApi.md#ListsContactsByListIdGet) | **Get** /lists/{list_id}/contacts | Get all contacts in a list
 [**ListsContactsByListIdPost**](ContactApi.md#ListsContactsByListIdPost) | **Post** /lists/{list_id}/contacts | Create new contact
+[**ListsCopyContactPut**](ContactApi.md#ListsCopyContactPut) | **Put** /lists/{from_list_id}/contacts/{contact_id}/copy/{to_list_id} | Copy contact to another list
 [**ListsRemoveOptedOutContactsByListIdAndOptOutListIdPut**](ContactApi.md#ListsRemoveOptedOutContactsByListIdAndOptOutListIdPut) | **Put** /lists/{list_id}/remove-opted-out-contacts/{opt_out_list_id} | Remove all opted out contacts
 [**ListsTransferContactPut**](ContactApi.md#ListsTransferContactPut) | **Put** /lists/{from_list_id}/contacts/{contact_id}/transfer/{to_list_id} | Transfer contact to another list
 
@@ -113,10 +114,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **listId** | **int32**| Contact list ID | 
- **optional** | ***ListsContactsByListIdGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***ContactApiListsContactsByListIdGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ListsContactsByListIdGetOpts struct
+Optional parameters are passed through a pointer to a ContactApiListsContactsByListIdGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -152,6 +153,36 @@ Name | Type | Description  | Notes
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **contact** | [**Contact**](Contact.md)| Contact model | 
   **listId** | **int32**| List id | 
+
+### Return type
+
+**string**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ListsCopyContactPut**
+> string ListsCopyContactPut(ctx, fromListId, contactId, toListId)
+Copy contact to another list
+
+Copy contact to another list
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **fromListId** | **int32**| List ID for list that contains contact. | 
+  **contactId** | **int32**| Contact ID | 
+  **toListId** | **int32**| List ID for list you want to copy the contact to. | 
 
 ### Return type
 

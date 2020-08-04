@@ -31,10 +31,10 @@ Get all email addresses
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***AllowedEmailAddressGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***EmailMarketingApiAllowedEmailAddressGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a AllowedEmailAddressGetOpts struct
+Optional parameters are passed through a pointer to a EmailMarketingApiAllowedEmailAddressGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -67,10 +67,10 @@ Create allowed Email Address
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***AllowedEmailAddressPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***EmailMarketingApiAllowedEmailAddressPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a AllowedEmailAddressPostOpts struct
+Optional parameters are passed through a pointer to a EmailMarketingApiAllowedEmailAddressPostOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -159,10 +159,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **emailCampaignId** | **int32**| Allowed email campaign id | 
- **optional** | ***EmailCampaignHistoryExportGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***EmailMarketingApiEmailCampaignHistoryExportGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a EmailCampaignHistoryExportGetOpts struct
+Optional parameters are passed through a pointer to a EmailMarketingApiEmailCampaignHistoryExportGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -197,10 +197,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **emailCampaignId** | **int32**| Allowed email campaign id | 
- **optional** | ***EmailCampaignHistoryGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***EmailMarketingApiEmailCampaignHistoryGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a EmailCampaignHistoryGetOpts struct
+Optional parameters are passed through a pointer to a EmailMarketingApiEmailCampaignHistoryGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -321,10 +321,10 @@ Get all email campaigns
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***EmailCampaignsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***EmailMarketingApiEmailCampaignsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a EmailCampaignsGetOpts struct
+Optional parameters are passed through a pointer to a EmailMarketingApiEmailCampaignsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

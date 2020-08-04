@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -31,19 +32,19 @@ SearchApiService Get list of searched contact list
 Get list of searched contact list
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param q Your keyword or query.
- * @param optional nil or *SearchContactsListsGetOpts - Optional Parameters:
+ * @param optional nil or *SearchApiSearchContactsListsGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type SearchContactsListsGetOpts struct { 
+type SearchApiSearchContactsListsGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *SearchApiService) SearchContactsListsGet(ctx context.Context, q string, localVarOptionals *SearchContactsListsGetOpts) (string, *http.Response, error) {
+func (a *SearchApiService) SearchContactsListsGet(ctx context.Context, q string, localVarOptionals *SearchApiSearchContactsListsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

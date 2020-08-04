@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -366,19 +367,19 @@ func (a *ResellerAccountApiService) ResellerAccountsByClientUserIdPut(ctx contex
 ResellerAccountApiService Get list of reseller accounts
 Get list of reseller accounts
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ResellerAccountsGetOpts - Optional Parameters:
+ * @param optional nil or *ResellerAccountApiResellerAccountsGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type ResellerAccountsGetOpts struct { 
+type ResellerAccountApiResellerAccountsGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *ResellerAccountApiService) ResellerAccountsGet(ctx context.Context, localVarOptionals *ResellerAccountsGetOpts) (string, *http.Response, error) {
+func (a *ResellerAccountApiService) ResellerAccountsGet(ctx context.Context, localVarOptionals *ResellerAccountApiResellerAccountsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

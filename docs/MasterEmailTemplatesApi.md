@@ -22,10 +22,10 @@ Get all master email template categories
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***MasterEmailTemplateCategoriesGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***MasterEmailTemplatesApiMasterEmailTemplateCategoriesGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a MasterEmailTemplateCategoriesGetOpts struct
+Optional parameters are passed through a pointer to a MasterEmailTemplatesApiMasterEmailTemplateCategoriesGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -114,10 +114,10 @@ Get all master email templates
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***MasterEmailTemplatesGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***MasterEmailTemplatesApiMasterEmailTemplatesGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a MasterEmailTemplatesGetOpts struct
+Optional parameters are passed through a pointer to a MasterEmailTemplatesApiMasterEmailTemplatesGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -151,10 +151,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **categoryId** | **int32**| Email category id | 
- **optional** | ***MasterEmailTemplatesInCategoryGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***MasterEmailTemplatesApiMasterEmailTemplatesInCategoryGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a MasterEmailTemplatesInCategoryGetOpts struct
+Optional parameters are passed through a pointer to a MasterEmailTemplatesApiMasterEmailTemplatesInCategoryGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

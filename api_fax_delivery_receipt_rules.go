@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -699,7 +700,7 @@ func (a *FAXDeliveryReceiptRulesApiService) FaxDeliveryReceiptAutomationPut(ctx 
 FAXDeliveryReceiptRulesApiService Get all fax delivery receipt automations
 Get all fax delivery receipt automations
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *FaxDeliveryReceiptAutomationsGetOpts - Optional Parameters:
+ * @param optional nil or *FAXDeliveryReceiptRulesApiFaxDeliveryReceiptAutomationsGetOpts - Optional Parameters:
      * @param "Q" (optional.String) -  Your keyword or query.
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
@@ -707,13 +708,13 @@ Get all fax delivery receipt automations
 @return string
 */
 
-type FaxDeliveryReceiptAutomationsGetOpts struct { 
+type FAXDeliveryReceiptRulesApiFaxDeliveryReceiptAutomationsGetOpts struct { 
 	Q optional.String
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *FAXDeliveryReceiptRulesApiService) FaxDeliveryReceiptAutomationsGet(ctx context.Context, localVarOptionals *FaxDeliveryReceiptAutomationsGetOpts) (string, *http.Response, error) {
+func (a *FAXDeliveryReceiptRulesApiService) FaxDeliveryReceiptAutomationsGet(ctx context.Context, localVarOptionals *FAXDeliveryReceiptRulesApiFaxDeliveryReceiptAutomationsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

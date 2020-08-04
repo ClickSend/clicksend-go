@@ -107,10 +107,10 @@ Get list of post return addresses
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***PostReturnAddressesGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***PostReturnAddressApiPostReturnAddressesGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a PostReturnAddressesGetOpts struct
+Optional parameters are passed through a pointer to a PostReturnAddressApiPostReturnAddressesGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

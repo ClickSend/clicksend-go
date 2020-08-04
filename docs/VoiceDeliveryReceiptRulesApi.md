@@ -135,10 +135,10 @@ Get all voice delivery receipt automations
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***VoiceDeliveryReceiptAutomationsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***VoiceDeliveryReceiptRulesApiVoiceDeliveryReceiptAutomationsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a VoiceDeliveryReceiptAutomationsGetOpts struct
+Optional parameters are passed through a pointer to a VoiceDeliveryReceiptRulesApiVoiceDeliveryReceiptAutomationsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

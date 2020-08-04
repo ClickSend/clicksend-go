@@ -115,10 +115,10 @@ Get all sms history
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***SmsHistoryGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***SMSApiSmsHistoryGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a SmsHistoryGetOpts struct
+Optional parameters are passed through a pointer to a SMSApiSmsHistoryGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -154,10 +154,10 @@ Get all inbound sms
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***SmsInboundGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***SMSApiSmsInboundGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a SmsInboundGetOpts struct
+Optional parameters are passed through a pointer to a SMSApiSmsInboundGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -247,10 +247,10 @@ Mark all inbound SMS as read optionally before a certain date
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***SmsInboundReadPutOpts** | optional parameters | nil if no parameters
+ **optional** | ***SMSApiSmsInboundReadPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a SmsInboundReadPutOpts struct
+Optional parameters are passed through a pointer to a SMSApiSmsInboundReadPutOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -338,10 +338,10 @@ Get all delivery receipts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***SmsReceiptsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***SMSApiSmsReceiptsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a SmsReceiptsGetOpts struct
+Optional parameters are passed through a pointer to a SMSApiSmsReceiptsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -402,10 +402,10 @@ Mark delivery receipts as read
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***SmsReceiptsReadPutOpts** | optional parameters | nil if no parameters
+ **optional** | ***SMSApiSmsReceiptsReadPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a SmsReceiptsReadPutOpts struct
+Optional parameters are passed through a pointer to a SMSApiSmsReceiptsReadPutOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -522,10 +522,10 @@ Get lists of all sms templates
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***SmsTemplatesGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***SMSApiSmsTemplatesGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a SmsTemplatesGetOpts struct
+Optional parameters are passed through a pointer to a SMSApiSmsTemplatesGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

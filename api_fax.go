@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -31,7 +32,7 @@ type FAXApiService service
 FAXApiService Get a list of Fax History.
 Get a list of Fax History.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *FaxHistoryGetOpts - Optional Parameters:
+ * @param optional nil or *FAXApiFaxHistoryGetOpts - Optional Parameters:
      * @param "DateFrom" (optional.Int32) -  Customize result by setting from date (timestsamp) Example: 1457572619.
      * @param "DateTo" (optional.Int32) -  Customize result by setting to date (timestamp) Example: 1457573000.
      * @param "Q" (optional.String) -  Custom query Example: status:Sent,status_code:201.
@@ -42,7 +43,7 @@ Get a list of Fax History.
 @return string
 */
 
-type FaxHistoryGetOpts struct { 
+type FAXApiFaxHistoryGetOpts struct { 
 	DateFrom optional.Int32
 	DateTo optional.Int32
 	Q optional.String
@@ -51,7 +52,7 @@ type FaxHistoryGetOpts struct {
 	Limit optional.Int32
 }
 
-func (a *FAXApiService) FaxHistoryGet(ctx context.Context, localVarOptionals *FaxHistoryGetOpts) (string, *http.Response, error) {
+func (a *FAXApiService) FaxHistoryGet(ctx context.Context, localVarOptionals *FAXApiFaxHistoryGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -563,19 +564,19 @@ func (a *FAXApiService) FaxReceiptsByMessageIdGet(ctx context.Context, messageId
 FAXApiService Get all delivery receipts
 Get all delivery receipts
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *FaxReceiptsGetOpts - Optional Parameters:
+ * @param optional nil or *FAXApiFaxReceiptsGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type FaxReceiptsGetOpts struct { 
+type FAXApiFaxReceiptsGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *FAXApiService) FaxReceiptsGet(ctx context.Context, localVarOptionals *FaxReceiptsGetOpts) (string, *http.Response, error) {
+func (a *FAXApiService) FaxReceiptsGet(ctx context.Context, localVarOptionals *FAXApiFaxReceiptsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -909,17 +910,17 @@ func (a *FAXApiService) FaxReceiptsPost(ctx context.Context, url Url) (string, *
 FAXApiService Mark delivery receipts as read
 Mark delivery receipts as read
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *FaxReceiptsReadPutOpts - Optional Parameters:
+ * @param optional nil or *FAXApiFaxReceiptsReadPutOpts - Optional Parameters:
      * @param "DateBefore" (optional.Interface of DateBefore) -  DateBefore model
 
 @return string
 */
 
-type FaxReceiptsReadPutOpts struct { 
+type FAXApiFaxReceiptsReadPutOpts struct { 
 	DateBefore optional.Interface
 }
 
-func (a *FAXApiService) FaxReceiptsReadPut(ctx context.Context, localVarOptionals *FaxReceiptsReadPutOpts) (string, *http.Response, error) {
+func (a *FAXApiService) FaxReceiptsReadPut(ctx context.Context, localVarOptionals *FAXApiFaxReceiptsReadPutOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}

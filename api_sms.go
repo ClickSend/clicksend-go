@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -527,7 +528,7 @@ func (a *SMSApiService) SmsHistoryExportGet(ctx context.Context, filename string
 SMSApiService Get all sms history
 Get all sms history
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SmsHistoryGetOpts - Optional Parameters:
+ * @param optional nil or *SMSApiSmsHistoryGetOpts - Optional Parameters:
      * @param "Q" (optional.String) -  Custom query Example: from:{number},status_code:201.
      * @param "DateFrom" (optional.Int32) -  Start date
      * @param "DateTo" (optional.Int32) -  End date
@@ -537,7 +538,7 @@ Get all sms history
 @return string
 */
 
-type SmsHistoryGetOpts struct { 
+type SMSApiSmsHistoryGetOpts struct { 
 	Q optional.String
 	DateFrom optional.Int32
 	DateTo optional.Int32
@@ -545,7 +546,7 @@ type SmsHistoryGetOpts struct {
 	Limit optional.Int32
 }
 
-func (a *SMSApiService) SmsHistoryGet(ctx context.Context, localVarOptionals *SmsHistoryGetOpts) (string, *http.Response, error) {
+func (a *SMSApiService) SmsHistoryGet(ctx context.Context, localVarOptionals *SMSApiSmsHistoryGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -721,7 +722,7 @@ func (a *SMSApiService) SmsHistoryGet(ctx context.Context, localVarOptionals *Sm
 SMSApiService Get all inbound sms
 Get all inbound sms
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SmsInboundGetOpts - Optional Parameters:
+ * @param optional nil or *SMSApiSmsInboundGetOpts - Optional Parameters:
      * @param "Q" (optional.String) -  Your keyword or query.
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
@@ -729,13 +730,13 @@ Get all inbound sms
 @return string
 */
 
-type SmsInboundGetOpts struct { 
+type SMSApiSmsInboundGetOpts struct { 
 	Q optional.String
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *SMSApiService) SmsInboundGet(ctx context.Context, localVarOptionals *SmsInboundGetOpts) (string, *http.Response, error) {
+func (a *SMSApiService) SmsInboundGet(ctx context.Context, localVarOptionals *SMSApiSmsInboundGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1238,17 +1239,17 @@ func (a *SMSApiService) SmsInboundReadByMessageIdPut(ctx context.Context, messag
 SMSApiService Mark inbound SMS as read
 Mark all inbound SMS as read optionally before a certain date
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SmsInboundReadPutOpts - Optional Parameters:
+ * @param optional nil or *SMSApiSmsInboundReadPutOpts - Optional Parameters:
      * @param "DateBefore" (optional.Interface of DateBefore) -  DateBefore model
 
 @return string
 */
 
-type SmsInboundReadPutOpts struct { 
+type SMSApiSmsInboundReadPutOpts struct { 
 	DateBefore optional.Interface
 }
 
-func (a *SMSApiService) SmsInboundReadPut(ctx context.Context, localVarOptionals *SmsInboundReadPutOpts) (string, *http.Response, error) {
+func (a *SMSApiService) SmsInboundReadPut(ctx context.Context, localVarOptionals *SMSApiSmsInboundReadPutOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -1751,19 +1752,19 @@ func (a *SMSApiService) SmsReceiptsByMessageIdGet(ctx context.Context, messageId
 SMSApiService Get all delivery receipts
 Get all delivery receipts
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SmsReceiptsGetOpts - Optional Parameters:
+ * @param optional nil or *SMSApiSmsReceiptsGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type SmsReceiptsGetOpts struct { 
+type SMSApiSmsReceiptsGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *SMSApiService) SmsReceiptsGet(ctx context.Context, localVarOptionals *SmsReceiptsGetOpts) (string, *http.Response, error) {
+func (a *SMSApiService) SmsReceiptsGet(ctx context.Context, localVarOptionals *SMSApiSmsReceiptsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -2097,17 +2098,17 @@ func (a *SMSApiService) SmsReceiptsPost(ctx context.Context, url Url) (string, *
 SMSApiService Mark delivery receipts as read
 Mark delivery receipts as read
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SmsReceiptsReadPutOpts - Optional Parameters:
+ * @param optional nil or *SMSApiSmsReceiptsReadPutOpts - Optional Parameters:
      * @param "DateBefore" (optional.Interface of DateBefore) -  DateBefore model
 
 @return string
 */
 
-type SmsReceiptsReadPutOpts struct { 
+type SMSApiSmsReceiptsReadPutOpts struct { 
 	DateBefore optional.Interface
 }
 
-func (a *SMSApiService) SmsReceiptsReadPut(ctx context.Context, localVarOptionals *SmsReceiptsReadPutOpts) (string, *http.Response, error) {
+func (a *SMSApiService) SmsReceiptsReadPut(ctx context.Context, localVarOptionals *SMSApiSmsReceiptsReadPutOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -2779,19 +2780,19 @@ func (a *SMSApiService) SmsTemplatesByTemplateIdPut(ctx context.Context, templat
 SMSApiService Get lists of all sms templates
 Get lists of all sms templates
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SmsTemplatesGetOpts - Optional Parameters:
+ * @param optional nil or *SMSApiSmsTemplatesGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type SmsTemplatesGetOpts struct { 
+type SMSApiSmsTemplatesGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *SMSApiService) SmsTemplatesGet(ctx context.Context, localVarOptionals *SmsTemplatesGetOpts) (string, *http.Response, error) {
+func (a *SMSApiService) SmsTemplatesGet(ctx context.Context, localVarOptionals *SMSApiSmsTemplatesGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

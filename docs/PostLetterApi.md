@@ -49,10 +49,10 @@ Get all post letter history
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***PostLettersHistoryGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***PostLetterApiPostLettersHistoryGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a PostLettersHistoryGetOpts struct
+Optional parameters are passed through a pointer to a PostLetterApiPostLettersHistoryGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

@@ -18,10 +18,10 @@ Get all referral accounts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ReferralAccountsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***ReferralAccountApiReferralAccountsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ReferralAccountsGetOpts struct
+Optional parameters are passed through a pointer to a ReferralAccountApiReferralAccountsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

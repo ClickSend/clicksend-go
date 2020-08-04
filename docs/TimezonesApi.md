@@ -18,10 +18,10 @@ Get supported list of timezones.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***TimezonesGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***TimezonesApiTimezonesGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a TimezonesGetOpts struct
+Optional parameters are passed through a pointer to a TimezonesApiTimezonesGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

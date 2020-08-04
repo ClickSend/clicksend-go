@@ -135,10 +135,10 @@ Get all inbound sms automations
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***SmsInboundAutomationsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***InboundSMSRulesApiSmsInboundAutomationsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a SmsInboundAutomationsGetOpts struct
+Optional parameters are passed through a pointer to a InboundSMSRulesApiSmsInboundAutomationsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

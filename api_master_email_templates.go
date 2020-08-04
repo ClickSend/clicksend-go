@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -31,19 +32,19 @@ type MasterEmailTemplatesApiService service
 MasterEmailTemplatesApiService Get all master email template categories
 Get all master email template categories
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *MasterEmailTemplateCategoriesGetOpts - Optional Parameters:
+ * @param optional nil or *MasterEmailTemplatesApiMasterEmailTemplateCategoriesGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type MasterEmailTemplateCategoriesGetOpts struct { 
+type MasterEmailTemplatesApiMasterEmailTemplateCategoriesGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *MasterEmailTemplatesApiService) MasterEmailTemplateCategoriesGet(ctx context.Context, localVarOptionals *MasterEmailTemplateCategoriesGetOpts) (string, *http.Response, error) {
+func (a *MasterEmailTemplatesApiService) MasterEmailTemplateCategoriesGet(ctx context.Context, localVarOptionals *MasterEmailTemplatesApiMasterEmailTemplateCategoriesGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -542,19 +543,19 @@ func (a *MasterEmailTemplatesApiService) MasterEmailTemplateGet(ctx context.Cont
 MasterEmailTemplatesApiService Get all master email templates
 Get all master email templates
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *MasterEmailTemplatesGetOpts - Optional Parameters:
+ * @param optional nil or *MasterEmailTemplatesApiMasterEmailTemplatesGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type MasterEmailTemplatesGetOpts struct { 
+type MasterEmailTemplatesApiMasterEmailTemplatesGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *MasterEmailTemplatesApiService) MasterEmailTemplatesGet(ctx context.Context, localVarOptionals *MasterEmailTemplatesGetOpts) (string, *http.Response, error) {
+func (a *MasterEmailTemplatesApiService) MasterEmailTemplatesGet(ctx context.Context, localVarOptionals *MasterEmailTemplatesApiMasterEmailTemplatesGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -722,19 +723,19 @@ MasterEmailTemplatesApiService Get all master email templates in a category
 Get all master email templates in a category
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param categoryId Email category id
- * @param optional nil or *MasterEmailTemplatesInCategoryGetOpts - Optional Parameters:
+ * @param optional nil or *MasterEmailTemplatesApiMasterEmailTemplatesInCategoryGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type MasterEmailTemplatesInCategoryGetOpts struct { 
+type MasterEmailTemplatesApiMasterEmailTemplatesInCategoryGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *MasterEmailTemplatesApiService) MasterEmailTemplatesInCategoryGet(ctx context.Context, categoryId int32, localVarOptionals *MasterEmailTemplatesInCategoryGetOpts) (string, *http.Response, error) {
+func (a *MasterEmailTemplatesApiService) MasterEmailTemplatesInCategoryGet(ctx context.Context, categoryId int32, localVarOptionals *MasterEmailTemplatesApiMasterEmailTemplatesInCategoryGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

@@ -22,10 +22,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **filename** | **string**| Filename to download history as | 
- **optional** | ***EmailHistoryExportGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***TransactionalEmailApiEmailHistoryExportGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a EmailHistoryExportGetOpts struct
+Optional parameters are passed through a pointer to a TransactionalEmailApiEmailHistoryExportGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -59,10 +59,10 @@ Get all transactional email history
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***EmailHistoryGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***TransactionalEmailApiEmailHistoryGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a EmailHistoryGetOpts struct
+Optional parameters are passed through a pointer to a TransactionalEmailApiEmailHistoryGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

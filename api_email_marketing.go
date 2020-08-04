@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -31,19 +32,19 @@ type EmailMarketingApiService service
 EmailMarketingApiService Get all email addresses
 Get all email addresses
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *AllowedEmailAddressGetOpts - Optional Parameters:
+ * @param optional nil or *EmailMarketingApiAllowedEmailAddressGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type AllowedEmailAddressGetOpts struct { 
+type EmailMarketingApiAllowedEmailAddressGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *EmailMarketingApiService) AllowedEmailAddressGet(ctx context.Context, localVarOptionals *AllowedEmailAddressGetOpts) (string, *http.Response, error) {
+func (a *EmailMarketingApiService) AllowedEmailAddressGet(ctx context.Context, localVarOptionals *EmailMarketingApiAllowedEmailAddressGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -210,17 +211,17 @@ func (a *EmailMarketingApiService) AllowedEmailAddressGet(ctx context.Context, l
 EmailMarketingApiService Create allowed Email Address
 Create allowed Email Address
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *AllowedEmailAddressPostOpts - Optional Parameters:
+ * @param optional nil or *EmailMarketingApiAllowedEmailAddressPostOpts - Optional Parameters:
      * @param "EmailAddress" (optional.Interface of EmailAddress) - 
 
 @return string
 */
 
-type AllowedEmailAddressPostOpts struct { 
+type EmailMarketingApiAllowedEmailAddressPostOpts struct { 
 	EmailAddress optional.Interface
 }
 
-func (a *EmailMarketingApiService) AllowedEmailAddressPost(ctx context.Context, localVarOptionals *AllowedEmailAddressPostOpts) (string, *http.Response, error) {
+func (a *EmailMarketingApiService) AllowedEmailAddressPost(ctx context.Context, localVarOptionals *EmailMarketingApiAllowedEmailAddressPostOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -723,19 +724,19 @@ EmailMarketingApiService Export specific email campaign history
 Export specific email campaign history
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param emailCampaignId Allowed email campaign id
- * @param optional nil or *EmailCampaignHistoryExportGetOpts - Optional Parameters:
+ * @param optional nil or *EmailMarketingApiEmailCampaignHistoryExportGetOpts - Optional Parameters:
      * @param "DateFrom" (optional.Int32) -  Start date
      * @param "DateTo" (optional.Int32) -  End date
 
 @return string
 */
 
-type EmailCampaignHistoryExportGetOpts struct { 
+type EmailMarketingApiEmailCampaignHistoryExportGetOpts struct { 
 	DateFrom optional.Int32
 	DateTo optional.Int32
 }
 
-func (a *EmailMarketingApiService) EmailCampaignHistoryExportGet(ctx context.Context, emailCampaignId int32, localVarOptionals *EmailCampaignHistoryExportGetOpts) (string, *http.Response, error) {
+func (a *EmailMarketingApiService) EmailCampaignHistoryExportGet(ctx context.Context, emailCampaignId int32, localVarOptionals *EmailMarketingApiEmailCampaignHistoryExportGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -904,7 +905,7 @@ EmailMarketingApiService Get specific email campaign history
 Get specific email campaign history
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param emailCampaignId Allowed email campaign id
- * @param optional nil or *EmailCampaignHistoryGetOpts - Optional Parameters:
+ * @param optional nil or *EmailMarketingApiEmailCampaignHistoryGetOpts - Optional Parameters:
      * @param "DateFrom" (optional.Int32) -  Start date
      * @param "DateTo" (optional.Int32) -  End date
      * @param "Page" (optional.Int32) -  Page number
@@ -913,14 +914,14 @@ Get specific email campaign history
 @return string
 */
 
-type EmailCampaignHistoryGetOpts struct { 
+type EmailMarketingApiEmailCampaignHistoryGetOpts struct { 
 	DateFrom optional.Int32
 	DateTo optional.Int32
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *EmailMarketingApiService) EmailCampaignHistoryGet(ctx context.Context, emailCampaignId int32, localVarOptionals *EmailCampaignHistoryGetOpts) (string, *http.Response, error) {
+func (a *EmailMarketingApiService) EmailCampaignHistoryGet(ctx context.Context, emailCampaignId int32, localVarOptionals *EmailMarketingApiEmailCampaignHistoryGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1597,19 +1598,19 @@ func (a *EmailMarketingApiService) EmailCampaignPut(ctx context.Context, emailCa
 EmailMarketingApiService Get all email campaigns
 Get all email campaigns
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *EmailCampaignsGetOpts - Optional Parameters:
+ * @param optional nil or *EmailMarketingApiEmailCampaignsGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type EmailCampaignsGetOpts struct { 
+type EmailMarketingApiEmailCampaignsGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *EmailMarketingApiService) EmailCampaignsGet(ctx context.Context, localVarOptionals *EmailCampaignsGetOpts) (string, *http.Response, error) {
+func (a *EmailMarketingApiService) EmailCampaignsGet(ctx context.Context, localVarOptionals *EmailMarketingApiEmailCampaignsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

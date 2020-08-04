@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -30,19 +31,19 @@ type TimezonesApiService service
 TimezonesApiService Get supported list of timezones.
 Get supported list of timezones.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *TimezonesGetOpts - Optional Parameters:
+ * @param optional nil or *TimezonesApiTimezonesGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type TimezonesGetOpts struct { 
+type TimezonesApiTimezonesGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *TimezonesApiService) TimezonesGet(ctx context.Context, localVarOptionals *TimezonesGetOpts) (string, *http.Response, error) {
+func (a *TimezonesApiService) TimezonesGet(ctx context.Context, localVarOptionals *TimezonesApiTimezonesGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

@@ -49,10 +49,10 @@ Retrieve the history of postcards sent or scheduled
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***PostPostcardsHistoryGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***PostPostcardApiPostPostcardsHistoryGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a PostPostcardsHistoryGetOpts struct
+Optional parameters are passed through a pointer to a PostPostcardApiPostPostcardsHistoryGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

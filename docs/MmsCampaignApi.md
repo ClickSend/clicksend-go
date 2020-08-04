@@ -108,10 +108,10 @@ Get list of mms campaigns
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***MmsCampaignsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***MmsCampaignApiMmsCampaignsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a MmsCampaignsGetOpts struct
+Optional parameters are passed through a pointer to a MmsCampaignApiMmsCampaignsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

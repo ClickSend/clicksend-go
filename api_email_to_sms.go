@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -31,19 +32,19 @@ type EmailToSmsApiService service
 EmailToSmsApiService Get list of email to sms allowed addresses
 Get list of email to sms allowed addresses
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SmsEmailSmsGetOpts - Optional Parameters:
+ * @param optional nil or *EmailToSmsApiSmsEmailSmsGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type SmsEmailSmsGetOpts struct { 
+type EmailToSmsApiSmsEmailSmsGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *EmailToSmsApiService) SmsEmailSmsGet(ctx context.Context, localVarOptionals *SmsEmailSmsGetOpts) (string, *http.Response, error) {
+func (a *EmailToSmsApiService) SmsEmailSmsGet(ctx context.Context, localVarOptionals *EmailToSmsApiSmsEmailSmsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1045,19 +1046,19 @@ func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringPut(ctx context.Context,
 EmailToSmsApiService Get list of email to sms stripped string rules
 Get list of email to sms stripped string rules
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SmsEmailSmsStrippedStringsGetOpts - Optional Parameters:
+ * @param optional nil or *EmailToSmsApiSmsEmailSmsStrippedStringsGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type SmsEmailSmsStrippedStringsGetOpts struct { 
+type EmailToSmsApiSmsEmailSmsStrippedStringsGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringsGet(ctx context.Context, localVarOptionals *SmsEmailSmsStrippedStringsGetOpts) (string, *http.Response, error) {
+func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringsGet(ctx context.Context, localVarOptionals *EmailToSmsApiSmsEmailSmsStrippedStringsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

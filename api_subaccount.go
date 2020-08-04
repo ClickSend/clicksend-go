@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -532,19 +533,19 @@ func (a *SubaccountApiService) SubaccountsBySubaccountIdPut(ctx context.Context,
 SubaccountApiService Get all subaccounts
 Get all subaccounts
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SubaccountsGetOpts - Optional Parameters:
+ * @param optional nil or *SubaccountApiSubaccountsGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type SubaccountsGetOpts struct { 
+type SubaccountApiSubaccountsGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *SubaccountApiService) SubaccountsGet(ctx context.Context, localVarOptionals *SubaccountsGetOpts) (string, *http.Response, error) {
+func (a *SubaccountApiService) SubaccountsGet(ctx context.Context, localVarOptionals *SubaccountApiSubaccountsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

@@ -108,10 +108,10 @@ Get all subaccounts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***SubaccountsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***SubaccountApiSubaccountsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a SubaccountsGetOpts struct
+Optional parameters are passed through a pointer to a SubaccountApiSubaccountsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

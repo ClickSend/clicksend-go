@@ -75,10 +75,10 @@ Get list of all packages
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***RechargePackagesGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***AccountRechargeApiRechargePackagesGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a RechargePackagesGetOpts struct
+Optional parameters are passed through a pointer to a AccountRechargeApiRechargePackagesGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -166,10 +166,10 @@ Get all transactions
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***RechargeTransactionsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***AccountRechargeApiRechargeTransactionsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a RechargeTransactionsGetOpts struct
+Optional parameters are passed through a pointer to a AccountRechargeApiRechargeTransactionsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

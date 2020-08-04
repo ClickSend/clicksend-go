@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -699,7 +700,7 @@ func (a *SMSDeliveryReceiptRulesApiService) SmsDeliveryReceiptAutomationPut(ctx 
 SMSDeliveryReceiptRulesApiService Get all sms delivery receipt automations
 Get all sms delivery receipt automations
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SmsDeliveryReceiptAutomationsGetOpts - Optional Parameters:
+ * @param optional nil or *SMSDeliveryReceiptRulesApiSmsDeliveryReceiptAutomationsGetOpts - Optional Parameters:
      * @param "Q" (optional.String) -  Your keyword or query.
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
@@ -707,13 +708,13 @@ Get all sms delivery receipt automations
 @return string
 */
 
-type SmsDeliveryReceiptAutomationsGetOpts struct { 
+type SMSDeliveryReceiptRulesApiSmsDeliveryReceiptAutomationsGetOpts struct { 
 	Q optional.String
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *SMSDeliveryReceiptRulesApiService) SmsDeliveryReceiptAutomationsGet(ctx context.Context, localVarOptionals *SmsDeliveryReceiptAutomationsGetOpts) (string, *http.Response, error) {
+func (a *SMSDeliveryReceiptRulesApiService) SmsDeliveryReceiptAutomationsGet(ctx context.Context, localVarOptionals *SMSDeliveryReceiptRulesApiSmsDeliveryReceiptAutomationsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

@@ -48,10 +48,10 @@ Get all availible dedicated numbers
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***NumbersGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***NumberApiNumbersGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a NumbersGetOpts struct
+Optional parameters are passed through a pointer to a NumberApiNumbersGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -85,10 +85,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **country** | **string**| Country code to search | 
- **optional** | ***NumbersSearchByCountryGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***NumberApiNumbersSearchByCountryGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a NumbersSearchByCountryGetOpts struct
+Optional parameters are passed through a pointer to a NumberApiNumbersSearchByCountryGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

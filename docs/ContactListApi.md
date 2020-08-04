@@ -109,10 +109,10 @@ Get all contact lists
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ListsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***ContactListApiListsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ListsGetOpts struct
+Optional parameters are passed through a pointer to a ContactListApiListsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

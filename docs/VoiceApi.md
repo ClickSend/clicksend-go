@@ -107,10 +107,10 @@ Get all voice history
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***VoiceHistoryGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***VoiceApiVoiceHistoryGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a VoiceHistoryGetOpts struct
+Optional parameters are passed through a pointer to a VoiceApiVoiceHistoryGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -197,10 +197,10 @@ Get all delivery receipts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***VoiceReceiptsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***VoiceApiVoiceReceiptsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a VoiceReceiptsGetOpts struct
+Optional parameters are passed through a pointer to a VoiceApiVoiceReceiptsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -261,10 +261,10 @@ Mark delivery receipts as read
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***VoiceReceiptsReadPutOpts** | optional parameters | nil if no parameters
+ **optional** | ***VoiceApiVoiceReceiptsReadPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a VoiceReceiptsReadPutOpts struct
+Optional parameters are passed through a pointer to a VoiceApiVoiceReceiptsReadPutOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

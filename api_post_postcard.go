@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -196,19 +197,19 @@ func (a *PostPostcardApiService) PostPostcardsHistoryExportGet(ctx context.Conte
 PostPostcardApiService Retrieve the history of postcards sent or scheduled
 Retrieve the history of postcards sent or scheduled
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *PostPostcardsHistoryGetOpts - Optional Parameters:
+ * @param optional nil or *PostPostcardApiPostPostcardsHistoryGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
 
 @return string
 */
 
-type PostPostcardsHistoryGetOpts struct { 
+type PostPostcardApiPostPostcardsHistoryGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *PostPostcardApiService) PostPostcardsHistoryGet(ctx context.Context, localVarOptionals *PostPostcardsHistoryGetOpts) (string, *http.Response, error) {
+func (a *PostPostcardApiService) PostPostcardsHistoryGet(ctx context.Context, localVarOptionals *PostPostcardApiPostPostcardsHistoryGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

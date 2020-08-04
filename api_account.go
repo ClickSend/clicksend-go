@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -862,17 +863,17 @@ func (a *AccountApiService) AccountVerifyVerifyByActivationTokenPut(ctx context.
 AccountApiService Forgot password
 Forgot password
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ForgotPasswordPutOpts - Optional Parameters:
+ * @param optional nil or *AccountApiForgotPasswordPutOpts - Optional Parameters:
      * @param "ForgotPassword" (optional.Interface of ForgotPassword) - 
 
 @return string
 */
 
-type ForgotPasswordPutOpts struct { 
+type AccountApiForgotPasswordPutOpts struct { 
 	ForgotPassword optional.Interface
 }
 
-func (a *AccountApiService) ForgotPasswordPut(ctx context.Context, localVarOptionals *ForgotPasswordPutOpts) (string, *http.Response, error) {
+func (a *AccountApiService) ForgotPasswordPut(ctx context.Context, localVarOptionals *AccountApiForgotPasswordPutOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -1209,17 +1210,17 @@ func (a *AccountApiService) ForgotPasswordVerifyPut(ctx context.Context, verifyP
 AccountApiService Forgot username
 Forgot username
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ForgotUsernamePutOpts - Optional Parameters:
+ * @param optional nil or *AccountApiForgotUsernamePutOpts - Optional Parameters:
      * @param "ForgotUsername" (optional.Interface of ForgotUsername) - 
 
 @return string
 */
 
-type ForgotUsernamePutOpts struct { 
+type AccountApiForgotUsernamePutOpts struct { 
 	ForgotUsername optional.Interface
 }
 
-func (a *AccountApiService) ForgotUsernamePut(ctx context.Context, localVarOptionals *ForgotUsernamePutOpts) (string, *http.Response, error) {
+func (a *AccountApiService) ForgotUsernamePut(ctx context.Context, localVarOptionals *AccountApiForgotUsernamePutOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}

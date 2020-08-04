@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -699,7 +700,7 @@ func (a *EmailDeliveryReceiptRulesApiService) EmailDeliveryReceiptAutomationPut(
 EmailDeliveryReceiptRulesApiService Get all email delivery receipt automations
 Get all email delivery receipt automations
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *EmailDeliveryReceiptAutomationsGetOpts - Optional Parameters:
+ * @param optional nil or *EmailDeliveryReceiptRulesApiEmailDeliveryReceiptAutomationsGetOpts - Optional Parameters:
      * @param "Q" (optional.String) -  Your keyword or query.
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
@@ -707,13 +708,13 @@ Get all email delivery receipt automations
 @return string
 */
 
-type EmailDeliveryReceiptAutomationsGetOpts struct { 
+type EmailDeliveryReceiptRulesApiEmailDeliveryReceiptAutomationsGetOpts struct { 
 	Q optional.String
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *EmailDeliveryReceiptRulesApiService) EmailDeliveryReceiptAutomationsGet(ctx context.Context, localVarOptionals *EmailDeliveryReceiptAutomationsGetOpts) (string, *http.Response, error) {
+func (a *EmailDeliveryReceiptRulesApiService) EmailDeliveryReceiptAutomationsGet(ctx context.Context, localVarOptionals *EmailDeliveryReceiptRulesApiEmailDeliveryReceiptAutomationsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

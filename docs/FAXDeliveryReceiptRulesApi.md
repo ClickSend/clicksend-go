@@ -135,10 +135,10 @@ Get all fax delivery receipt automations
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***FaxDeliveryReceiptAutomationsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***FAXDeliveryReceiptRulesApiFaxDeliveryReceiptAutomationsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a FaxDeliveryReceiptAutomationsGetOpts struct
+Optional parameters are passed through a pointer to a FAXDeliveryReceiptRulesApiFaxDeliveryReceiptAutomationsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

@@ -1,3 +1,4 @@
+
 /*
  * ClickSend v3 API
  *
@@ -699,7 +700,7 @@ func (a *InboundFAXRulesApiService) FaxInboundAutomationPut(ctx context.Context,
 InboundFAXRulesApiService Get all inbound fax automations
 Get all inbound fax automations
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *FaxInboundAutomationsGetOpts - Optional Parameters:
+ * @param optional nil or *InboundFAXRulesApiFaxInboundAutomationsGetOpts - Optional Parameters:
      * @param "Q" (optional.String) -  Your keyword or query.
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
@@ -707,13 +708,13 @@ Get all inbound fax automations
 @return string
 */
 
-type FaxInboundAutomationsGetOpts struct { 
+type InboundFAXRulesApiFaxInboundAutomationsGetOpts struct { 
 	Q optional.String
 	Page optional.Int32
 	Limit optional.Int32
 }
 
-func (a *InboundFAXRulesApiService) FaxInboundAutomationsGet(ctx context.Context, localVarOptionals *FaxInboundAutomationsGetOpts) (string, *http.Response, error) {
+func (a *InboundFAXRulesApiService) FaxInboundAutomationsGet(ctx context.Context, localVarOptionals *InboundFAXRulesApiFaxInboundAutomationsGetOpts) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

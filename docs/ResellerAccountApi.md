@@ -78,10 +78,10 @@ Get list of reseller accounts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ResellerAccountsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***ResellerAccountApiResellerAccountsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ResellerAccountsGetOpts struct
+Optional parameters are passed through a pointer to a ResellerAccountApiResellerAccountsGetOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
