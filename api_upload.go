@@ -30,12 +30,12 @@ type UploadApiService service
 UploadApiService Upload File
 Upload File
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param uploadFile Your file to be uploaded
+ * @param content Your file to be uploaded
  * @param convert 
 
 @return string
 */
-func (a *UploadApiService) UploadsPost(ctx context.Context, uploadFile UploadFile, convert string) (string, *http.Response, error) {
+func (a *UploadApiService) UploadsPost(ctx context.Context, content Content, convert string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -70,7 +70,7 @@ func (a *UploadApiService) UploadsPost(ctx context.Context, uploadFile UploadFil
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
 	// body params
-	localVarPostBody = &uploadFile
+	localVarPostBody = &content
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err

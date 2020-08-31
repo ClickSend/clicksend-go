@@ -10,7 +10,7 @@
 
 package clicksend
 
-// All dates before specified timestam.
+// All dates before specified timestamp.
 type DateBefore struct {
 	// An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
 	DateBefore float32 `json:"date_before,omitempty"`

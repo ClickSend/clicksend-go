@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **UploadsPost**
-> string UploadsPost(ctx, uploadFile, convert)
+> string UploadsPost(ctx, content, convert)
 Upload File
 
 Upload File
@@ -18,7 +18,7 @@ Upload File
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **uploadFile** | [**UploadFile**](UploadFile.md)| Your file to be uploaded | 
+  **content** | [**Content**](Content.md)| Your file to be uploaded | 
   **convert** | **string**|  | 
 
 ### Return type

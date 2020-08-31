@@ -6320,12 +6320,12 @@ paths:
       - "application/json"
       parameters:
       - in: "body"
-        name: "uploadFile"
+        name: "content"
         description: "Your file to be uploaded"
         required: true
         schema:
-          $ref: "#/definitions/UploadFile"
-        x-exportParamName: "UploadFile"
+          $ref: "#/definitions/Content"
+        x-exportParamName: "Content"
       - name: "convert"
         in: "query"
         description: ""
@@ -7079,12 +7079,12 @@ paths:
       - "application/json"
       parameters:
       - in: "body"
-        name: "uploadFile"
+        name: "content"
         description: "Your file to be uploaded"
         required: true
         schema:
-          $ref: "#/definitions/UploadFile"
-        x-exportParamName: "UploadFile"
+          $ref: "#/definitions/Content"
+        x-exportParamName: "Content"
       responses:
         "200":
           description: "SUCCESS"
@@ -11837,10 +11837,10 @@ definitions:
         type: "number"
         description: "An optional timestamp - mark all as read before this timestamp.\
           \ If not given, all messages will be marked as read."
-    description: "All dates before specified timestam."
+    description: "All dates before specified timestamp."
     example:
       date_before: 0.80082819046101150206595775671303272247314453125
-  UploadFile:
+  Content:
     type: "object"
     required:
     - "content"
