@@ -6320,12 +6320,12 @@ paths:
       - "application/json"
       parameters:
       - in: "body"
-        name: "content"
+        name: "uploadFile"
         description: "Your file to be uploaded"
         required: true
         schema:
-          $ref: "#/definitions/Content"
-        x-exportParamName: "Content"
+          $ref: "#/definitions/UploadFile"
+        x-exportParamName: "UploadFile"
       - name: "convert"
         in: "query"
         description: ""
@@ -7079,12 +7079,12 @@ paths:
       - "application/json"
       parameters:
       - in: "body"
-        name: "content"
+        name: "uploadFile"
         description: "Your file to be uploaded"
         required: true
         schema:
-          $ref: "#/definitions/Content"
-        x-exportParamName: "Content"
+          $ref: "#/definitions/UploadFile"
+        x-exportParamName: "UploadFile"
       responses:
         "200":
           description: "SUCCESS"
@@ -11840,7 +11840,7 @@ definitions:
     description: "All dates before specified timestamp."
     example:
       date_before: 0.80082819046101150206595775671303272247314453125
-  Content:
+  UploadFile:
     type: "object"
     required:
     - "content"

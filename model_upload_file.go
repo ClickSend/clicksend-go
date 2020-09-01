@@ -11,7 +11,7 @@
 package clicksend
 
 // Your file to be uploaded.
-type Content struct {
+type UploadFile struct {
 	// Your base64 encoded file string.
 	Content string `json:"content"`
 }
