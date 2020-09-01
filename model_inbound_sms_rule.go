@@ -26,4 +26,6 @@ type InboundSmsRule struct {
 	ActionAddress string `json:"action_address"`
 	// Enabled: Disabled=0 or Enabled=1.
 	Enabled float32 `json:"enabled"`
+	// post, get, or json. post by default
+	WebhookType string `json:"webhook_type,omitempty"`
 }

@@ -12026,6 +12026,9 @@ definitions:
       enabled:
         type: "number"
         description: "Enabled: Disabled=0 or Enabled=1."
+      webhook_type:
+        type: "string"
+        description: "post, get, or json. post by default"
     description: "Model for Inbound SMS Rules"
   InboundFaxRule:
     type: "object"
