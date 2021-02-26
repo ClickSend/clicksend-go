@@ -26,7 +26,7 @@ var (
 
 type UploadApiService service
 
-/* 
+/*
 UploadApiService Upload File
 Upload File
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -90,9 +90,7 @@ func (a *UploadApiService) UploadsPost(ctx context.Context, uploadFile UploadFil
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -194,3 +192,4 @@ func (a *UploadApiService) UploadsPost(ctx context.Context, uploadFile UploadFil
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

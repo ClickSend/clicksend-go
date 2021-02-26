@@ -27,7 +27,7 @@ var (
 
 type MMSApiService service
 
-/* 
+/*
 MMSApiService Get Price for MMS sent
 Get Price for MMS sent
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -89,9 +89,7 @@ func (a *MMSApiService) MmsPricePost(ctx context.Context, mmsMessages MmsMessage
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -194,7 +192,7 @@ func (a *MMSApiService) MmsPricePost(ctx context.Context, mmsMessages MmsMessage
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 MMSApiService Get all delivery receipts
 Get all delivery receipts
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -268,9 +266,7 @@ func (a *MMSApiService) MmsReceiptsGet(ctx context.Context, localVarOptionals *M
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -373,7 +369,7 @@ func (a *MMSApiService) MmsReceiptsGet(ctx context.Context, localVarOptionals *M
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 MMSApiService Mark delivery receipts as read
 Mark delivery receipts as read
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -448,9 +444,7 @@ func (a *MMSApiService) MmsReceiptsReadPut(ctx context.Context, localVarOptional
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -553,7 +547,7 @@ func (a *MMSApiService) MmsReceiptsReadPut(ctx context.Context, localVarOptional
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 MMSApiService Send MMS
 Send MMS
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -615,9 +609,7 @@ func (a *MMSApiService) MmsSendPost(ctx context.Context, mmsMessages MmsMessageC
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -719,3 +711,4 @@ func (a *MMSApiService) MmsSendPost(ctx context.Context, mmsMessages MmsMessageC
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

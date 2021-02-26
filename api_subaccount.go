@@ -28,7 +28,7 @@ var (
 
 type SubaccountApiService service
 
-/* 
+/*
 SubaccountApiService Delete a subaccount
 Delete a subaccount
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -89,9 +89,7 @@ func (a *SubaccountApiService) SubaccountsBySubaccountIdDelete(ctx context.Conte
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -194,7 +192,7 @@ func (a *SubaccountApiService) SubaccountsBySubaccountIdDelete(ctx context.Conte
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 SubaccountApiService Get specific subaccount
 Get specific subaccount
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -255,9 +253,7 @@ func (a *SubaccountApiService) SubaccountsBySubaccountIdGet(ctx context.Context,
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -360,7 +356,7 @@ func (a *SubaccountApiService) SubaccountsBySubaccountIdGet(ctx context.Context,
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 SubaccountApiService Update subaccount
 Update subaccount
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -424,9 +420,7 @@ func (a *SubaccountApiService) SubaccountsBySubaccountIdPut(ctx context.Context,
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -529,7 +523,7 @@ func (a *SubaccountApiService) SubaccountsBySubaccountIdPut(ctx context.Context,
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 SubaccountApiService Get all subaccounts
 Get all subaccounts
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -603,9 +597,7 @@ func (a *SubaccountApiService) SubaccountsGet(ctx context.Context, localVarOptio
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -708,7 +700,7 @@ func (a *SubaccountApiService) SubaccountsGet(ctx context.Context, localVarOptio
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 SubaccountApiService Create new subaccount
 Create new subaccount
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -770,9 +762,7 @@ func (a *SubaccountApiService) SubaccountsPost(ctx context.Context, subaccount S
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -875,7 +865,7 @@ func (a *SubaccountApiService) SubaccountsPost(ctx context.Context, subaccount S
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 SubaccountApiService Regenerate an API Key
 Regenerate an API Key
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -936,9 +926,7 @@ func (a *SubaccountApiService) SubaccountsRegenApiKeyBySubaccountIdPut(ctx conte
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1040,3 +1028,4 @@ func (a *SubaccountApiService) SubaccountsRegenApiKeyBySubaccountIdPut(ctx conte
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

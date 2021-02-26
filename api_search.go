@@ -27,7 +27,7 @@ var (
 
 type SearchApiService service
 
-/* 
+/*
 SearchApiService Get list of searched contact list
 Get list of searched contact list
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -103,9 +103,7 @@ func (a *SearchApiService) SearchContactsListsGet(ctx context.Context, q string,
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -207,3 +205,4 @@ func (a *SearchApiService) SearchContactsListsGet(ctx context.Context, q string,
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

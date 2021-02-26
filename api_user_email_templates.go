@@ -28,7 +28,7 @@ var (
 
 type UserEmailTemplatesApiService service
 
-/* 
+/*
 UserEmailTemplatesApiService Delete user email template
 Delete user email template
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -89,9 +89,7 @@ func (a *UserEmailTemplatesApiService) EmailTemplateDelete(ctx context.Context, 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -194,7 +192,7 @@ func (a *UserEmailTemplatesApiService) EmailTemplateDelete(ctx context.Context, 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 UserEmailTemplatesApiService Get specific user email template
 Get specific user email templates
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -255,9 +253,7 @@ func (a *UserEmailTemplatesApiService) EmailTemplateGet(ctx context.Context, tem
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -360,7 +356,7 @@ func (a *UserEmailTemplatesApiService) EmailTemplateGet(ctx context.Context, tem
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 UserEmailTemplatesApiService Create email template
 Create email template
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -422,9 +418,7 @@ func (a *UserEmailTemplatesApiService) EmailTemplatePost(ctx context.Context, em
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -527,7 +521,7 @@ func (a *UserEmailTemplatesApiService) EmailTemplatePost(ctx context.Context, em
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 UserEmailTemplatesApiService Update email template
 Update email template
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -591,9 +585,7 @@ func (a *UserEmailTemplatesApiService) EmailTemplatePut(ctx context.Context, tem
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -696,7 +688,7 @@ func (a *UserEmailTemplatesApiService) EmailTemplatePut(ctx context.Context, tem
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 UserEmailTemplatesApiService Get all user email templates
 Get all user email templates
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -770,9 +762,7 @@ func (a *UserEmailTemplatesApiService) EmailTemplatesGet(ctx context.Context, lo
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -874,3 +864,4 @@ func (a *UserEmailTemplatesApiService) EmailTemplatesGet(ctx context.Context, lo
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

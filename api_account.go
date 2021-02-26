@@ -27,7 +27,7 @@ var (
 
 type AccountApiService service
 
-/* 
+/*
 AccountApiService Get account information
 Get account details
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -86,9 +86,7 @@ func (a *AccountApiService) AccountGet(ctx context.Context) (string, *http.Respo
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -191,7 +189,7 @@ func (a *AccountApiService) AccountGet(ctx context.Context) (string, *http.Respo
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 AccountApiService Create a new account
 Create An Account
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -253,9 +251,7 @@ func (a *AccountApiService) AccountPost(ctx context.Context, account Account) (s
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -358,7 +354,7 @@ func (a *AccountApiService) AccountPost(ctx context.Context, account Account) (s
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 AccountApiService Get account useage by subaccount
 Get account useage by subaccount
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -421,9 +417,7 @@ func (a *AccountApiService) AccountUseageBySubaccountGet(ctx context.Context, ye
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -526,7 +520,7 @@ func (a *AccountApiService) AccountUseageBySubaccountGet(ctx context.Context, ye
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 AccountApiService Send account activation token
 Send account activation token
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -588,9 +582,7 @@ func (a *AccountApiService) AccountVerifySendPut(ctx context.Context, accountVer
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -693,7 +685,7 @@ func (a *AccountApiService) AccountVerifySendPut(ctx context.Context, accountVer
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 AccountApiService Verify new account
 Verify new account
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -754,9 +746,7 @@ func (a *AccountApiService) AccountVerifyVerifyByActivationTokenPut(ctx context.
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -859,7 +849,7 @@ func (a *AccountApiService) AccountVerifyVerifyByActivationTokenPut(ctx context.
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 AccountApiService Forgot password
 Forgot password
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -934,9 +924,7 @@ func (a *AccountApiService) ForgotPasswordPut(ctx context.Context, localVarOptio
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1039,7 +1027,7 @@ func (a *AccountApiService) ForgotPasswordPut(ctx context.Context, localVarOptio
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 AccountApiService Verify forgot password
 Verify forgot password
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -1101,9 +1089,7 @@ func (a *AccountApiService) ForgotPasswordVerifyPut(ctx context.Context, verifyP
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1206,7 +1192,7 @@ func (a *AccountApiService) ForgotPasswordVerifyPut(ctx context.Context, verifyP
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 AccountApiService Forgot username
 Forgot username
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -1281,9 +1267,7 @@ func (a *AccountApiService) ForgotUsernamePut(ctx context.Context, localVarOptio
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1385,3 +1369,4 @@ func (a *AccountApiService) ForgotUsernamePut(ctx context.Context, localVarOptio
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

@@ -26,7 +26,7 @@ var (
 
 type DetectAddressApiService service
 
-/* 
+/*
 DetectAddressApiService Detects address in uploaded file.
 Detects address in uploaded file.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -88,9 +88,7 @@ func (a *DetectAddressApiService) DetectAddressPost(ctx context.Context, uploadF
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -192,3 +190,4 @@ func (a *DetectAddressApiService) DetectAddressPost(ctx context.Context, uploadF
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

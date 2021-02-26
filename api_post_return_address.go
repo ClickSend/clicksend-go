@@ -28,7 +28,7 @@ var (
 
 type PostReturnAddressApiService service
 
-/* 
+/*
 PostReturnAddressApiService Delete specific post return address
 Delete specific post return address
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -89,9 +89,7 @@ func (a *PostReturnAddressApiService) PostReturnAddressesByReturnAddressIdDelete
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -194,7 +192,7 @@ func (a *PostReturnAddressApiService) PostReturnAddressesByReturnAddressIdDelete
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 PostReturnAddressApiService Get specific post return address
 Get specific post return address
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -255,9 +253,7 @@ func (a *PostReturnAddressApiService) PostReturnAddressesByReturnAddressIdGet(ct
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -360,7 +356,7 @@ func (a *PostReturnAddressApiService) PostReturnAddressesByReturnAddressIdGet(ct
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 PostReturnAddressApiService Update post return address
 Update post return address
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -424,9 +420,7 @@ func (a *PostReturnAddressApiService) PostReturnAddressesByReturnAddressIdPut(ct
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -529,7 +523,7 @@ func (a *PostReturnAddressApiService) PostReturnAddressesByReturnAddressIdPut(ct
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 PostReturnAddressApiService Get list of post return addresses
 Get list of post return addresses
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -603,9 +597,7 @@ func (a *PostReturnAddressApiService) PostReturnAddressesGet(ctx context.Context
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -708,7 +700,7 @@ func (a *PostReturnAddressApiService) PostReturnAddressesGet(ctx context.Context
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 PostReturnAddressApiService Create post return address
 Create post return address
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -770,9 +762,7 @@ func (a *PostReturnAddressApiService) PostReturnAddressesPost(ctx context.Contex
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -874,3 +864,4 @@ func (a *PostReturnAddressApiService) PostReturnAddressesPost(ctx context.Contex
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

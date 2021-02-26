@@ -28,7 +28,7 @@ var (
 
 type SMSDeliveryReceiptRulesApiService service
 
-/* 
+/*
 SMSDeliveryReceiptRulesApiService Delete sms delivery receipt automation
 Delete sms delivery receipt automation
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -89,9 +89,7 @@ func (a *SMSDeliveryReceiptRulesApiService) SmsDeliveryReceiptAutomationDelete(c
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -194,7 +192,7 @@ func (a *SMSDeliveryReceiptRulesApiService) SmsDeliveryReceiptAutomationDelete(c
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 SMSDeliveryReceiptRulesApiService Get specific sms delivery receipt automation
 Get specific sms delivery receipt automation
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -255,9 +253,7 @@ func (a *SMSDeliveryReceiptRulesApiService) SmsDeliveryReceiptAutomationGet(ctx 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -360,7 +356,7 @@ func (a *SMSDeliveryReceiptRulesApiService) SmsDeliveryReceiptAutomationGet(ctx 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 SMSDeliveryReceiptRulesApiService Create sms delivery receipt automations
 Create sms delivery receipt automations
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -422,9 +418,7 @@ func (a *SMSDeliveryReceiptRulesApiService) SmsDeliveryReceiptAutomationPost(ctx
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -527,7 +521,7 @@ func (a *SMSDeliveryReceiptRulesApiService) SmsDeliveryReceiptAutomationPost(ctx
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 SMSDeliveryReceiptRulesApiService Update sms delivery receipt automation
 Update sms delivery receipt automation
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -591,9 +585,7 @@ func (a *SMSDeliveryReceiptRulesApiService) SmsDeliveryReceiptAutomationPut(ctx 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -696,7 +688,7 @@ func (a *SMSDeliveryReceiptRulesApiService) SmsDeliveryReceiptAutomationPut(ctx 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 SMSDeliveryReceiptRulesApiService Get all sms delivery receipt automations
 Get all sms delivery receipt automations
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -775,9 +767,7 @@ func (a *SMSDeliveryReceiptRulesApiService) SmsDeliveryReceiptAutomationsGet(ctx
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -879,3 +869,4 @@ func (a *SMSDeliveryReceiptRulesApiService) SmsDeliveryReceiptAutomationsGet(ctx
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

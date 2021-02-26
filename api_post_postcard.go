@@ -27,7 +27,7 @@ var (
 
 type PostPostcardApiService service
 
-/* 
+/*
 PostPostcardApiService Export postcard history to a CSV file
 Export postcard history to a CSV file
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -88,9 +88,7 @@ func (a *PostPostcardApiService) PostPostcardsHistoryExportGet(ctx context.Conte
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -193,7 +191,7 @@ func (a *PostPostcardApiService) PostPostcardsHistoryExportGet(ctx context.Conte
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 PostPostcardApiService Retrieve the history of postcards sent or scheduled
 Retrieve the history of postcards sent or scheduled
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -267,9 +265,7 @@ func (a *PostPostcardApiService) PostPostcardsHistoryGet(ctx context.Context, lo
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -372,7 +368,7 @@ func (a *PostPostcardApiService) PostPostcardsHistoryGet(ctx context.Context, lo
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 PostPostcardApiService Calculate price for sending one or more postcards
 Calculate price for sending one or more postcards
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -434,9 +430,7 @@ func (a *PostPostcardApiService) PostPostcardsPricePost(ctx context.Context, pos
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -539,7 +533,7 @@ func (a *PostPostcardApiService) PostPostcardsPricePost(ctx context.Context, pos
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 PostPostcardApiService Send one or more postcards
 Send one or more postcards
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -601,9 +595,7 @@ func (a *PostPostcardApiService) PostPostcardsSendPost(ctx context.Context, post
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -705,3 +697,4 @@ func (a *PostPostcardApiService) PostPostcardsSendPost(ctx context.Context, post
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

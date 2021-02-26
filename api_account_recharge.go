@@ -28,7 +28,7 @@ var (
 
 type AccountRechargeApiService service
 
-/* 
+/*
 AccountRechargeApiService Get Credit Card info
 Get Credit Card info
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -87,9 +87,7 @@ func (a *AccountRechargeApiService) RechargeCreditCardGet(ctx context.Context) (
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -192,7 +190,7 @@ func (a *AccountRechargeApiService) RechargeCreditCardGet(ctx context.Context) (
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 AccountRechargeApiService Update credit card info
 Update credit card info
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -254,9 +252,7 @@ func (a *AccountRechargeApiService) RechargeCreditCardPut(ctx context.Context, c
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -359,7 +355,7 @@ func (a *AccountRechargeApiService) RechargeCreditCardPut(ctx context.Context, c
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 AccountRechargeApiService Get list of all packages
 Get list of all packages
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -428,9 +424,7 @@ func (a *AccountRechargeApiService) RechargePackagesGet(ctx context.Context, loc
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -533,7 +527,7 @@ func (a *AccountRechargeApiService) RechargePackagesGet(ctx context.Context, loc
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 AccountRechargeApiService Purchase a package
 Purchase a package
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -594,9 +588,7 @@ func (a *AccountRechargeApiService) RechargePurchaseByPackageIdPut(ctx context.C
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -699,7 +691,7 @@ func (a *AccountRechargeApiService) RechargePurchaseByPackageIdPut(ctx context.C
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 AccountRechargeApiService Get specific Transaction
 Get specific Transaction
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -760,9 +752,7 @@ func (a *AccountRechargeApiService) RechargeTransactionsByTransactionIdGet(ctx c
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -865,7 +855,7 @@ func (a *AccountRechargeApiService) RechargeTransactionsByTransactionIdGet(ctx c
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 AccountRechargeApiService Purchase a package
 Get all transactions
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -939,9 +929,7 @@ func (a *AccountRechargeApiService) RechargeTransactionsGet(ctx context.Context,
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1043,3 +1031,4 @@ func (a *AccountRechargeApiService) RechargeTransactionsGet(ctx context.Context,
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

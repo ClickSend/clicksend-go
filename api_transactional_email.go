@@ -27,7 +27,7 @@ var (
 
 type TransactionalEmailApiService service
 
-/* 
+/*
 TransactionalEmailApiService Export all Transactional Email history
 Export all Transactional Email history
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -103,9 +103,7 @@ func (a *TransactionalEmailApiService) EmailHistoryExportGet(ctx context.Context
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -208,7 +206,7 @@ func (a *TransactionalEmailApiService) EmailHistoryExportGet(ctx context.Context
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 TransactionalEmailApiService Get all transactional email history
 Get all transactional email history
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -292,9 +290,7 @@ func (a *TransactionalEmailApiService) EmailHistoryGet(ctx context.Context, loca
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -397,7 +393,7 @@ func (a *TransactionalEmailApiService) EmailHistoryGet(ctx context.Context, loca
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 TransactionalEmailApiService Get transactional email price
 Get transactional email price
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -459,9 +455,7 @@ func (a *TransactionalEmailApiService) EmailPricePost(ctx context.Context, email
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -564,7 +558,7 @@ func (a *TransactionalEmailApiService) EmailPricePost(ctx context.Context, email
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 TransactionalEmailApiService Send transactional email
 Send transactional email
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -626,9 +620,7 @@ func (a *TransactionalEmailApiService) EmailSendPost(ctx context.Context, email 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -730,3 +722,4 @@ func (a *TransactionalEmailApiService) EmailSendPost(ctx context.Context, email 
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

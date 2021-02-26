@@ -28,7 +28,7 @@ var (
 
 type ResellerAccountApiService service
 
-/* 
+/*
 ResellerAccountApiService Get Reseller clients Account
 Get Reseller clients Account
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -89,9 +89,7 @@ func (a *ResellerAccountApiService) ResellerAccountsByClientUserIdGet(ctx contex
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -194,7 +192,7 @@ func (a *ResellerAccountApiService) ResellerAccountsByClientUserIdGet(ctx contex
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 ResellerAccountApiService Update Reseller clients Account
 Update Reseller clients Account
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -258,9 +256,7 @@ func (a *ResellerAccountApiService) ResellerAccountsByClientUserIdPut(ctx contex
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -363,7 +359,7 @@ func (a *ResellerAccountApiService) ResellerAccountsByClientUserIdPut(ctx contex
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 ResellerAccountApiService Get list of reseller accounts
 Get list of reseller accounts
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -437,9 +433,7 @@ func (a *ResellerAccountApiService) ResellerAccountsGet(ctx context.Context, loc
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -542,7 +536,7 @@ func (a *ResellerAccountApiService) ResellerAccountsGet(ctx context.Context, loc
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 ResellerAccountApiService Create reseller account
 Create reseller account
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -604,9 +598,7 @@ func (a *ResellerAccountApiService) ResellerAccountsPost(ctx context.Context, re
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -708,3 +700,4 @@ func (a *ResellerAccountApiService) ResellerAccountsPost(ctx context.Context, re
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

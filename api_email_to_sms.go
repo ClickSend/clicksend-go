@@ -28,7 +28,7 @@ var (
 
 type EmailToSmsApiService service
 
-/* 
+/*
 EmailToSmsApiService Get list of email to sms allowed addresses
 Get list of email to sms allowed addresses
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -102,9 +102,7 @@ func (a *EmailToSmsApiService) SmsEmailSmsGet(ctx context.Context, localVarOptio
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -207,7 +205,7 @@ func (a *EmailToSmsApiService) SmsEmailSmsGet(ctx context.Context, localVarOptio
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailToSmsApiService Create email to sms allowed address
 Create email to sms allowed address
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -269,9 +267,7 @@ func (a *EmailToSmsApiService) SmsEmailSmsPost(ctx context.Context, emailSmsAddr
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -374,7 +370,7 @@ func (a *EmailToSmsApiService) SmsEmailSmsPost(ctx context.Context, emailSmsAddr
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailToSmsApiService Delete email to sms stripped string rule
 Delete email to sms stripped string rule
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -435,9 +431,7 @@ func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringDelete(ctx context.Conte
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -540,7 +534,7 @@ func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringDelete(ctx context.Conte
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailToSmsApiService Get email to sms stripped string rule
 Get email to sms stripped string rule
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -601,9 +595,7 @@ func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringGet(ctx context.Context,
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -706,7 +698,7 @@ func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringGet(ctx context.Context,
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailToSmsApiService Create email to sms stripped string rule
 Create email to sms stripped string rules
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -768,9 +760,7 @@ func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringPost(ctx context.Context
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -873,7 +863,7 @@ func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringPost(ctx context.Context
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailToSmsApiService Update email to sms stripped string rule
 Update email to sms stripped string rule
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -937,9 +927,7 @@ func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringPut(ctx context.Context,
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1042,7 +1030,7 @@ func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringPut(ctx context.Context,
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailToSmsApiService Get list of email to sms stripped string rules
 Get list of email to sms stripped string rules
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -1116,9 +1104,7 @@ func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringsGet(ctx context.Context
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1220,3 +1206,4 @@ func (a *EmailToSmsApiService) SmsEmailSmsStrippedStringsGet(ctx context.Context
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

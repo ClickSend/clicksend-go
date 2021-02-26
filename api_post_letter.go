@@ -27,7 +27,7 @@ var (
 
 type PostLetterApiService service
 
-/* 
+/*
 PostLetterApiService export post letter history
 export post letter history
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -88,9 +88,7 @@ func (a *PostLetterApiService) PostLettersExportGet(ctx context.Context, filenam
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -193,7 +191,7 @@ func (a *PostLetterApiService) PostLettersExportGet(ctx context.Context, filenam
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 PostLetterApiService Get all post letter history
 Get all post letter history
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -267,9 +265,7 @@ func (a *PostLetterApiService) PostLettersHistoryGet(ctx context.Context, localV
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -372,7 +368,7 @@ func (a *PostLetterApiService) PostLettersHistoryGet(ctx context.Context, localV
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 PostLetterApiService Calculate post letter price
 Calculate post letter price
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -434,9 +430,7 @@ func (a *PostLetterApiService) PostLettersPricePost(ctx context.Context, postLet
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -539,7 +533,7 @@ func (a *PostLetterApiService) PostLettersPricePost(ctx context.Context, postLet
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 PostLetterApiService Send post letter
 Send post letter
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -601,9 +595,7 @@ func (a *PostLetterApiService) PostLettersSendPost(ctx context.Context, postLett
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -705,3 +697,4 @@ func (a *PostLetterApiService) PostLettersSendPost(ctx context.Context, postLett
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

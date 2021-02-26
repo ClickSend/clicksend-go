@@ -28,7 +28,7 @@ var (
 
 type EmailDeliveryReceiptRulesApiService service
 
-/* 
+/*
 EmailDeliveryReceiptRulesApiService Delete email delivery receipt automation
 Delete email delivery receipt automation
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -89,9 +89,7 @@ func (a *EmailDeliveryReceiptRulesApiService) EmailDeliveryReceiptAutomationDele
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -194,7 +192,7 @@ func (a *EmailDeliveryReceiptRulesApiService) EmailDeliveryReceiptAutomationDele
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailDeliveryReceiptRulesApiService Get specific email delivery receipt automation
 Get specific email delivery receipt automation
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -255,9 +253,7 @@ func (a *EmailDeliveryReceiptRulesApiService) EmailDeliveryReceiptAutomationGet(
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -360,7 +356,7 @@ func (a *EmailDeliveryReceiptRulesApiService) EmailDeliveryReceiptAutomationGet(
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailDeliveryReceiptRulesApiService Create email delivery receipt automations
 Create email delivery receipt automations
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -422,9 +418,7 @@ func (a *EmailDeliveryReceiptRulesApiService) EmailDeliveryReceiptAutomationPost
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -527,7 +521,7 @@ func (a *EmailDeliveryReceiptRulesApiService) EmailDeliveryReceiptAutomationPost
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailDeliveryReceiptRulesApiService Update email delivery receipt automation
 Update email delivery receipt automation
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -591,9 +585,7 @@ func (a *EmailDeliveryReceiptRulesApiService) EmailDeliveryReceiptAutomationPut(
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -696,7 +688,7 @@ func (a *EmailDeliveryReceiptRulesApiService) EmailDeliveryReceiptAutomationPut(
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailDeliveryReceiptRulesApiService Get all email delivery receipt automations
 Get all email delivery receipt automations
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -775,9 +767,7 @@ func (a *EmailDeliveryReceiptRulesApiService) EmailDeliveryReceiptAutomationsGet
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -879,3 +869,4 @@ func (a *EmailDeliveryReceiptRulesApiService) EmailDeliveryReceiptAutomationsGet
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

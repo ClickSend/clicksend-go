@@ -28,7 +28,7 @@ var (
 
 type FAXDeliveryReceiptRulesApiService service
 
-/* 
+/*
 FAXDeliveryReceiptRulesApiService Delete fax delivery receipt automation
 Delete fax delivery receipt automation
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -89,9 +89,7 @@ func (a *FAXDeliveryReceiptRulesApiService) FaxDeliveryReceiptAutomationDelete(c
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -194,7 +192,7 @@ func (a *FAXDeliveryReceiptRulesApiService) FaxDeliveryReceiptAutomationDelete(c
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 FAXDeliveryReceiptRulesApiService Get specific fax delivery receipt automation
 Get specific fax delivery receipt automation
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -255,9 +253,7 @@ func (a *FAXDeliveryReceiptRulesApiService) FaxDeliveryReceiptAutomationGet(ctx 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -360,7 +356,7 @@ func (a *FAXDeliveryReceiptRulesApiService) FaxDeliveryReceiptAutomationGet(ctx 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 FAXDeliveryReceiptRulesApiService Create fax delivery receipt automations
 Create fax delivery receipt automations
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -422,9 +418,7 @@ func (a *FAXDeliveryReceiptRulesApiService) FaxDeliveryReceiptAutomationPost(ctx
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -527,7 +521,7 @@ func (a *FAXDeliveryReceiptRulesApiService) FaxDeliveryReceiptAutomationPost(ctx
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 FAXDeliveryReceiptRulesApiService Update fax delivery receipt automation
 Update fax delivery receipt automation
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -591,9 +585,7 @@ func (a *FAXDeliveryReceiptRulesApiService) FaxDeliveryReceiptAutomationPut(ctx 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -696,7 +688,7 @@ func (a *FAXDeliveryReceiptRulesApiService) FaxDeliveryReceiptAutomationPut(ctx 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 FAXDeliveryReceiptRulesApiService Get all fax delivery receipt automations
 Get all fax delivery receipt automations
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -775,9 +767,7 @@ func (a *FAXDeliveryReceiptRulesApiService) FaxDeliveryReceiptAutomationsGet(ctx
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -879,3 +869,4 @@ func (a *FAXDeliveryReceiptRulesApiService) FaxDeliveryReceiptAutomationsGet(ctx
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

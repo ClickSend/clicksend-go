@@ -28,7 +28,7 @@ var (
 
 type VoiceDeliveryReceiptRulesApiService service
 
-/* 
+/*
 VoiceDeliveryReceiptRulesApiService Delete voice delivery receipt automation
 Delete voice delivery receipt automation
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -89,9 +89,7 @@ func (a *VoiceDeliveryReceiptRulesApiService) VoiceDeliveryReceiptAutomationDele
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -194,7 +192,7 @@ func (a *VoiceDeliveryReceiptRulesApiService) VoiceDeliveryReceiptAutomationDele
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 VoiceDeliveryReceiptRulesApiService Get specific voice delivery receipt automation
 Get specific voice delivery receipt automation
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -255,9 +253,7 @@ func (a *VoiceDeliveryReceiptRulesApiService) VoiceDeliveryReceiptAutomationGet(
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -360,7 +356,7 @@ func (a *VoiceDeliveryReceiptRulesApiService) VoiceDeliveryReceiptAutomationGet(
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 VoiceDeliveryReceiptRulesApiService Create voice delivery receipt automations
 Create voice delivery receipt automations
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -422,9 +418,7 @@ func (a *VoiceDeliveryReceiptRulesApiService) VoiceDeliveryReceiptAutomationPost
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -527,7 +521,7 @@ func (a *VoiceDeliveryReceiptRulesApiService) VoiceDeliveryReceiptAutomationPost
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 VoiceDeliveryReceiptRulesApiService Update voice delivery receipt automation
 Update voice delivery receipt automation
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -591,9 +585,7 @@ func (a *VoiceDeliveryReceiptRulesApiService) VoiceDeliveryReceiptAutomationPut(
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -696,7 +688,7 @@ func (a *VoiceDeliveryReceiptRulesApiService) VoiceDeliveryReceiptAutomationPut(
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 VoiceDeliveryReceiptRulesApiService Get all voice delivery receipt automations
 Get all voice delivery receipt automations
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -775,9 +767,7 @@ func (a *VoiceDeliveryReceiptRulesApiService) VoiceDeliveryReceiptAutomationsGet
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -879,3 +869,4 @@ func (a *VoiceDeliveryReceiptRulesApiService) VoiceDeliveryReceiptAutomationsGet
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

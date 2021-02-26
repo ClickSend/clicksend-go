@@ -28,7 +28,7 @@ var (
 
 type FAXApiService service
 
-/* 
+/*
 FAXApiService Get a list of Fax History.
 Get a list of Fax History.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -122,9 +122,7 @@ func (a *FAXApiService) FaxHistoryGet(ctx context.Context, localVarOptionals *FA
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -227,7 +225,7 @@ func (a *FAXApiService) FaxHistoryGet(ctx context.Context, localVarOptionals *FA
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 FAXApiService Calculate Total Price for Fax Messages sent
 Calculate Total Price for Fax Messages sent
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -289,9 +287,7 @@ func (a *FAXApiService) FaxPricePost(ctx context.Context, faxMessage FaxMessageC
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -394,7 +390,7 @@ func (a *FAXApiService) FaxPricePost(ctx context.Context, faxMessage FaxMessageC
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 FAXApiService Get a single fax receipt based on message id.
 Get a single fax receipt based on message id.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -455,9 +451,7 @@ func (a *FAXApiService) FaxReceiptsByMessageIdGet(ctx context.Context, messageId
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -560,7 +554,7 @@ func (a *FAXApiService) FaxReceiptsByMessageIdGet(ctx context.Context, messageId
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 FAXApiService Get all delivery receipts
 Get all delivery receipts
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -634,9 +628,7 @@ func (a *FAXApiService) FaxReceiptsGet(ctx context.Context, localVarOptionals *F
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -739,7 +731,7 @@ func (a *FAXApiService) FaxReceiptsGet(ctx context.Context, localVarOptionals *F
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 FAXApiService Add a delivery receipt
 Add a delivery receipt
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -801,9 +793,7 @@ func (a *FAXApiService) FaxReceiptsPost(ctx context.Context, url Url) (string, *
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -906,7 +896,7 @@ func (a *FAXApiService) FaxReceiptsPost(ctx context.Context, url Url) (string, *
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 FAXApiService Mark delivery receipts as read
 Mark delivery receipts as read
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -981,9 +971,7 @@ func (a *FAXApiService) FaxReceiptsReadPut(ctx context.Context, localVarOptional
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1086,7 +1074,7 @@ func (a *FAXApiService) FaxReceiptsReadPut(ctx context.Context, localVarOptional
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 FAXApiService Send a fax using supplied supported file-types.
 Send a fax using supplied supported file-types.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -1148,9 +1136,7 @@ func (a *FAXApiService) FaxSendPost(ctx context.Context, faxMessage FaxMessageCo
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1252,3 +1238,4 @@ func (a *FAXApiService) FaxSendPost(ctx context.Context, faxMessage FaxMessageCo
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

@@ -28,7 +28,7 @@ var (
 
 type ContactApiService service
 
-/* 
+/*
 ContactApiService Delete a contact
 Delete a contact
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -91,9 +91,7 @@ func (a *ContactApiService) ListsContactsByListIdAndContactIdDelete(ctx context.
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -196,7 +194,7 @@ func (a *ContactApiService) ListsContactsByListIdAndContactIdDelete(ctx context.
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 ContactApiService Get a specific contact
 Get a specific contact
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -259,9 +257,7 @@ func (a *ContactApiService) ListsContactsByListIdAndContactIdGet(ctx context.Con
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -364,7 +360,7 @@ func (a *ContactApiService) ListsContactsByListIdAndContactIdGet(ctx context.Con
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 ContactApiService Update specific contact
 Update specific contact
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -430,9 +426,7 @@ func (a *ContactApiService) ListsContactsByListIdAndContactIdPut(ctx context.Con
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -535,7 +529,7 @@ func (a *ContactApiService) ListsContactsByListIdAndContactIdPut(ctx context.Con
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 ContactApiService Get all contacts in a list
 Get all contacts in a list
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -611,9 +605,7 @@ func (a *ContactApiService) ListsContactsByListIdGet(ctx context.Context, listId
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -716,7 +708,7 @@ func (a *ContactApiService) ListsContactsByListIdGet(ctx context.Context, listId
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 ContactApiService Create new contact
 Create new contact
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -780,9 +772,7 @@ func (a *ContactApiService) ListsContactsByListIdPost(ctx context.Context, conta
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -885,7 +875,7 @@ func (a *ContactApiService) ListsContactsByListIdPost(ctx context.Context, conta
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 ContactApiService Copy contact to another list
 Copy contact to another list
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -950,9 +940,7 @@ func (a *ContactApiService) ListsCopyContactPut(ctx context.Context, fromListId 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1055,7 +1043,7 @@ func (a *ContactApiService) ListsCopyContactPut(ctx context.Context, fromListId 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 ContactApiService Remove all opted out contacts
 Remove all opted out contacts
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -1118,9 +1106,7 @@ func (a *ContactApiService) ListsRemoveOptedOutContactsByListIdAndOptOutListIdPu
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1223,7 +1209,7 @@ func (a *ContactApiService) ListsRemoveOptedOutContactsByListIdAndOptOutListIdPu
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 ContactApiService Transfer contact to another list
 Transfer contact to another list
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -1288,9 +1274,7 @@ func (a *ContactApiService) ListsTransferContactPut(ctx context.Context, fromLis
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1392,3 +1376,4 @@ func (a *ContactApiService) ListsTransferContactPut(ctx context.Context, fromLis
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

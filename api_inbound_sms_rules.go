@@ -28,7 +28,7 @@ var (
 
 type InboundSMSRulesApiService service
 
-/* 
+/*
 InboundSMSRulesApiService Delete inbound sms automation
 Delete inbound sms automation
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -89,9 +89,7 @@ func (a *InboundSMSRulesApiService) SmsInboundAutomationDelete(ctx context.Conte
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -194,7 +192,7 @@ func (a *InboundSMSRulesApiService) SmsInboundAutomationDelete(ctx context.Conte
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 InboundSMSRulesApiService Get specific inbound sms automation
 Get specific inbound sms automation
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -255,9 +253,7 @@ func (a *InboundSMSRulesApiService) SmsInboundAutomationGet(ctx context.Context,
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -360,7 +356,7 @@ func (a *InboundSMSRulesApiService) SmsInboundAutomationGet(ctx context.Context,
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 InboundSMSRulesApiService Create new inbound sms automation
 Create new inbound sms automation
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -422,9 +418,7 @@ func (a *InboundSMSRulesApiService) SmsInboundAutomationPost(ctx context.Context
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -527,7 +521,7 @@ func (a *InboundSMSRulesApiService) SmsInboundAutomationPost(ctx context.Context
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 InboundSMSRulesApiService Update inbound sms automation
 Update inbound sms automation
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -591,9 +585,7 @@ func (a *InboundSMSRulesApiService) SmsInboundAutomationPut(ctx context.Context,
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -696,7 +688,7 @@ func (a *InboundSMSRulesApiService) SmsInboundAutomationPut(ctx context.Context,
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 InboundSMSRulesApiService Get all inbound sms automations
 Get all inbound sms automations
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -775,9 +767,7 @@ func (a *InboundSMSRulesApiService) SmsInboundAutomationsGet(ctx context.Context
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -879,3 +869,4 @@ func (a *InboundSMSRulesApiService) SmsInboundAutomationsGet(ctx context.Context
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

@@ -28,7 +28,7 @@ var (
 
 type VoiceApiService service
 
-/* 
+/*
 VoiceApiService Update all voice messages as cancelled
 Update all voice messages as cancelled
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -87,9 +87,7 @@ func (a *VoiceApiService) VoiceCancelAllPut(ctx context.Context) (string, *http.
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -192,7 +190,7 @@ func (a *VoiceApiService) VoiceCancelAllPut(ctx context.Context) (string, *http.
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 VoiceApiService Update voice message status as cancelled
 Update voice message status as cancelled
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -253,9 +251,7 @@ func (a *VoiceApiService) VoiceCancelByMessageIdPut(ctx context.Context, message
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -358,7 +354,7 @@ func (a *VoiceApiService) VoiceCancelByMessageIdPut(ctx context.Context, message
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 VoiceApiService Export voice history
 Export voice history
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -419,9 +415,7 @@ func (a *VoiceApiService) VoiceHistoryExportGet(ctx context.Context, filename st
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -524,7 +518,7 @@ func (a *VoiceApiService) VoiceHistoryExportGet(ctx context.Context, filename st
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 VoiceApiService Get all voice history
 Get all voice history
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -608,9 +602,7 @@ func (a *VoiceApiService) VoiceHistoryGet(ctx context.Context, localVarOptionals
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -713,7 +705,7 @@ func (a *VoiceApiService) VoiceHistoryGet(ctx context.Context, localVarOptionals
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 VoiceApiService Get all voice languages
 Get all voice languages
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -772,9 +764,7 @@ func (a *VoiceApiService) VoiceLangGet(ctx context.Context) (string, *http.Respo
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -877,7 +867,7 @@ func (a *VoiceApiService) VoiceLangGet(ctx context.Context) (string, *http.Respo
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 VoiceApiService Calculate voice price
 Calculate voice price
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -939,9 +929,7 @@ func (a *VoiceApiService) VoicePricePost(ctx context.Context, voiceMessages Voic
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1044,7 +1032,7 @@ func (a *VoiceApiService) VoicePricePost(ctx context.Context, voiceMessages Voic
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 VoiceApiService Get all delivery receipts
 Get all delivery receipts
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -1118,9 +1106,7 @@ func (a *VoiceApiService) VoiceReceiptsGet(ctx context.Context, localVarOptional
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1223,7 +1209,7 @@ func (a *VoiceApiService) VoiceReceiptsGet(ctx context.Context, localVarOptional
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 VoiceApiService Add a delivery receipt
 Add a delivery receipt
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -1285,9 +1271,7 @@ func (a *VoiceApiService) VoiceReceiptsPost(ctx context.Context, url Url) (strin
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1390,7 +1374,7 @@ func (a *VoiceApiService) VoiceReceiptsPost(ctx context.Context, url Url) (strin
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 VoiceApiService Mark delivery receipts as read
 Mark delivery receipts as read
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -1465,9 +1449,7 @@ func (a *VoiceApiService) VoiceReceiptsReadPut(ctx context.Context, localVarOpti
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1570,7 +1552,7 @@ func (a *VoiceApiService) VoiceReceiptsReadPut(ctx context.Context, localVarOpti
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 VoiceApiService Send voice message(s)
 Send a voice call
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -1632,9 +1614,7 @@ func (a *VoiceApiService) VoiceSendPost(ctx context.Context, voiceMessages Voice
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1736,3 +1716,4 @@ func (a *VoiceApiService) VoiceSendPost(ctx context.Context, voiceMessages Voice
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

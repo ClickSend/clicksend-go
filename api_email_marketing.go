@@ -28,7 +28,7 @@ var (
 
 type EmailMarketingApiService service
 
-/* 
+/*
 EmailMarketingApiService Get all email addresses
 Get all email addresses
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -102,9 +102,7 @@ func (a *EmailMarketingApiService) AllowedEmailAddressGet(ctx context.Context, l
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -207,7 +205,7 @@ func (a *EmailMarketingApiService) AllowedEmailAddressGet(ctx context.Context, l
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailMarketingApiService Create allowed Email Address
 Create allowed Email Address
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -282,9 +280,7 @@ func (a *EmailMarketingApiService) AllowedEmailAddressPost(ctx context.Context, 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -387,7 +383,7 @@ func (a *EmailMarketingApiService) AllowedEmailAddressPost(ctx context.Context, 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailMarketingApiService Cancel email campaign
 Cancel email campaign
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -448,9 +444,7 @@ func (a *EmailMarketingApiService) CancelEmailCampaignPut(ctx context.Context, e
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -553,7 +547,7 @@ func (a *EmailMarketingApiService) CancelEmailCampaignPut(ctx context.Context, e
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailMarketingApiService Get specific email campaign
 Get specific email campaign
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -614,9 +608,7 @@ func (a *EmailMarketingApiService) EmailCampaignGet(ctx context.Context, emailCa
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -719,7 +711,7 @@ func (a *EmailMarketingApiService) EmailCampaignGet(ctx context.Context, emailCa
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailMarketingApiService Export specific email campaign history
 Export specific email campaign history
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -795,9 +787,7 @@ func (a *EmailMarketingApiService) EmailCampaignHistoryExportGet(ctx context.Con
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -900,7 +890,7 @@ func (a *EmailMarketingApiService) EmailCampaignHistoryExportGet(ctx context.Con
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailMarketingApiService Get specific email campaign history
 Get specific email campaign history
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -986,9 +976,7 @@ func (a *EmailMarketingApiService) EmailCampaignHistoryGet(ctx context.Context, 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1091,7 +1079,7 @@ func (a *EmailMarketingApiService) EmailCampaignHistoryGet(ctx context.Context, 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailMarketingApiService Send email campaign
 Send email campaign
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -1153,9 +1141,7 @@ func (a *EmailMarketingApiService) EmailCampaignPost(ctx context.Context, emailC
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1258,7 +1244,7 @@ func (a *EmailMarketingApiService) EmailCampaignPost(ctx context.Context, emailC
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailMarketingApiService Calculate email campaign price
 Calculate email campaign price
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -1320,9 +1306,7 @@ func (a *EmailMarketingApiService) EmailCampaignPricePost(ctx context.Context, e
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1425,7 +1409,7 @@ func (a *EmailMarketingApiService) EmailCampaignPricePost(ctx context.Context, e
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailMarketingApiService Edit email campaign
 Edit email campaign
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -1489,9 +1473,7 @@ func (a *EmailMarketingApiService) EmailCampaignPut(ctx context.Context, emailCa
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1594,7 +1576,7 @@ func (a *EmailMarketingApiService) EmailCampaignPut(ctx context.Context, emailCa
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailMarketingApiService Get all email campaigns
 Get all email campaigns
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -1668,9 +1650,7 @@ func (a *EmailMarketingApiService) EmailCampaignsGet(ctx context.Context, localV
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1773,7 +1753,7 @@ func (a *EmailMarketingApiService) EmailCampaignsGet(ctx context.Context, localV
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailMarketingApiService Send verification token
 Send verification token
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -1834,9 +1814,7 @@ func (a *EmailMarketingApiService) SendVerificationTokenGet(ctx context.Context,
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1939,7 +1917,7 @@ func (a *EmailMarketingApiService) SendVerificationTokenGet(ctx context.Context,
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailMarketingApiService Delete specific email address
 Delete specific email address
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -2000,9 +1978,7 @@ func (a *EmailMarketingApiService) SpecificAllowedEmailAddressDelete(ctx context
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -2105,7 +2081,7 @@ func (a *EmailMarketingApiService) SpecificAllowedEmailAddressDelete(ctx context
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailMarketingApiService Get specific email address
 Get specific email address
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -2166,9 +2142,7 @@ func (a *EmailMarketingApiService) SpecificAllowedEmailAddressGet(ctx context.Co
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -2271,7 +2245,7 @@ func (a *EmailMarketingApiService) SpecificAllowedEmailAddressGet(ctx context.Co
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EmailMarketingApiService Verify email address using verification token
 Verify email address using verification token
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -2334,9 +2308,7 @@ func (a *EmailMarketingApiService) VerifyAllowedEmailAddressGet(ctx context.Cont
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -2438,3 +2410,4 @@ func (a *EmailMarketingApiService) VerifyAllowedEmailAddressGet(ctx context.Cont
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+
