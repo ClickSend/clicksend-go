@@ -587,6 +587,57 @@ paths:
             type: "string"
       security:
       - BasicAuth: []
+  /mms/history/export:
+    get:
+      tags:
+      - "MMS"
+      summary: "Export all mms history"
+      description: "Export all mms history"
+      operationId: "MmsHistoryExportGet"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "filename"
+        in: "query"
+        description: "Filename to download history as"
+        required: true
+        type: "string"
+        x-exportParamName: "Filename"
+      responses:
+        "200":
+          description: "SUCCESS"
+          schema:
+            type: "string"
+        "400":
+          description: "BAD_REQUEST"
+          schema:
+            type: "string"
+        "401":
+          description: "UNAUTHORIZED"
+          schema:
+            type: "string"
+        "403":
+          description: "FORBIDDEN"
+          schema:
+            type: "string"
+        "404":
+          description: "NOT_FOUND"
+          schema:
+            type: "string"
+        "405":
+          description: "METHOD_NOT_FOUND"
+          schema:
+            type: "string"
+        "429":
+          description: "TOO_MANY_REQUESTS"
+          schema:
+            type: "string"
+        default:
+          description: "INTERNAL_SERVER_ERROR"
+          schema:
+            type: "string"
+      security:
+      - BasicAuth: []
   /sms/receipts:
     get:
       tags:
@@ -6863,6 +6914,98 @@ paths:
       summary: "Get all sms history"
       description: "Get all sms history"
       operationId: "SmsHistoryGet"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "q"
+        in: "query"
+        description: "Custom query Example: from:{number},status_code:201."
+        required: false
+        type: "string"
+        x-exportParamName: "Q"
+        x-optionalDataType: "String"
+      - name: "date_from"
+        in: "query"
+        description: "Start date"
+        required: false
+        type: "integer"
+        format: "int32"
+        x-exportParamName: "DateFrom"
+        x-optionalDataType: "Int32"
+      - name: "date_to"
+        in: "query"
+        description: "End date"
+        required: false
+        type: "integer"
+        format: "int32"
+        x-exportParamName: "DateTo"
+        x-optionalDataType: "Int32"
+      - name: "page"
+        in: "query"
+        description: "Page number"
+        required: false
+        type: "integer"
+        default: 1
+        exclusiveMaximum: false
+        minimum: 1
+        exclusiveMinimum: false
+        format: "int32"
+        x-exportParamName: "Page"
+        x-optionalDataType: "Int32"
+      - name: "limit"
+        in: "query"
+        description: "Number of records per page"
+        required: false
+        type: "integer"
+        default: 10
+        exclusiveMaximum: false
+        minimum: 1
+        exclusiveMinimum: false
+        format: "int32"
+        x-exportParamName: "Limit"
+        x-optionalDataType: "Int32"
+      responses:
+        "200":
+          description: "SUCCESS"
+          schema:
+            type: "string"
+        "400":
+          description: "BAD_REQUEST"
+          schema:
+            type: "string"
+        "401":
+          description: "UNAUTHORIZED"
+          schema:
+            type: "string"
+        "403":
+          description: "FORBIDDEN"
+          schema:
+            type: "string"
+        "404":
+          description: "NOT_FOUND"
+          schema:
+            type: "string"
+        "405":
+          description: "METHOD_NOT_FOUND"
+          schema:
+            type: "string"
+        "429":
+          description: "TOO_MANY_REQUESTS"
+          schema:
+            type: "string"
+        default:
+          description: "INTERNAL_SERVER_ERROR"
+          schema:
+            type: "string"
+      security:
+      - BasicAuth: []
+  /mms/history:
+    get:
+      tags:
+      - "MMS"
+      summary: "Get all mms history"
+      description: "Get all mms history"
+      operationId: "MmsHistoryGet"
       produces:
       - "application/json"
       parameters:
