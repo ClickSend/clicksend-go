@@ -537,6 +537,7 @@ Get all contacts in a list
  * @param optional nil or *ContactApiListsContactsByListIdGetOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Page number
      * @param "Limit" (optional.Int32) -  Number of records per page
+     * @param "UpdatedAfter" (optional.Int32) -  Get all contacts updated after a given timestamp.
 
 @return string
 */
@@ -544,6 +545,7 @@ Get all contacts in a list
 type ContactApiListsContactsByListIdGetOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
+	UpdatedAfter optional.Int32
 }
 
 func (a *ContactApiService) ListsContactsByListIdGet(ctx context.Context, listId int32, localVarOptionals *ContactApiListsContactsByListIdGetOpts) (string, *http.Response, error) {
@@ -568,6 +570,9 @@ func (a *ContactApiService) ListsContactsByListIdGet(ctx context.Context, listId
 	}
 	if localVarOptionals != nil && localVarOptionals.Limit.IsSet() {
 		localVarQueryParams.Add("limit", parameterToString(localVarOptionals.Limit.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.UpdatedAfter.IsSet() {
+		localVarQueryParams.Add("updated_after", parameterToString(localVarOptionals.UpdatedAfter.Value(), ""))
 	}
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{"application/json"}
