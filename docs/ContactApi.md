@@ -124,6 +124,7 @@ Name | Type | Description  | Notes
 
  **page** | **optional.Int32**| Page number | [default to 1]
  **limit** | **optional.Int32**| Number of records per page | [default to 10]
+ **updatedAfter** | **optional.Int32**| Get all contacts updated after a given timestamp. | [default to 10]
 
 ### Return type
 

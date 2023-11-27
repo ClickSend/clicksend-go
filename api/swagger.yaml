@@ -35,6 +35,8 @@ tags:
   description: "Everything about sending and viewing responses to voice messages"
 - name: "Fax"
   description: "Everything about sending and viewing fax"
+- name: "Global Sending"
+  description: "Everything about Global Sending"
 - name: "Email To Sms"
   description: "Everything about Email to SMS"
 - name: "Number"
@@ -76,6 +78,7 @@ paths:
       produces:
       - "application/json"
       parameters: []
+      security: []
       responses:
         "200":
           description: "SUCCESS"
@@ -109,7 +112,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security: []
       x-unitTests: []
       x-operation-settings:
         CollectParameters: false
@@ -138,6 +140,8 @@ paths:
         schema:
           $ref: "#/definitions/SmsMessageCollection"
         x-exportParamName: "SmsMessages"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -171,8 +175,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /voice/send:
     post:
       tags:
@@ -190,6 +192,8 @@ paths:
         schema:
           $ref: "#/definitions/VoiceMessageCollection"
         x-exportParamName: "VoiceMessages"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -223,8 +227,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /account:
     get:
       tags:
@@ -235,6 +237,8 @@ paths:
       produces:
       - "application/json"
       parameters: []
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -268,8 +272,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "Account"
@@ -286,6 +288,8 @@ paths:
         schema:
           $ref: "#/definitions/Account"
         x-exportParamName: "Account"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -319,8 +323,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /account/usage/{year}/{month}/subaccount:
     get:
       tags:
@@ -345,6 +347,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "Month"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -378,8 +382,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /account-verify/send:
     put:
       tags:
@@ -397,6 +399,8 @@ paths:
         schema:
           $ref: "#/definitions/AccountVerify"
         x-exportParamName: "AccountVerify"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -430,8 +434,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /account-verify/verify/{activation_token}:
     put:
       tags:
@@ -449,6 +451,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "ActivationToken"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -482,8 +486,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /sms/price:
     post:
       tags:
@@ -501,6 +503,8 @@ paths:
         schema:
           $ref: "#/definitions/SmsMessageCollection"
         x-exportParamName: "SmsMessages"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -534,8 +538,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /sms/history/export:
     get:
       tags:
@@ -552,6 +554,8 @@ paths:
         required: true
         type: "string"
         x-exportParamName: "Filename"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -585,8 +589,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /mms/history/export:
     get:
       tags:
@@ -603,6 +605,8 @@ paths:
         required: true
         type: "string"
         x-exportParamName: "Filename"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -636,8 +640,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /sms/receipts:
     get:
       tags:
@@ -672,6 +674,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -705,8 +709,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "SMS"
@@ -723,6 +725,8 @@ paths:
         schema:
           $ref: "#/definitions/Url"
         x-exportParamName: "Url"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -756,8 +760,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /sms/receipts-read:
     put:
       tags:
@@ -775,6 +777,8 @@ paths:
         schema:
           $ref: "#/definitions/DateBefore"
         x-exportParamName: "DateBefore"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -808,8 +812,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /sms/inbound:
     get:
       tags:
@@ -851,6 +853,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -884,8 +888,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "SMS"
@@ -902,6 +904,8 @@ paths:
         schema:
           $ref: "#/definitions/Url"
         x-exportParamName: "Url"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -935,8 +939,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /sms/{message_id}/cancel:
     put:
       tags:
@@ -953,6 +955,8 @@ paths:
         required: true
         type: "string"
         x-exportParamName: "MessageId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -986,8 +990,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /sms/cancel-all:
     put:
       tags:
@@ -998,6 +1000,8 @@ paths:
       produces:
       - "application/json"
       parameters: []
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -1031,8 +1035,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /sms/templates:
     get:
       tags:
@@ -1067,6 +1069,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -1100,8 +1104,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "SMS"
@@ -1118,6 +1120,8 @@ paths:
         schema:
           $ref: "#/definitions/SmsTemplate"
         x-exportParamName: "SmsTemplate"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -1151,8 +1155,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /sms/templates/{template_id}:
     put:
       tags:
@@ -1177,6 +1179,8 @@ paths:
         schema:
           $ref: "#/definitions/SmsTemplate"
         x-exportParamName: "SmsTemplate"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -1210,8 +1214,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     delete:
       tags:
       - "SMS"
@@ -1228,6 +1230,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "TemplateId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -1261,8 +1265,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /voice/price:
     post:
       tags:
@@ -1280,6 +1282,8 @@ paths:
         schema:
           $ref: "#/definitions/VoiceMessageCollection"
         x-exportParamName: "VoiceMessages"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -1313,8 +1317,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /voice/lang:
     get:
       tags:
@@ -1325,6 +1327,8 @@ paths:
       produces:
       - "application/json"
       parameters: []
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -1358,8 +1362,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /voice/receipts:
     get:
       tags:
@@ -1394,6 +1396,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -1427,8 +1431,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "Voice"
@@ -1445,6 +1447,8 @@ paths:
         schema:
           $ref: "#/definitions/Url"
         x-exportParamName: "Url"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -1478,8 +1482,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /voice/receipts-read:
     put:
       tags:
@@ -1497,6 +1499,8 @@ paths:
         schema:
           $ref: "#/definitions/DateBefore"
         x-exportParamName: "DateBefore"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -1530,8 +1534,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /voice/{message_id}/cancel:
     put:
       tags:
@@ -1548,6 +1550,8 @@ paths:
         required: true
         type: "string"
         x-exportParamName: "MessageId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -1581,8 +1585,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /voice/cancel-all:
     put:
       tags:
@@ -1593,6 +1595,8 @@ paths:
       produces:
       - "application/json"
       parameters: []
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -1626,8 +1630,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /voice/history/export:
     get:
       tags:
@@ -1644,6 +1646,8 @@ paths:
         required: true
         type: "string"
         x-exportParamName: "Filename"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -1677,8 +1681,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /subaccounts:
     get:
       tags:
@@ -1713,6 +1715,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -1746,8 +1750,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "Subaccount"
@@ -1764,6 +1766,8 @@ paths:
         schema:
           $ref: "#/definitions/Subaccount"
         x-exportParamName: "Subaccount"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -1797,8 +1801,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /subaccounts/{subaccount_id}:
     get:
       tags:
@@ -1816,6 +1818,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "SubaccountId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -1849,8 +1853,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     put:
       tags:
       - "Subaccount"
@@ -1874,6 +1876,8 @@ paths:
         schema:
           $ref: "#/definitions/Subaccount"
         x-exportParamName: "Subaccount"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -1907,8 +1911,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     delete:
       tags:
       - "Subaccount"
@@ -1925,6 +1927,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "SubaccountId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -1958,8 +1962,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /subaccounts/{subaccount_id}/regen-api-key:
     put:
       tags:
@@ -1977,6 +1979,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "SubaccountId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -2010,8 +2014,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /lists:
     get:
       tags:
@@ -2046,6 +2048,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -2079,8 +2083,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "ContactList"
@@ -2099,6 +2101,8 @@ paths:
         schema:
           $ref: "#/definitions/ContactList"
         x-exportParamName: "ContactList"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -2132,8 +2136,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /lists/{list_id}:
     get:
       tags:
@@ -2151,6 +2153,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "ListId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -2184,8 +2188,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     put:
       tags:
       - "ContactList"
@@ -2209,6 +2211,8 @@ paths:
         schema:
           $ref: "#/definitions/ContactList"
         x-exportParamName: "ContactList"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -2242,8 +2246,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     delete:
       tags:
       - "ContactList"
@@ -2260,6 +2262,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "ListId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -2293,8 +2297,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /lists/{list_id}/remove-duplicates:
     put:
       tags:
@@ -2321,6 +2323,8 @@ paths:
         schema:
           $ref: "#/definitions/Fields"
         x-exportParamName: "Fields"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -2354,8 +2358,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /lists/{list_id}/contacts:
     get:
       tags:
@@ -2399,6 +2401,20 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      - name: "updated_after"
+        in: "query"
+        description: "Get all contacts updated after a given timestamp."
+        required: false
+        type: "integer"
+        default: 10
+        exclusiveMaximum: false
+        minimum: 1
+        exclusiveMinimum: false
+        format: "int32"
+        x-exportParamName: "UpdatedAfter"
+        x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -2432,8 +2448,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "Contact"
@@ -2457,6 +2471,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "ListId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -2490,8 +2506,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /lists/{list_id}/contacts/{contact_id}:
     get:
       tags:
@@ -2520,6 +2534,8 @@ paths:
         exclusiveMinimum: false
         format: "int32"
         x-exportParamName: "ContactId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -2553,8 +2569,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     put:
       tags:
       - "Contact"
@@ -2585,6 +2599,8 @@ paths:
         schema:
           $ref: "#/definitions/Contact"
         x-exportParamName: "Contact"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -2618,8 +2634,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     delete:
       tags:
       - "Contact"
@@ -2643,6 +2657,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "ContactId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -2676,8 +2692,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /lists/{list_id}/remove-opted-out-contacts/{opt_out_list_id}:
     put:
       tags:
@@ -2706,6 +2720,8 @@ paths:
         exclusiveMinimum: false
         format: "int32"
         x-exportParamName: "OptOutListId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -2739,8 +2755,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /lists/{from_list_id}/contacts/{contact_id}/transfer/{to_list_id}:
     put:
       tags:
@@ -2776,6 +2790,8 @@ paths:
         exclusiveMinimum: false
         format: "int32"
         x-exportParamName: "ToListId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -2809,8 +2825,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /lists/{from_list_id}/contacts/{contact_id}/copy/{to_list_id}:
     put:
       tags:
@@ -2846,6 +2860,8 @@ paths:
         exclusiveMinimum: false
         format: "int32"
         x-exportParamName: "ToListId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -2879,8 +2895,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /numbers:
     get:
       tags:
@@ -2915,6 +2929,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -2948,8 +2964,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /numbers/buy/{dedicated_number}:
     post:
       tags:
@@ -2966,6 +2980,8 @@ paths:
         required: true
         type: "string"
         x-exportParamName: "DedicatedNumber"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -2999,8 +3015,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /numbers/search/{country}:
     get:
       tags:
@@ -3057,6 +3071,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -3090,8 +3106,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /statistics/voice:
     get:
       tags:
@@ -3102,6 +3116,8 @@ paths:
       produces:
       - "application/json"
       parameters: []
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -3135,8 +3151,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /forgot-username:
     put:
       tags:
@@ -3155,6 +3169,7 @@ paths:
         schema:
           $ref: "#/definitions/forgotUsername"
         x-exportParamName: "ForgotUsername"
+      security: []
       responses:
         "200":
           description: "SUCCESS"
@@ -3188,7 +3203,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security: []
       x-unitTests: []
       x-operation-settings:
         CollectParameters: false
@@ -3213,6 +3227,8 @@ paths:
         schema:
           $ref: "#/definitions/forgotPassword"
         x-exportParamName: "ForgotPassword"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -3246,8 +3262,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /forgot-password/verify:
     put:
       tags:
@@ -3265,6 +3279,8 @@ paths:
         schema:
           $ref: "#/definitions/AccountForgotPasswordVerify"
         x-exportParamName: "VerifyPassword"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -3298,8 +3314,197 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
+  /user-countries:
+    get:
+      tags:
+      - "Global Sending"
+      summary: "Get Countries for Global Sending"
+      description: "Get the list of selected countries."
+      operationId: "UserCountriesGet"
+      produces:
+      - "application/json"
+      parameters: []
       security:
       - BasicAuth: []
+      responses:
+        "200":
+          description: "SUCCESS"
+          schema:
+            type: "string"
+        "400":
+          description: "BAD_REQUEST"
+          schema:
+            type: "string"
+        "401":
+          description: "UNAUTHORIZED"
+          schema:
+            type: "string"
+        "403":
+          description: "FORBIDDEN"
+          schema:
+            type: "string"
+        "404":
+          description: "NOT_FOUND"
+          schema:
+            type: "string"
+        "405":
+          description: "METHOD_NOT_FOUND"
+          schema:
+            type: "string"
+        "429":
+          description: "TOO_MANY_REQUESTS"
+          schema:
+            type: "string"
+        default:
+          description: "INTERNAL_SERVER_ERROR"
+          schema:
+            type: "string"
+    post:
+      tags:
+      - "Global Sending"
+      summary: "Select Countries for Global Sending"
+      description: "Use this endpoint to select countries that you intend to send\
+        \ sms / mms to. To remove / unselect a country, just remove the country id\
+        \ from the array in the payload."
+      operationId: "UserCountriesPost"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "country_list_ids"
+        description: "Id of countr(ies) you want to select, you can get them from\
+          \ GET /country-list response"
+        required: true
+        schema:
+          $ref: "#/definitions/CountryListIds"
+        x-exportParamName: "CountryListIds"
+      security:
+      - BasicAuth: []
+      responses:
+        "200":
+          description: "SUCCESS"
+          schema:
+            type: "string"
+        "400":
+          description: "BAD_REQUEST"
+          schema:
+            type: "string"
+        "401":
+          description: "UNAUTHORIZED"
+          schema:
+            type: "string"
+        "403":
+          description: "FORBIDDEN"
+          schema:
+            type: "string"
+        "404":
+          description: "NOT_FOUND"
+          schema:
+            type: "string"
+        "405":
+          description: "METHOD_NOT_FOUND"
+          schema:
+            type: "string"
+        "429":
+          description: "TOO_MANY_REQUESTS"
+          schema:
+            type: "string"
+        default:
+          description: "INTERNAL_SERVER_ERROR"
+          schema:
+            type: "string"
+  /user-countries/agree:
+    post:
+      tags:
+      - "Global Sending"
+      summary: "Agree to rules and regulation"
+      description: "To agree on rules and regulations of selected countries and confirm\
+        \ selection."
+      operationId: "UserCountriesAgreePost"
+      produces:
+      - "application/json"
+      parameters: []
+      security:
+      - BasicAuth: []
+      responses:
+        "200":
+          description: "SUCCESS"
+          schema:
+            type: "string"
+        "400":
+          description: "BAD_REQUEST"
+          schema:
+            type: "string"
+        "401":
+          description: "UNAUTHORIZED"
+          schema:
+            type: "string"
+        "403":
+          description: "FORBIDDEN"
+          schema:
+            type: "string"
+        "404":
+          description: "NOT_FOUND"
+          schema:
+            type: "string"
+        "405":
+          description: "METHOD_NOT_FOUND"
+          schema:
+            type: "string"
+        "429":
+          description: "TOO_MANY_REQUESTS"
+          schema:
+            type: "string"
+        default:
+          description: "INTERNAL_SERVER_ERROR"
+          schema:
+            type: "string"
+  /country-list:
+    get:
+      tags:
+      - "Global Sending"
+      summary: "List of countries"
+      description: "List of countries with IDs that can be used in selecting countries\
+        \ for Global sending."
+      operationId: "ListCountriesGet"
+      produces:
+      - "application/json"
+      parameters: []
+      security:
+      - BasicAuth: []
+      responses:
+        "200":
+          description: "SUCCESS"
+          schema:
+            type: "string"
+        "400":
+          description: "BAD_REQUEST"
+          schema:
+            type: "string"
+        "401":
+          description: "UNAUTHORIZED"
+          schema:
+            type: "string"
+        "403":
+          description: "FORBIDDEN"
+          schema:
+            type: "string"
+        "404":
+          description: "NOT_FOUND"
+          schema:
+            type: "string"
+        "405":
+          description: "METHOD_NOT_FOUND"
+          schema:
+            type: "string"
+        "429":
+          description: "TOO_MANY_REQUESTS"
+          schema:
+            type: "string"
+        default:
+          description: "INTERNAL_SERVER_ERROR"
+          schema:
+            type: "string"
   /sms/email-sms:
     get:
       tags:
@@ -3334,6 +3539,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -3367,8 +3574,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "Email To Sms"
@@ -3385,6 +3590,8 @@ paths:
         schema:
           $ref: "#/definitions/EmailSMSAddress"
         x-exportParamName: "EmailSmsAddress"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -3418,8 +3625,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /sms/email-sms-stripped-strings:
     get:
       tags:
@@ -3454,6 +3659,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -3487,8 +3694,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "Email To Sms"
@@ -3505,6 +3710,8 @@ paths:
         schema:
           $ref: "#/definitions/StrippedString"
         x-exportParamName: "StrippedString"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -3538,8 +3745,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /sms/email-sms-stripped-strings/{rule_id}:
     get:
       tags:
@@ -3559,6 +3764,8 @@ paths:
         exclusiveMinimum: false
         format: "int32"
         x-exportParamName: "RuleId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -3592,8 +3799,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     put:
       tags:
       - "Email To Sms"
@@ -3619,6 +3824,8 @@ paths:
         exclusiveMinimum: false
         format: "int32"
         x-exportParamName: "RuleId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -3652,8 +3859,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     delete:
       tags:
       - "Email To Sms"
@@ -3672,6 +3877,8 @@ paths:
         exclusiveMinimum: false
         format: "int32"
         x-exportParamName: "RuleId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -3705,8 +3912,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /search/contacts-lists:
     get:
       tags:
@@ -3747,6 +3952,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -3780,8 +3987,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /referral/accounts:
     get:
       tags:
@@ -3816,6 +4021,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -3849,8 +4056,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /reseller/accounts:
     get:
       tags:
@@ -3885,6 +4090,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -3918,8 +4125,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "Reseller Account"
@@ -3936,6 +4141,8 @@ paths:
         schema:
           $ref: "#/definitions/ResellerAccount"
         x-exportParamName: "ResellerAccount"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -3969,8 +4176,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /reseller/accounts/{client_user_id}:
     get:
       tags:
@@ -3988,6 +4193,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "ClientUserId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -4021,8 +4228,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     put:
       tags:
       - "Reseller Account"
@@ -4046,6 +4251,8 @@ paths:
         schema:
           $ref: "#/definitions/ResellerAccount"
         x-exportParamName: "ResellerAccount"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -4079,8 +4286,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /reseller/transfer-credit:
     put:
       tags:
@@ -4098,6 +4303,8 @@ paths:
         schema:
           $ref: "#/definitions/ResellerAccountTransferCredit"
         x-exportParamName: "ResellerAccountTransferCredit"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -4131,8 +4338,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /recharge/credit-card:
     get:
       tags:
@@ -4143,6 +4348,8 @@ paths:
       produces:
       - "application/json"
       parameters: []
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -4176,8 +4383,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     put:
       tags:
       - "Account Recharge"
@@ -4194,6 +4399,8 @@ paths:
         schema:
           $ref: "#/definitions/CreditCard"
         x-exportParamName: "CreditCard"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -4227,8 +4434,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /recharge/packages:
     get:
       tags:
@@ -4246,6 +4451,8 @@ paths:
         type: "string"
         x-exportParamName: "Country"
         x-optionalDataType: "String"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -4279,8 +4486,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /recharge/purchase/{package_id}:
     put:
       tags:
@@ -4298,6 +4503,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "PackageId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -4331,8 +4538,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /recharge/transactions:
     get:
       tags:
@@ -4367,6 +4572,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -4400,8 +4607,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /recharge/transactions/{transaction_id}:
     get:
       tags:
@@ -4418,6 +4623,8 @@ paths:
         required: true
         type: "string"
         x-exportParamName: "TransactionId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -4451,8 +4658,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /sms-campaigns/send:
     post:
       tags:
@@ -4470,6 +4675,8 @@ paths:
         schema:
           $ref: "#/definitions/SmsCampaign"
         x-exportParamName: "Campaign"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -4503,8 +4710,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /sms-campaigns/price:
     post:
       tags:
@@ -4522,6 +4727,8 @@ paths:
         schema:
           $ref: "#/definitions/SmsCampaign"
         x-exportParamName: "Campaign"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -4555,8 +4762,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /sms-campaigns/{sms_campaign_id}:
     get:
       tags:
@@ -4574,6 +4779,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "SmsCampaignId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -4607,8 +4814,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     put:
       tags:
       - "Sms Campaign"
@@ -4632,6 +4837,8 @@ paths:
         schema:
           $ref: "#/definitions/SmsCampaign"
         x-exportParamName: "Campaign"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -4665,8 +4872,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /sms-campaigns/{sms_campaign_id}/cancel:
     put:
       tags:
@@ -4684,6 +4889,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "SmsCampaignId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -4717,8 +4924,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /statistics/sms:
     get:
       tags:
@@ -4729,6 +4934,8 @@ paths:
       produces:
       - "application/json"
       parameters: []
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -4762,8 +4969,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /sms-campaigns:
     get:
       tags:
@@ -4798,6 +5003,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -4831,8 +5038,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /mms-campaigns/send:
     post:
       tags:
@@ -4850,6 +5055,8 @@ paths:
         schema:
           $ref: "#/definitions/MmsCampaign"
         x-exportParamName: "Campaign"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -4883,8 +5090,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /mms-campaigns/price:
     post:
       tags:
@@ -4902,6 +5107,8 @@ paths:
         schema:
           $ref: "#/definitions/MmsCampaign"
         x-exportParamName: "Campaign"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -4935,8 +5142,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /mms-campaigns/{mms_campaign_id}:
     get:
       tags:
@@ -4954,6 +5159,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "MmsCampaignId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -4987,8 +5194,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     put:
       tags:
       - "Mms Campaign"
@@ -5012,6 +5217,8 @@ paths:
         schema:
           $ref: "#/definitions/MmsCampaign"
         x-exportParamName: "Campaign"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -5045,8 +5252,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /mms-campaigns/{mms_campaign_id}/cancel:
     put:
       tags:
@@ -5064,6 +5269,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "MmsCampaignId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -5097,8 +5304,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /mms-campaigns:
     get:
       tags:
@@ -5133,6 +5338,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -5166,8 +5373,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /post/letters/send:
     post:
       tags:
@@ -5185,6 +5390,8 @@ paths:
         schema:
           $ref: "#/definitions/PostLetter"
         x-exportParamName: "PostLetter"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -5218,8 +5425,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /post/letters/price:
     post:
       tags:
@@ -5237,6 +5442,8 @@ paths:
         schema:
           $ref: "#/definitions/PostLetter"
         x-exportParamName: "PostLetter"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -5270,8 +5477,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /post/letters/history:
     get:
       tags:
@@ -5306,6 +5511,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -5339,8 +5546,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /post/letters/history/export:
     get:
       tags:
@@ -5357,6 +5562,8 @@ paths:
         required: true
         type: "string"
         x-exportParamName: "Filename"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -5390,8 +5597,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /post/return-addresses:
     get:
       tags:
@@ -5426,6 +5631,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -5459,8 +5666,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "Post Return Address"
@@ -5477,6 +5682,8 @@ paths:
         schema:
           $ref: "#/definitions/Address"
         x-exportParamName: "ReturnAddress"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -5510,8 +5717,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /post/return-addresses/{return_address_id}:
     get:
       tags:
@@ -5529,6 +5734,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "ReturnAddressId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -5562,8 +5769,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     put:
       tags:
       - "Post Return Address"
@@ -5587,6 +5792,8 @@ paths:
         schema:
           $ref: "#/definitions/Address"
         x-exportParamName: "ReturnAddress"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -5620,8 +5827,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     delete:
       tags:
       - "Post Return Address"
@@ -5638,6 +5843,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "ReturnAddressId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -5671,8 +5878,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /fax/receipts:
     get:
       tags:
@@ -5707,6 +5912,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -5740,8 +5947,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "FAX"
@@ -5758,6 +5963,8 @@ paths:
         schema:
           $ref: "#/definitions/Url"
         x-exportParamName: "Url"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -5791,8 +5998,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /fax/receipts/{message_id}:
     get:
       tags:
@@ -5809,6 +6014,8 @@ paths:
         required: true
         type: "string"
         x-exportParamName: "MessageId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -5842,8 +6049,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /fax/receipts-read:
     put:
       tags:
@@ -5861,6 +6066,8 @@ paths:
         schema:
           $ref: "#/definitions/DateBefore"
         x-exportParamName: "DateBefore"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -5894,8 +6101,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /fax/history:
     get:
       tags:
@@ -5961,6 +6166,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -5994,8 +6201,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /sms/inbound-read:
     put:
       tags:
@@ -6013,6 +6218,8 @@ paths:
         schema:
           $ref: "#/definitions/DateBefore"
         x-exportParamName: "DateBefore"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -6046,8 +6253,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /sms/inbound-read/{message_id}:
     put:
       tags:
@@ -6064,6 +6269,8 @@ paths:
         required: true
         type: "string"
         x-exportParamName: "MessageId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -6097,8 +6304,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /sms/receipts/{message_id}:
     get:
       tags:
@@ -6115,6 +6320,8 @@ paths:
         required: true
         type: "string"
         x-exportParamName: "MessageId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -6148,8 +6355,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /mms/send:
     post:
       tags:
@@ -6167,6 +6372,8 @@ paths:
         schema:
           $ref: "#/definitions/MmsMessageCollection"
         x-exportParamName: "MmsMessages"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -6200,8 +6407,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /fax/price:
     post:
       tags:
@@ -6219,6 +6424,8 @@ paths:
         schema:
           $ref: "#/definitions/FaxMessageCollection"
         x-exportParamName: "FaxMessage"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -6252,8 +6459,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /post/postcards/send:
     post:
       tags:
@@ -6271,6 +6476,8 @@ paths:
         schema:
           $ref: "#/definitions/PostPostcard"
         x-exportParamName: "PostPostcards"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -6304,8 +6511,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /post/postcards/price:
     post:
       tags:
@@ -6323,6 +6528,8 @@ paths:
         schema:
           $ref: "#/definitions/PostPostcard"
         x-exportParamName: "PostPostcards"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -6356,8 +6563,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /uploads:
     post:
       tags:
@@ -6383,6 +6588,8 @@ paths:
         required: true
         type: "string"
         x-exportParamName: "Convert"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -6416,8 +6623,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /fax/send:
     post:
       tags:
@@ -6435,6 +6640,8 @@ paths:
         schema:
           $ref: "#/definitions/FaxMessageCollection"
         x-exportParamName: "FaxMessage"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -6468,8 +6675,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /mms/price:
     post:
       tags:
@@ -6487,6 +6692,8 @@ paths:
         schema:
           $ref: "#/definitions/MmsMessageCollection"
         x-exportParamName: "MmsMessages"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -6520,8 +6727,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /mms/receipts:
     get:
       tags:
@@ -6556,6 +6761,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -6589,8 +6796,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /mms/receipts-read:
     put:
       tags:
@@ -6608,6 +6813,8 @@ paths:
         schema:
           $ref: "#/definitions/DateBefore"
         x-exportParamName: "DateBefore"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -6641,8 +6848,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /post/postcards/history:
     get:
       tags:
@@ -6677,6 +6882,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -6710,8 +6917,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /post/postcards/history/export:
     get:
       tags:
@@ -6728,6 +6933,8 @@ paths:
         required: true
         type: "string"
         x-exportParamName: "Filename"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -6761,8 +6968,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /lists/{list_id}/import:
     post:
       tags:
@@ -6787,6 +6992,8 @@ paths:
         schema:
           $ref: "#/definitions/ContactListImport"
         x-exportParamName: "File"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -6820,8 +7027,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /voice/history:
     get:
       tags:
@@ -6872,6 +7077,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -6905,8 +7112,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /sms/history:
     get:
       tags:
@@ -6964,6 +7169,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -6997,8 +7204,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /mms/history:
     get:
       tags:
@@ -7056,6 +7261,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -7089,8 +7296,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /delivery-issues:
     get:
       tags:
@@ -7125,6 +7330,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -7158,8 +7365,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "Delivery Issues"
@@ -7176,6 +7381,8 @@ paths:
         schema:
           $ref: "#/definitions/DeliveryIssue"
         x-exportParamName: "DeliveryIssue"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -7209,8 +7416,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /post/letters/detect-address:
     post:
       tags:
@@ -7228,6 +7433,8 @@ paths:
         schema:
           $ref: "#/definitions/UploadFile"
         x-exportParamName: "UploadFile"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -7261,8 +7468,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /timezones:
     get:
       tags:
@@ -7297,6 +7502,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -7330,8 +7537,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email/send:
     post:
       tags:
@@ -7349,6 +7554,8 @@ paths:
         schema:
           $ref: "#/definitions/Email"
         x-exportParamName: "Email"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -7382,8 +7589,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email/price:
     post:
       tags:
@@ -7401,6 +7606,8 @@ paths:
         schema:
           $ref: "#/definitions/Email"
         x-exportParamName: "Email"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -7434,8 +7641,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email/history:
     get:
       tags:
@@ -7486,6 +7691,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -7519,8 +7726,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email/history/export:
     get:
       tags:
@@ -7553,6 +7758,8 @@ paths:
         format: "int32"
         x-exportParamName: "DateTo"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -7586,8 +7793,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email/addresses:
     get:
       tags:
@@ -7622,6 +7827,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -7655,8 +7862,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "Email Marketing"
@@ -7674,6 +7879,8 @@ paths:
         schema:
           $ref: "#/definitions/emailAddress"
         x-exportParamName: "EmailAddress"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -7707,8 +7914,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email/address-verify/{email_address_id}/send:
     put:
       tags:
@@ -7726,6 +7931,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "EmailAddressId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -7759,8 +7966,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email/address-verify/{email_address_id}/verify/{activation_token}:
     put:
       tags:
@@ -7784,6 +7989,8 @@ paths:
         required: true
         type: "string"
         x-exportParamName: "ActivationToken"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -7817,8 +8024,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email/addresses/{email_address_id}:
     get:
       tags:
@@ -7836,6 +8041,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "EmailAddressId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -7869,8 +8076,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     delete:
       tags:
       - "Email Marketing"
@@ -7887,6 +8092,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "EmailAddressId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -7920,8 +8127,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email-campaigns:
     get:
       tags:
@@ -7956,6 +8161,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -7989,8 +8196,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email-campaigns/{email_campaign_id}:
     get:
       tags:
@@ -8008,6 +8213,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "EmailCampaignId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -8041,8 +8248,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     put:
       tags:
       - "Email Marketing"
@@ -8066,6 +8271,8 @@ paths:
         schema:
           $ref: "#/definitions/EmailCampaign"
         x-exportParamName: "EmailCampaign"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -8099,8 +8306,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email-campaigns/send:
     post:
       tags:
@@ -8118,6 +8323,8 @@ paths:
         schema:
           $ref: "#/definitions/EmailCampaign"
         x-exportParamName: "EmailCampaign"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -8151,8 +8358,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email-campaigns/{email_campaign_id}/cancel:
     put:
       tags:
@@ -8170,6 +8375,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "EmailCampaignId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -8203,8 +8410,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email-campaigns/price:
     post:
       tags:
@@ -8222,6 +8427,8 @@ paths:
         schema:
           $ref: "#/definitions/EmailCampaign"
         x-exportParamName: "EmailCampaign"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -8255,8 +8462,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email-campaigns/{email_campaign_id}/history:
     get:
       tags:
@@ -8314,6 +8519,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -8347,8 +8554,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email-campaigns/{email_campaign_id}/history/export:
     get:
       tags:
@@ -8382,6 +8587,8 @@ paths:
         format: "int32"
         x-exportParamName: "DateTo"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -8415,8 +8622,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email/templates:
     get:
       tags:
@@ -8451,6 +8656,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -8484,8 +8691,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "User Email Templates"
@@ -8502,6 +8707,8 @@ paths:
         schema:
           $ref: "#/definitions/EmailTemplateNew"
         x-exportParamName: "EmailTemplate"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -8535,8 +8742,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email/templates/{template_id}:
     get:
       tags:
@@ -8554,6 +8759,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "TemplateId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -8587,8 +8794,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     put:
       tags:
       - "User Email Templates"
@@ -8612,6 +8817,8 @@ paths:
         schema:
           $ref: "#/definitions/EmailTemplateUpdate"
         x-exportParamName: "EmailTemplate"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -8645,8 +8852,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     delete:
       tags:
       - "User Email Templates"
@@ -8663,6 +8868,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "TemplateId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -8696,8 +8903,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email/master-templates:
     get:
       tags:
@@ -8732,6 +8937,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -8765,8 +8972,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email/master-templates/{template_id}:
     get:
       tags:
@@ -8784,6 +8989,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "TemplateId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -8817,8 +9024,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email/master-templates-categories:
     get:
       tags:
@@ -8853,6 +9058,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -8886,8 +9093,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email/master-templates-categories/{category_id}:
     get:
       tags:
@@ -8905,6 +9110,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "CategoryId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -8938,8 +9145,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /email/master-templates-categories/{category_id}/master-templates:
     get:
       tags:
@@ -8981,6 +9186,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -9014,8 +9221,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /automations/sms/inbound:
     get:
       tags:
@@ -9057,6 +9262,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -9090,8 +9297,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "Inbound SMS Rules"
@@ -9108,6 +9313,8 @@ paths:
         schema:
           $ref: "#/definitions/InboundSMSRule"
         x-exportParamName: "InboundSmsRule"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -9141,8 +9348,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /automations/sms/inbound/{inbound_rule_id}:
     get:
       tags:
@@ -9160,6 +9365,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "InboundRuleId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -9193,8 +9400,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     put:
       tags:
       - "Inbound SMS Rules"
@@ -9218,6 +9423,8 @@ paths:
         schema:
           $ref: "#/definitions/InboundSMSRule"
         x-exportParamName: "InboundSmsRule"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -9251,8 +9458,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     delete:
       tags:
       - "Inbound SMS Rules"
@@ -9269,6 +9474,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "InboundRuleId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -9302,8 +9509,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /automations/sms/receipts:
     get:
       tags:
@@ -9345,6 +9550,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -9378,8 +9585,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "SMS Delivery Receipt Rules"
@@ -9396,6 +9601,8 @@ paths:
         schema:
           $ref: "#/definitions/DeliveryReceiptRule"
         x-exportParamName: "DeliveryReceiptRule"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -9429,8 +9636,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /automations/sms/receipts/{receipt_rule_id}:
     get:
       tags:
@@ -9448,6 +9653,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "ReceiptRuleId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -9481,8 +9688,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     put:
       tags:
       - "SMS Delivery Receipt Rules"
@@ -9506,6 +9711,8 @@ paths:
         schema:
           $ref: "#/definitions/DeliveryReceiptRule"
         x-exportParamName: "DeliveryReceiptRule"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -9539,8 +9746,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     delete:
       tags:
       - "SMS Delivery Receipt Rules"
@@ -9557,6 +9762,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "ReceiptRuleId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -9590,8 +9797,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /automations/fax/inbound:
     get:
       tags:
@@ -9633,6 +9838,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -9666,8 +9873,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "Inbound FAX Rules"
@@ -9684,6 +9889,8 @@ paths:
         schema:
           $ref: "#/definitions/InboundFaxRule"
         x-exportParamName: "InboundFaxRule"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -9717,8 +9924,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /automations/fax/inbound/{inbound_rule_id}:
     get:
       tags:
@@ -9736,6 +9941,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "InboundRuleId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -9769,8 +9976,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     put:
       tags:
       - "Inbound FAX Rules"
@@ -9794,6 +9999,8 @@ paths:
         schema:
           $ref: "#/definitions/InboundFaxRule"
         x-exportParamName: "InboundFaxRule"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -9827,8 +10034,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     delete:
       tags:
       - "Inbound FAX Rules"
@@ -9845,6 +10050,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "InboundRuleId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -9878,8 +10085,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /automations/fax/receipts:
     get:
       tags:
@@ -9921,6 +10126,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -9954,8 +10161,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "FAX Delivery Receipt Rules"
@@ -9972,6 +10177,8 @@ paths:
         schema:
           $ref: "#/definitions/DeliveryReceiptRule"
         x-exportParamName: "DeliveryReceiptRule"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -10005,8 +10212,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /automations/fax/receipts/{receipt_rule_id}:
     get:
       tags:
@@ -10024,6 +10229,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "ReceiptRuleId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -10057,8 +10264,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     put:
       tags:
       - "FAX Delivery Receipt Rules"
@@ -10082,6 +10287,8 @@ paths:
         schema:
           $ref: "#/definitions/DeliveryReceiptRule"
         x-exportParamName: "DeliveryReceiptRule"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -10115,8 +10322,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     delete:
       tags:
       - "FAX Delivery Receipt Rules"
@@ -10133,6 +10338,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "ReceiptRuleId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -10166,8 +10373,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /automations/voice/receipts:
     get:
       tags:
@@ -10209,6 +10414,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -10242,8 +10449,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "Voice Delivery Receipt Rules"
@@ -10260,6 +10465,8 @@ paths:
         schema:
           $ref: "#/definitions/DeliveryReceiptRule"
         x-exportParamName: "DeliveryReceiptRule"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -10293,8 +10500,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /automations/voice/receipts/{receipt_rule_id}:
     get:
       tags:
@@ -10312,6 +10517,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "ReceiptRuleId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -10345,8 +10552,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     put:
       tags:
       - "Voice Delivery Receipt Rules"
@@ -10370,6 +10575,8 @@ paths:
         schema:
           $ref: "#/definitions/DeliveryReceiptRule"
         x-exportParamName: "DeliveryReceiptRule"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -10403,8 +10610,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     delete:
       tags:
       - "Voice Delivery Receipt Rules"
@@ -10421,6 +10626,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "ReceiptRuleId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -10454,8 +10661,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /automations/email/receipts:
     get:
       tags:
@@ -10497,6 +10702,8 @@ paths:
         format: "int32"
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -10530,8 +10737,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     post:
       tags:
       - "Email Delivery Receipt Rules"
@@ -10548,6 +10753,8 @@ paths:
         schema:
           $ref: "#/definitions/DeliveryReceiptRule"
         x-exportParamName: "DeliveryReceiptRule"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -10581,8 +10788,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
   /automations/email/receipts/{receipt_rule_id}:
     get:
       tags:
@@ -10600,6 +10805,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "ReceiptRuleId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -10633,8 +10840,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     put:
       tags:
       - "Email Delivery Receipt Rules"
@@ -10658,6 +10863,8 @@ paths:
         schema:
           $ref: "#/definitions/DeliveryReceiptRule"
         x-exportParamName: "DeliveryReceiptRule"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -10691,8 +10898,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
     delete:
       tags:
       - "Email Delivery Receipt Rules"
@@ -10709,6 +10914,8 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "ReceiptRuleId"
+      security:
+      - BasicAuth: []
       responses:
         "200":
           description: "SUCCESS"
@@ -10742,8 +10949,6 @@ paths:
           description: "INTERNAL_SERVER_ERROR"
           schema:
             type: "string"
-      security:
-      - BasicAuth: []
 securityDefinitions:
   BasicAuth:
     type: "basic"
@@ -11871,6 +12076,22 @@ definitions:
       description: "description"
       message_id: "message_id"
       type: "type"
+  CountryListIds:
+    type: "object"
+    required:
+    - "country_list_ids"
+    properties:
+      country_list_ids:
+        type: "array"
+        example:
+        - 1
+        description: "Array of country ids"
+        items:
+          type: "integer"
+          format: "int32"
+    example:
+      country_list_ids:
+      - 1
   Email:
     type: "object"
     required:
