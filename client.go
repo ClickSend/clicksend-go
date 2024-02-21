@@ -1,7 +1,7 @@
 /*
  * ClickSend v3 API
  *
- *  This is an official SDK for [ClickSend](https://clicksend.com)  Below you will find a current list of the available methods for clicksend.  *NOTE: You will need to create a free account to use the API. You can register [here](https://dashboard.clicksend.com/#/signup/step1/)..* 
+ *  This is an official SDK for [ClickSend](https://clicksend.com)  Below you will find a current list of the available methods for clicksend.  *NOTE: You will need to create a free account to use the API. You can register [here](https://dashboard.clicksend.com/#/signup/step1/)..*
  *
  * API version: 3.1
  * Contact: support@clicksend.com
@@ -419,17 +419,29 @@ func (c *APIClient) prepareRequest(
 }
 
 func (c *APIClient) decode(v interface{}, b []byte, contentType string) (err error) {
-		if strings.Contains(contentType, "application/xml") {
-			if err = xml.Unmarshal(b, v); err != nil {
-				return err
-			}
-			return nil
-		} else if strings.Contains(contentType, "application/json") {
-			if err = json.Unmarshal(b, v); err != nil {
-				return err
-			}
-			return nil
+
+	if strings.Contains(contentType, "application/xml") {
+		if err = xml.Unmarshal(b, v); err != nil {
+			return err
 		}
+		return nil
+	} else if strings.Contains(contentType, "application/json") {
+
+		var result map[string]interface{}
+
+		if err = json.Unmarshal(b, &result); err != nil {
+			return err
+		}
+
+		if fieldValue, ok := result["response_msg"].(string); ok {
+			if strPtr, ok := v.(*string); ok {
+				*strPtr = fieldValue
+				return nil
+			}
+			return errors.New("v must be a pointer to string for JSON decoding")
+		}
+		return nil
+	}
 	return errors.New("undefined response type")
 }
 
