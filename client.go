@@ -292,7 +292,7 @@ func (c *APIClient) prepareRequest(
 	// add form parameters and file if available.
 	if strings.HasPrefix(headerParams["Content-Type"], "multipart/form-data") && len(formParams) > 0 || (len(fileBytes) > 0 && fileName != "") {
 		if body != nil {
-			return nil, errors.New("Cannot specify postBody and multipart form at the same time.")
+			return nil, errors.New("cannot specify postbody and multipart form at the same time")
 		}
 		body = &bytes.Buffer{}
 		w := multipart.NewWriter(body)
@@ -427,12 +427,14 @@ func (c *APIClient) decode(v interface{}, b []byte, contentType string) (err err
 		return nil
 	} else if strings.Contains(contentType, "application/json") {
 
+		//create empty map to acceopt values of any type
 		var result map[string]interface{}
 
 		if err = json.Unmarshal(b, &result); err != nil {
 			return err
 		}
 
+		//check if response message exists, if so, receive value as string
 		if fieldValue, ok := result["response_msg"].(string); ok {
 			if strPtr, ok := v.(*string); ok {
 				*strPtr = fieldValue
