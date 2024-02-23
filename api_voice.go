@@ -1,8 +1,7 @@
-
 /*
  * ClickSend v3 API
  *
- *  This is an official SDK for [ClickSend](https://clicksend.com)  Below you will find a current list of the available methods for clicksend.  *NOTE: You will need to create a free account to use the API. You can register [here](https://dashboard.clicksend.com/#/signup/step1/)..* 
+ *  This is an official SDK for [ClickSend](https://clicksend.com)  Below you will find a current list of the available methods for clicksend.  *NOTE: You will need to create a free account to use the API. You can register [here](https://dashboard.clicksend.com/#/signup/step1/)..*
  *
  * API version: 3.1
  * Contact: support@clicksend.com
@@ -13,11 +12,12 @@ package clicksend
 
 import (
 	"context"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"strings"
-	"fmt"
+
 	"github.com/antihax/optional"
 )
 
@@ -31,16 +31,16 @@ type VoiceApiService service
 /*
 VoiceApiService Update all voice messages as cancelled
 Update all voice messages as cancelled
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return string
 */
 func (a *VoiceApiService) VoiceCancelAllPut(ctx context.Context) (string, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Put")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue string
 	)
 
@@ -86,104 +86,104 @@ func (a *VoiceApiService) VoiceCancelAllPut(ctx context.Context) (string, *http.
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 400 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 401 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 403 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 404 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 405 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 429 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
@@ -193,17 +193,17 @@ func (a *VoiceApiService) VoiceCancelAllPut(ctx context.Context) (string, *http.
 /*
 VoiceApiService Update voice message status as cancelled
 Update voice message status as cancelled
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param messageId Your voice message id
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param messageId Your voice message id
 
 @return string
 */
 func (a *VoiceApiService) VoiceCancelByMessageIdPut(ctx context.Context, messageId string) (string, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Put")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue string
 	)
 
@@ -250,104 +250,104 @@ func (a *VoiceApiService) VoiceCancelByMessageIdPut(ctx context.Context, message
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 400 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 401 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 403 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 404 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 405 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 429 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
@@ -357,17 +357,17 @@ func (a *VoiceApiService) VoiceCancelByMessageIdPut(ctx context.Context, message
 /*
 VoiceApiService Export voice history
 Export voice history
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param filename Filename to export to
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param filename Filename to export to
 
 @return string
 */
 func (a *VoiceApiService) VoiceHistoryExportGet(ctx context.Context, filename string) (string, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Get")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue string
 	)
 
@@ -414,104 +414,104 @@ func (a *VoiceApiService) VoiceHistoryExportGet(ctx context.Context, filename st
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 400 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 401 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 403 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 404 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 405 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 429 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
@@ -531,19 +531,19 @@ Get all voice history
 @return string
 */
 
-type VoiceApiVoiceHistoryGetOpts struct { 
+type VoiceApiVoiceHistoryGetOpts struct {
 	DateFrom optional.Int32
-	DateTo optional.Int32
-	Page optional.Int32
-	Limit optional.Int32
+	DateTo   optional.Int32
+	Page     optional.Int32
+	Limit    optional.Int32
 }
 
 func (a *VoiceApiService) VoiceHistoryGet(ctx context.Context, localVarOptionals *VoiceApiVoiceHistoryGetOpts) (string, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Get")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue string
 	)
 
@@ -601,104 +601,104 @@ func (a *VoiceApiService) VoiceHistoryGet(ctx context.Context, localVarOptionals
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 400 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 401 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 403 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 404 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 405 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 429 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
@@ -708,16 +708,16 @@ func (a *VoiceApiService) VoiceHistoryGet(ctx context.Context, localVarOptionals
 /*
 VoiceApiService Get all voice languages
 Get all voice languages
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return string
 */
 func (a *VoiceApiService) VoiceLangGet(ctx context.Context) (string, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Get")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue string
 	)
 
@@ -763,104 +763,104 @@ func (a *VoiceApiService) VoiceLangGet(ctx context.Context) (string, *http.Respo
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 400 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 401 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 403 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 404 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 405 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 429 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
@@ -870,17 +870,17 @@ func (a *VoiceApiService) VoiceLangGet(ctx context.Context) (string, *http.Respo
 /*
 VoiceApiService Calculate voice price
 Calculate voice price
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param voiceMessages VoiceMessageCollection model
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param voiceMessages VoiceMessageCollection model
 
 @return string
 */
 func (a *VoiceApiService) VoicePricePost(ctx context.Context, voiceMessages VoiceMessageCollection) (string, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Post")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue string
 	)
 
@@ -928,104 +928,104 @@ func (a *VoiceApiService) VoicePricePost(ctx context.Context, voiceMessages Voic
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 400 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 401 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 403 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 404 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 405 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 429 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
@@ -1043,17 +1043,17 @@ Get all delivery receipts
 @return string
 */
 
-type VoiceApiVoiceReceiptsGetOpts struct { 
-	Page optional.Int32
+type VoiceApiVoiceReceiptsGetOpts struct {
+	Page  optional.Int32
 	Limit optional.Int32
 }
 
 func (a *VoiceApiService) VoiceReceiptsGet(ctx context.Context, localVarOptionals *VoiceApiVoiceReceiptsGetOpts) (string, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Get")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue string
 	)
 
@@ -1105,104 +1105,104 @@ func (a *VoiceApiService) VoiceReceiptsGet(ctx context.Context, localVarOptional
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 400 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 401 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 403 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 404 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 405 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 429 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
@@ -1212,17 +1212,17 @@ func (a *VoiceApiService) VoiceReceiptsGet(ctx context.Context, localVarOptional
 /*
 VoiceApiService Add a delivery receipt
 Add a delivery receipt
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param url Url model
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param url Url model
 
 @return string
 */
-func (a *VoiceApiService) VoiceReceiptsPost(ctx context.Context, url Url) (string, *http.Response, error) {
+func (a *VoiceApiService) VoiceReceiptsPost(ctx context.Context, structUrl Url) (string, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Post")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue string
 	)
 
@@ -1251,7 +1251,7 @@ func (a *VoiceApiService) VoiceReceiptsPost(ctx context.Context, url Url) (strin
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
 	// body params
-	localVarPostBody = &url
+	localVarPostBody = &structUrl
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1270,104 +1270,104 @@ func (a *VoiceApiService) VoiceReceiptsPost(ctx context.Context, url Url) (strin
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 400 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 401 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 403 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 404 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 405 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 429 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
@@ -1384,16 +1384,16 @@ Mark delivery receipts as read
 @return string
 */
 
-type VoiceApiVoiceReceiptsReadPutOpts struct { 
+type VoiceApiVoiceReceiptsReadPutOpts struct {
 	DateBefore optional.Interface
 }
 
 func (a *VoiceApiService) VoiceReceiptsReadPut(ctx context.Context, localVarOptionals *VoiceApiVoiceReceiptsReadPutOpts) (string, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Put")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue string
 	)
 
@@ -1423,10 +1423,10 @@ func (a *VoiceApiService) VoiceReceiptsReadPut(ctx context.Context, localVarOpti
 	}
 	// body params
 	if localVarOptionals != nil && localVarOptionals.DateBefore.IsSet() {
-		
+
 		localVarOptionalDateBefore, localVarOptionalDateBeforeok := localVarOptionals.DateBefore.Value().(DateBefore)
 		if !localVarOptionalDateBeforeok {
-				return localVarReturnValue, nil, reportError("dateBefore should be DateBefore")
+			return localVarReturnValue, nil, reportError("dateBefore should be DateBefore")
 		}
 		localVarPostBody = &localVarOptionalDateBefore
 	}
@@ -1448,104 +1448,104 @@ func (a *VoiceApiService) VoiceReceiptsReadPut(ctx context.Context, localVarOpti
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 400 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 401 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 403 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 404 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 405 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 429 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
@@ -1555,17 +1555,17 @@ func (a *VoiceApiService) VoiceReceiptsReadPut(ctx context.Context, localVarOpti
 /*
 VoiceApiService Send voice message(s)
 Send a voice call
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param voiceMessages VoiceMessageCollection model
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param voiceMessages VoiceMessageCollection model
 
 @return string
 */
 func (a *VoiceApiService) VoiceSendPost(ctx context.Context, voiceMessages VoiceMessageCollection) (string, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Post")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue string
 	)
 
@@ -1613,107 +1613,106 @@ func (a *VoiceApiService) VoiceSendPost(ctx context.Context, voiceMessages Voice
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 400 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 401 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 403 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 404 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 405 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 429 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v string
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
-
