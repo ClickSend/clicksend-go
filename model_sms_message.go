@@ -12,7 +12,7 @@ package clicksend
 
 // SmsMessage model
 type SmsMessage struct {
-	// Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number.
+	// Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids.
 	From string `json:"from,omitempty"`
 	// Your message.
 	Body string `json:"body"`
@@ -20,7 +20,7 @@ type SmsMessage struct {
 	To string `json:"to,omitempty"`
 	// Your method of sending e.g. 'wordpress', 'php', 'c#'.
 	Source string `json:"source,omitempty"`
-	// Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp
+	// Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp
 	Schedule int32 `json:"schedule,omitempty"`
 	// Your reference. Will be passed back with all replies and delivery reports.
 	CustomString string `json:"custom_string,omitempty"`

@@ -28,7 +28,7 @@ type VoiceMessage struct {
 	ListId int32 `json:"list_id,omitempty"`
 	// au (string, required) - See section on available languages.
 	Lang string `json:"lang,omitempty"`
-	// Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp
+	// Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp
 	Schedule int32 `json:"schedule,omitempty"`
 	// Whether you want to receive a keypress from the call recipient
 	RequireInput int32 `json:"require_input,omitempty"`
