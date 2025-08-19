@@ -20,7 +20,7 @@ type FaxMessage struct {
 	ListId int32 `json:"list_id,omitempty"`
 	// Your sender id. Must be a valid fax number.
 	From string `json:"from,omitempty"`
-	// Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp
+	// Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp
 	Schedule int32 `json:"schedule,omitempty"`
 	// Your reference. Will be passed back with all replies and delivery reports.
 	CustomString string `json:"custom_string,omitempty"`

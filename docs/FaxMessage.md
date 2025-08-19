@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **To** | **string** | Recipient fax number in E.164 format. | [default to null]
 **ListId** | **int32** | Your list ID if sending to a whole list. Can be used instead of &#39;to&#39;. | [optional] [default to null]
 **From** | **string** | Your sender id. Must be a valid fax number. | [optional] [default to null]
-**Schedule** | **int32** | Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp | [optional] [default to null]
+**Schedule** | **int32** | Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp | [optional] [default to null]
 **CustomString** | **string** | Your reference. Will be passed back with all replies and delivery reports. | [optional] [default to null]
 **Country** | **string** | Recipient country. | [optional] [default to null]
 **FromEmail** | **string** | An email address where the reply should be emailed to. | [optional] [default to null]

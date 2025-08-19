@@ -10975,7 +10975,7 @@ definitions:
         description: "Your campaign message."
       from:
         type: "string"
-        description: "Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number."
+        description: "Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids."
       schedule:
         type: "integer"
         format: "int32"
@@ -11016,7 +11016,7 @@ definitions:
         description: "Your campaign message."
       from:
         type: "string"
-        description: "Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number."
+        description: "Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids."
       schedule:
         type: "integer"
         format: "int32"
@@ -11118,7 +11118,7 @@ definitions:
     properties:
       from:
         type: "string"
-        description: "Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number."
+        description: "Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids."
       body:
         type: "string"
         description: "Your message."
@@ -11136,7 +11136,7 @@ definitions:
         format: "int32"
         example: 0
         description: "Leave blank for immediate delivery. Your schedule time in unix\
-          \ format http://help.clicksend.com/what-is-a-unix-timestamp"
+          \ format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp"
         default: 0
       custom_string:
         type: "string"
@@ -11462,7 +11462,7 @@ definitions:
         type: "integer"
         format: "int32"
         description: "Leave blank for immediate delivery. Your schedule time in unix\
-          \ format http://help.clicksend.com/what-is-a-unix-timestamp"
+          \ format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp"
       custom_string:
         type: "string"
         description: "Your reference. Will be passed back with all replies and delivery\
@@ -11698,7 +11698,7 @@ definitions:
         type: "integer"
         format: "int32"
         description: "Leave blank for immediate delivery. Your schedule time in unix\
-          \ format http://help.clicksend.com/what-is-a-unix-timestamp"
+          \ format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp"
       require_input:
         type: "integer"
         format: "int32"
