@@ -900,7 +900,7 @@ Create inbound sms
 
 @return string
 */
-func (a *SMSApiService) SmsInboundPost(ctx context.Context, url Url) (string, *http.Response, error) {
+func (a *SMSApiService) SmsInboundPost(ctx context.Context, urlArg Url) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -934,7 +934,7 @@ func (a *SMSApiService) SmsInboundPost(ctx context.Context, url Url) (string, *h
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
 	// body params
-	localVarPostBody = &url
+	localVarPostBody = &urlArg
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1913,7 +1913,7 @@ Add a delivery receipt
 
 @return string
 */
-func (a *SMSApiService) SmsReceiptsPost(ctx context.Context, url Url) (string, *http.Response, error) {
+func (a *SMSApiService) SmsReceiptsPost(ctx context.Context, urlArg Url) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1947,7 +1947,7 @@ func (a *SMSApiService) SmsReceiptsPost(ctx context.Context, url Url) (string, *
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
 	// body params
-	localVarPostBody = &url
+	localVarPostBody = &urlArg
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err

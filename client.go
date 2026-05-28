@@ -426,6 +426,10 @@ func (c *APIClient) decode(v interface{}, b []byte, contentType string) (err err
 			return nil
 		} else if strings.Contains(contentType, "application/json") {
 			if err = json.Unmarshal(b, v); err != nil {
+				if sp, ok := v.(*string); ok {
+					*sp = string(b)
+					return nil
+				}
 				return err
 			}
 			return nil

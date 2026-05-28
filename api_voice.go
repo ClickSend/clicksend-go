@@ -1217,7 +1217,7 @@ Add a delivery receipt
 
 @return string
 */
-func (a *VoiceApiService) VoiceReceiptsPost(ctx context.Context, url Url) (string, *http.Response, error) {
+func (a *VoiceApiService) VoiceReceiptsPost(ctx context.Context, urlArg Url) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1251,7 +1251,7 @@ func (a *VoiceApiService) VoiceReceiptsPost(ctx context.Context, url Url) (strin
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
 	// body params
-	localVarPostBody = &url
+	localVarPostBody = &urlArg
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err
